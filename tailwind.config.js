@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'heading': ['ClashDisplay-Semibold', 'sans-serif'],
+        'body': ['JetBrainsMono-Variable', 'monospace']
+      }
+    },
   },
   plugins: [],
 }
