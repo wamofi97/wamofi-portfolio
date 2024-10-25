@@ -49,14 +49,14 @@ export function Skills() {
           </h2>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mx-auto max-w-6xl">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 mx-auto max-w-6xl">
         {skills.map((skill, index) => (
             <div key={index} className="bg-white rounded-lg hover:bg-slate-100 p-6 hover:animate-float">
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
                     {skill.icon}
                     <div>
-                        <h3 className="text-lg font-body">{skill.title}</h3>
-                        <p className="text-gray-600 text-sm">{skill.desc}</p>
+                        <h3 className="text-xl  font-body">{skill.title}</h3>
+                        <p className="text-gray-600 text-sm hidden sm:block">{skill.desc}</p>
                     </div>
                 </div>
             </div>
