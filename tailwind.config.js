@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'heading': ['ClashDisplay-Semibold', 'sans-serif'],
+        'heading': ['ClashDisplay-SemiBold', 'sans-serif'],
         'body': ['JetBrainsMono-Variable', 'monospace']
       }
     },
