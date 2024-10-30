@@ -6,7 +6,7 @@ export function Header() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 transition-all ease-in-out duration-300 z-10 bg-gradient-to-b from-gray-100/90 via-slate-100/90 to-slate-200/80 backdrop-blur-sm overflow-hidden ${isMenuOpen ?  'h-screen' : 'h-16'} `}>
-      <nav className="max-w-6xl mx-auto px-4 py-4 font-body">
+      <nav className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between ">
           <div className="text-2xl font-bold gradient-text">wamofi.dev</div>
           
