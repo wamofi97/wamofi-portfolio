@@ -40,23 +40,23 @@ const skills = [{
 
 export function Skills() {
   return (
-    <section id="skills" className="py-20 px-4 bg-gradient-to-b from-slate-50 via-slate-100 to-slate-200">
-      <div className="max-w-6xl mx-auto px-4">
+    <section id="skills" className="py-20 px-4">
+      <div className="max-w-5xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-heading gradient-text inline-flex items-center gap-2">
+          <h2 className="text-4xl font-heading inline-flex items-center gap-2">
             {/* <Heart className="w-8 h-8" /> */}
             My go-to technologies
           </h2>
         </div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 mx-auto max-w-6xl">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 mx-auto max-w-5xl">
         {skills.map((skill, index) => (
-            <div key={index} className="bg-white rounded-lg hover:bg-slate-100 p-6 hover:animate-float">
+            <div key={index} className="bg-neutral-800/70 hover:bg-neutral-800/90 rounded-lg p-6 hover:animate-float">
                 <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
                     {skill.icon}
                     <div>
-                        <h3 className="text-xl  font-body">{skill.title}</h3>
-                        <p className="text-gray-600 text-sm hidden sm:block">{skill.desc}</p>
+                        <h3 className="text-xl font-body">{skill.title}</h3>
+                        <p className="text-neutral-400 text-sm hidden sm:block">{skill.desc}</p>
                     </div>
                 </div>
             </div>
