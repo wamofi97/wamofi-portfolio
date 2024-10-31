@@ -2,10 +2,10 @@
 
 export default function About() {
   return (
-    <section id="about" className="py-20 px-4">
-      <div className="max-w-6xl mx-auto px-4">      
+    <section id="about" className="py-10 px-4">
+      <div className="max-w-5xl mx-auto px-4">      
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-heading gradient-text inline-flex items-center gap-2">
+          <h2 className="text-4xl font-heading inline-flex items-center gap-2">
             {/* <Heart className="w-8 h-8" /> */}
             About me
           </h2>
@@ -13,7 +13,7 @@ export default function About() {
 
         
         <div>
-            <p className="text-xl text-gray-600 leading-relaxed text-center mb-3">
+            <p className="text-neutral-400 leading-relaxed sm:text-center mb-3">
                 After graduating with a degree in{" "}
                 <span className="font-medium">Aerospace Engineering</span>, I decided to pursue my
                 passion for programming. I enrolled in a coding bootcamp and learned{" "}
@@ -31,7 +31,7 @@ export default function About() {
                 developer.
             </p>
 
-            <p className="text-xl text-gray-600 leading-relaxed text-center">
+            <p className="text-neutral-400 leading-relaxed sm:text-center">
                 <span className="italic">When I'm not coding</span>, I enjoy playing
                 video games and watching movies. I also enjoy{" "}
                 <span className="font-medium">learning new things</span>. I'm currently
