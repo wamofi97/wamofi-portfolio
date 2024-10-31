@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'heading': ['ClashDisplay-SemiBold', 'sans-serif'],
-        'body': ['JetBrainsMono-Variable', 'monospace']
+        'heading': ['Satoshi-Variable'],
+        'body': ['Satoshi-Variable']
       }
     },
   },
