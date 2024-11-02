@@ -55,7 +55,7 @@ export default function Hero() {
                   LINKEDIN
                 </span>
               </a>
-              <a href="mailto:wamofi97@gmail.com" target='_blank'  className="relative group bg-neutral-800  p-3 rounded-full transition-all duration-300 hover:-translate-y-1">
+              <a href="mailto:wamofi.dev@gmail.com" target='_blank'  className="relative group bg-neutral-800  p-3 rounded-full transition-all duration-300 hover:-translate-y-1">
                 <Mail className="w-5 h-5" />
                 <span className="absolute left-1/2 -translate-x-1/2 -top-8 scale-0 group-hover:scale-75 transition-transform duration-300 bg-teal-900 text-white text-sm px-2 py-1 rounded-md shadow-md">
                   EMAIL

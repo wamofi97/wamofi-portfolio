@@ -63,7 +63,7 @@ export function Header() {
               <a href="https://linkedin.com/in/wanfirdausfauzi" target='_blank' className="text-neutral-400 hover:text-slate-700 transition-colors">
                 <Linkedin className="text-3xl" />
               </a>
-              <a href="mailto:wamofi97@gmail.com" className="text-neutral-400 hover:text-slate-700 transition-colors">
+              <a href="mailto:wamofi.dev@gmail.com" className="text-neutral-400 hover:text-slate-700 transition-colors">
                 <Mail className="text-3xl" />
               </a>
             </div>
