@@ -15,12 +15,12 @@ export default function Hero() {
         <div className='flex flex-col gap-4 items-center'>
           <span className="text-2xl animate-wave">👋 <span className=" inline-block">Hello!</span></span>
           <div className="relative group mx-auto">
-            <div className="absolute inset-0 bg-gradient-to-r from-teal-200 to-teal-400 rounded-xl blur-xl opacity-30 group-hover:opacity-40 transition-opacity"></div>
-            <div className="relative rounded-xl shadow-xl rotate-3 hover:rotate-0 transition-transform duration-300">
+            <div className="absolute inset-0 bg-gradient-to-r from-teal-200 to-teal-400 rounded-full blur-xl opacity-30 group-hover:opacity-40 transition-opacity"></div>
+            <div className="relative rounded-full shadow-xl rotate-3 hover:rotate-0 transition-transform duration-300">
               <img 
                 src={profile4}
                 alt="Profile"
-                className="h-64 w-64 object-cover rounded-xl transition-all duration-300"
+                className="h-52 w-52 object-cover rounded-full transition-all duration-300"
               />
             </div>
           </div>
@@ -61,7 +61,7 @@ export default function Hero() {
                   EMAIL
                 </span>
               </a>
-              <a href={resume} target='_blank'  className="flex items-center gap-1 border border-neutral-700 bg-neutral-800 px-4 py-2 rounded-xl transition-all duration-300 hover:-translate-y-1">
+              <a href={resume} target='_blank'  className="flex items-center gap-1 border border-neutral-700 bg-neutral-800 px-4 py-2 rounded-full transition-all duration-300 hover:-translate-y-1">
                 <FileUser className="w-5 h-5" />
                 Resume
               </a>
@@ -69,7 +69,7 @@ export default function Hero() {
             <Link 
               to="projects"
               smooth={true}
-              className="cursor-pointer group relative inline-flex items-center gap-2 text-neutral-800 bg-neutral-100 hover:bg-neutral-300 hover:text-neutral-900 px-4 py-2 rounded-xl font-medium transition-all duration-300"
+              className="cursor-pointer group relative inline-flex items-center gap-2 text-neutral-800 bg-neutral-100 hover:bg-neutral-300 hover:text-neutral-900 px-4 py-2 rounded-full font-medium transition-all duration-300"
             >
               See My Work
               <span 

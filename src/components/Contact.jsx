@@ -30,7 +30,7 @@ export default function Contact() {
                   type="text"
                   id="name"
                   placeholder="Your name"
-                  className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-2 mt-2 focus:outline-none focus:ring-2 focus:ring-teal-500 placeholder:text-neutral-400/50"
+                  className="w-full bg-neutral-900 border border-neutral-800 rounded-2xl px-4 py-2 mt-2 focus:outline-none focus:ring-2 focus:ring-teal-500 placeholder:text-neutral-400/50"
                 />
               </div>
               <div>
@@ -41,7 +41,7 @@ export default function Contact() {
                   type="email"
                   id="email"
                   placeholder="Your email"
-                  className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-2 mt-2 focus:outline-none focus:ring-2 focus:ring-teal-500 placeholder:text-neutral-400/50"
+                  className="w-full bg-neutral-900 border border-neutral-800 rounded-2xl px-4 py-2 mt-2 focus:outline-none focus:ring-2 focus:ring-teal-500 placeholder:text-neutral-400/50"
                 />
               </div>
             </div>
@@ -52,12 +52,12 @@ export default function Contact() {
               <textarea
                 id="message"
                 placeholder="Your message"
-                className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-2 mt-2 focus:outline-none focus:ring-2 focus:ring-teal-500 placeholder:text-neutral-400/50"
+                className="w-full bg-neutral-900 border border-neutral-800 rounded-2xl px-4 py-2 mt-2 focus:outline-none focus:ring-2 focus:ring-teal-500 placeholder:text-neutral-400/50"
               ></textarea>
             </div>
             <button
               type="submit"
-              className="w-full bg-teal-500 text-neutral-800 hover:bg-teal-600 tracking-wide font-medium py-2 px-4 rounded-xl mt-4"
+              className="w-full bg-teal-500 text-neutral-800 hover:bg-teal-600 tracking-wide font-medium py-2 px-4 rounded-2xl mt-4"
             >
               SEND
             </button>
