@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'heading': ['Satoshi-Variable'],
+        'heading': ['ClashDisplay-Bold'],
         'body': ['Satoshi-Variable']
       }
     },
