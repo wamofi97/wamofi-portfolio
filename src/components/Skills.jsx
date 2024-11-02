@@ -21,35 +21,48 @@ const skills = [{
     desc: "Frontend framework"
   },
   {
-    title: "Supabase",
-    source: supabase,
-    desc: "Database"
-  },    
-  {
     title: "Tailwind",
     source: tailwind,
     desc: "CSS framework"
-  },                
+  },   
   {
-    title: "TypeScript",
-    source: typescript,
-    desc: "Language"
+    title: "Next.js",
+    source: "https://nextjs.org/static/favicon/favicon-32x32.png",
+    desc: "Frontend framework"
+  },
+  {
+    title: "PostgreSQL",
+    source: "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg",
+    desc: "Database"
+  },
+  {
+    title: "Vite",
+    source: "https://vitejs.dev/logo.svg",
+    desc: "Frontend build tool"
+  },
+  {
+    title: "Vercel",
+    source: "https://vercel.com/favicon.ico",
+    desc: "Deployment platform"
   }
+  
 ]
 
 export function Skills() {
   return (
-    <section id="skills" className="py-20 px-4">
+    <section id="skills" className="min-h-[75vh] flex flex-col justify-center py-20 px-4">
       <div className="max-w-5xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-heading inline-flex items-center gap-2">
-            My go-to technologies
+          <h3 className="text-teal-700 text-lg font-medium">My go-to technologies.</h3>
+          <h2 className="sm:text-6xl text-5xl font-heading inline-flex items-center gap-2">
+            SKILLS
           </h2>
+          
         </div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 mx-auto max-w-5xl">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 mx-auto max-w-5xl">
         {skills.map((skill, index) => (
-            <div key={index} className="group bg-neutral-800 hover:bg-neutral-800/60 rounded-lg p-6 hover:animate-float">
+            <div key={index} className="group bg-neutral-900/50 hover:bg-teal-900/20 rounded-lg p-6 hover:animate-float">
                 <div className=" flex flex-col sm:flex-row items-center gap-2 sm:gap-4 ">
                     <img src={skill.source} alt={skill.title} className="w-8 h-8 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-300" />
                     <div>
