@@ -7,34 +7,36 @@ import Hero from "./components/Hero";
 import Project from "./components/Project";
 import { Skills } from "./components/Skills";
 import { Element } from "react-scroll";
+import ThemeToggle from "./components/ThemeToggle";
 
 function App() {
-  
+
   return (
-    <main className="bg-neutral-950 text-neutral-200">
+    <div className="w-full relative bg-neutral-200 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-200 transition-colors duration-500">
       <Header/>
-      <main>
-        <Element name="hero">
-          <Hero/>
+      <main className="max-w-5xl mx-auto relative" >
+        <Element name="hero" className="min-h-[60vh] flex justify-center items-center">
+            <Hero/>
         </Element>
-        <Element name="skills">
+        <Element name="skills" className=" flex justify-center items-center">
           <Skills/>
         </Element>
-        <Element name="projects">
-          <Project/>
+        <Element name="projects" className=" flex justify-center items-center">
+            <Project/>
         </Element>
-        <Element name="experiences">
+        <Element name="experiences" className=" flex justify-center items-center">
           <Experience/>
         </Element>
-        <Element name="about">
-          <About/>
+        <Element name="about" className=" flex justify-center items-center">
+              <About/>
         </Element>
-        <Element name="contact">
-          <Contact/>
+        <Element name="contact" className="min-h-[90vh] flex justify-center items-center">
+              <Contact/>
         </Element>
         <Footer/>
+        <ThemeToggle/>
       </main>
-    </main>
+    </div>
   )
 }
 
