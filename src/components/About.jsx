@@ -13,7 +13,7 @@ export default function About() {
 
         
         <div>
-            <p className="text-neutral-700 dark:text-neutral-400 text-lg leading-relaxed sm:text-center mb-8">
+            <p className="text-neutral-700 dark:text-neutral-400 sm:text-xl text-lg font-light leading-relaxed sm:text-center mb-8">
                 After graduating with a degree in{" "}
                 <span className="font-medium">Aerospace Engineering</span>, I decided to pursue my
                 passion for programming. I enrolled in a coding bootcamp and learned{" "}
@@ -22,7 +22,7 @@ export default function About() {
                 problem-solving aspect. I <span className="underline">love</span> the
                 feeling of finally figuring out a solution to a problem. My core stack
                 is{" "}
-                <span className="font-bold">
+                <span className="font-medium">
                 React, Next.js, Node.js, and PostgreSQL
                 </span>
                 . I am also familiar with TypeScript and Drizzle. I am always looking to
@@ -31,7 +31,7 @@ export default function About() {
                 developer.
             </p>
 
-            <p className="text-neutral-700 dark:text-neutral-400 text-lg leading-relaxed sm:text-center">
+            <p className="text-neutral-700 dark:text-neutral-400 sm:text-xl text-lg font-light leading-relaxed sm:text-center">
                 <span className="italic">When I'm not coding</span>, I enjoy playing
                 video games and watching movies. I also enjoy{" "}
                 <span className="font-medium">learning new things</span>. I'm currently
