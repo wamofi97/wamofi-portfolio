@@ -70,21 +70,21 @@ export function Skills() {
           
         </div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 mx-auto max-w-5xl z-10">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-4 mx-auto max-w-5xl z-10">
         {skills.map((skill, index) => (
             <div key={index} className="group bg-neutral-300/40 dark:bg-neutral-900/50 hover:bg-teal-600/10 dark:hover:bg-teal-900/20 rounded-2xl p-6 hover:animate-float">
                 <div className=" flex flex-col sm:flex-row items-center gap-2 sm:gap-4 ">
                     <img src={skill.source} alt={skill.title} className="w-8 h-8 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-300" />
                     <div>
-                        <h3 className="text-xl font-body">{skill.title}</h3>
+                        <h3 className="text-lg font-body">{skill.title}</h3>
                         <p className="text-neutral-500 text-sm hidden sm:block">{skill.desc}</p>
                     </div>
                 </div>
             </div>
         ))}
       </div>
-      <div className="absolute top-10 right-0 sm:w-1/5 w-1/2 h-1/3 bg-teal-400 rounded-2xl blur-3xl opacity-20"></div>
-      <div className="absolute -bottom-32 left-10 sm:w-1/5 w-1/2 h-1/3 bg-teal-400 rounded-3xl blur-3xl opacity-20"></div>
+      <div className="absolute top-10 sm:right-0 -right-20 sm:w-1/5 w-1/2 h-1/3 bg-teal-400 rounded-2xl blur-2xl opacity-20"></div>
+      <div className="absolute -bottom-32 sm:left-10 -left-20 sm:w-1/5 w-1/2 h-1/3 bg-teal-400 rounded-3xl blur-3xl opacity-20"></div>
     </section>
   );
 }
