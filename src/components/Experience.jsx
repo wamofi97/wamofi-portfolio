@@ -66,7 +66,7 @@ export default function Experience() {
             Work
           </button>
           <button
-            className={`rounded-xl px-4 py-2 ${option === 2 ? "bg-neutral-700 dark:bg-neutral-300 text-neutral-100 dark:text-neutral-800" : ""}`}
+            className={`rounded-xl px-4 py-2 ${option === 2 ? "font-medium bg-neutral-700 dark:bg-neutral-300 text-neutral-100 dark:text-neutral-800" : ""}`}
             onClick={() => setOption(2)}
           >
             Education
