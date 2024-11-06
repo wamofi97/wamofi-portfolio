@@ -2,7 +2,7 @@ import { ChevronRight } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="flex flex-col justify-center py-20 px-4">
+    <section id="contact" className="flex flex-col justify-center py-20 px-4 relative">
       <div className="max-w-5xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="sm:text-6xl text-5xl font-heading inline-flex items-center gap-2">
@@ -11,7 +11,7 @@ export default function Contact() {
           <h3 className="text-teal-700 text-lg font-medium">Get in touch.</h3>
         </div>
       </div>
-      <div className="grid mx-auto max-w-3xl px-4">
+      <div className="grid mx-auto max-w-3xl px-4 z-10">
         <div>
           <p className="text-neutral-700 dark:text-neutral-400 text-lg leading-relaxed sm:text-center">
             I'm always looking for new opportunities. If you'd like to chat, feel
@@ -76,6 +76,9 @@ export default function Contact() {
           </form>
         </div>
       </div>
+      <div className="absolute top-10 sm:right-0 -right-20 sm:w-1/5 w-1/2 h-1/3 bg-teal-400 rounded-2xl blur-2xl opacity-20"></div>
+      <div className="absolute top-32 sm:left-10 -left-20 sm:w-1/5 w-1/2 h-1/3 bg-teal-400 rounded-3xl blur-3xl opacity-20"></div>
+      {/* <div className="absolute -bottom-72 sm:-left-80 -left-24 w-1/2 h-1/2 rotate-12 bg-teal-400 rounded-full blur-3xl opacity-30"></div> */}
     </section>
   )
 }
