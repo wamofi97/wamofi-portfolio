@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="w-full relative bg-neutral-200 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-200 transition-colors duration-500">
       <Header/>
-      <main className="max-w-5xl mx-auto relative" >
+      <main className="max-w-5xl mx-auto relative overflow-hidden md:overflow-visible " >
         <Element name="hero" className="min-h-[60vh] flex justify-center items-center">
             <Hero/>
         </Element>
