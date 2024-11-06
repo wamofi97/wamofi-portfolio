@@ -30,13 +30,13 @@ export default function Hero() {
           <div className="space-y-4 text-center">
             
             <h1 className="sm:text-5xl text-4xl font-body font-bold">
-              <span className='font-light'>My name is </span>
-              <span className="text-neutral-800 dark:text-neutral-100 tracking-wide">Wan Firdaus</span> 
+              <span className='font-medium'>My name is </span>
+              <span className="text-neutral-800 dark:text-neutral-50">Wan Firdaus</span> 
               <span className='text-lg font-light block'>and I'm a</span>
               <span className="block font-heading tracking-wide gradient-text">FRONTEND DEVELOPER</span>
             </h1>
           </div>
-          <p className="text-lg leading-relaxed ">
+          <p className="text-lg font-light leading-relaxed ">
             Bringing ideas to life with modern web technologies and clean design.
           </p>
           
