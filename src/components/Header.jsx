@@ -28,11 +28,11 @@ export function Header() {
             <Link to="hero" duration={700} smooth={true} className="cursor-pointer text-xl font-bold font-logo gradient-text">wamofi.dev</Link>
            
             <div className="flex items-center gap-8 font-medium uppercase text-sm">
-              <Link to="skills" spy={true} duration={700} smooth={true} offset={-100} activeClass="active-text" className="cursor-pointer hover:text-teal-500 transition-all">Skills</Link>
-              <Link to="projects" spy={true} duration={700} smooth={true} offset={-100} activeClass="active-text" className="cursor-pointer hover:text-teal-500 transition-all" >Projects</Link>
-              <Link to="experiences" spy={true} duration={700} smooth={true} offset={-100} activeClass="active-text"  className="cursor-pointer hover:text-teal-500 transition-all" >Experiences</Link>
-              <Link to="about" spy={true} duration={700} smooth={true} offset={-100} activeClass="active-text"  className="cursor-pointer hover:text-teal-500 transition-all">About</Link>
-              <Link to="contact" spy={true} duration={700} smooth={true} offset={-100} activeClass="active-text"  className="cursor-pointer hover:text-teal-500 transition-all" >Contact</Link>
+              <Link to="skills" spy={true} duration={700} smooth={true} offset={-50} activeClass="active-text" className="cursor-pointer hover:text-teal-500 transition-all">Skills</Link>
+              <Link to="projects" spy={true} duration={700} smooth={true} offset={-50} activeClass="active-text" className="cursor-pointer hover:text-teal-500 transition-all" >Projects</Link>
+              <Link to="experiences" spy={true} duration={700} smooth={true} offset={-50} activeClass="active-text"  className="cursor-pointer hover:text-teal-500 transition-all" >Experiences</Link>
+              <Link to="about" spy={true} duration={700} smooth={true} offset={-50} activeClass="active-text"  className="cursor-pointer hover:text-teal-500 transition-all">About</Link>
+              <Link to="contact" spy={true} duration={700} smooth={true} offset={-50} activeClass="active-text"  className="cursor-pointer hover:text-teal-500 transition-all" >Contact</Link>
             </div>
             {/* <ThemeToggle/> */}
           </div>
@@ -40,14 +40,14 @@ export function Header() {
 
         {/* Mobile menu */}    
         
-        <div className={`md:hidden transition-all duration-500 ease-in-out bg-neutral-200/95 dark:bg-neutral-950/95 w-3/4 sm:w-1/2 absolute top-0 right-0 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-          <div className="flex flex-col min-h-screen items-center justify-evenly gap-20">
-            <div className='flex flex-col items-center gap-12 text-3xl font-medium uppercase'>
-              <Link to="skills" onClick={() => setIsMenuOpen(false)} spy={true} duration={700} smooth={true} offset={-100} activeClass="active-text" className="cursor-pointer hover:text-teal-500 transition-all">Skills</Link>
-              <Link to="projects" onClick={() => setIsMenuOpen(false)} spy={true} duration={700} smooth={true} offset={-100} activeClass="active-text" className="cursor-pointer hover:text-teal-500 transition-all" >Projects</Link>
-              <Link to="experiences" onClick={() => setIsMenuOpen(false)} spy={true} duration={700} smooth={true} offset={-100} activeClass="active-text"  className="cursor-pointer hover:text-teal-500 transition-all" >Experiences</Link>
-              <Link to="about" onClick={() => setIsMenuOpen(false)} spy={true} duration={700} smooth={true} offset={-100} activeClass="active-text"  className="cursor-pointer hover:text-teal-500 transition-all">About</Link>
-              <Link to="contact" onClick={() => setIsMenuOpen(false)} spy={true} duration={700} smooth={true} offset={-100} activeClass="active-text"  className="cursor-pointer hover:text-teal-500 transition-all" >Contact</Link>
+        <div className={`md:hidden transition-all duration-500 ease-in-out bg-neutral-200/95 dark:bg-neutral-950/95 w-2/3 sm:w-1/2 absolute top-0 right-0 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+          <div className="flex flex-col min-h-screen items-center justify-evenly">
+            <div className='flex flex-col items-center gap-12 text-2xl font-medium uppercase'>
+              <Link to="skills" onClick={() => setIsMenuOpen(false)} spy={true} duration={700} smooth={true} activeClass="active-text" className="cursor-pointer hover:text-teal-500 transition-all">Skills</Link>
+              <Link to="projects" onClick={() => setIsMenuOpen(false)} spy={true} duration={700} smooth={true} activeClass="active-text" className="cursor-pointer hover:text-teal-500 transition-all" >Projects</Link>
+              <Link to="experiences" onClick={() => setIsMenuOpen(false)} spy={true} duration={700} smooth={true} activeClass="active-text"  className="cursor-pointer hover:text-teal-500 transition-all" >Experiences</Link>
+              <Link to="about" onClick={() => setIsMenuOpen(false)} spy={true} duration={700} smooth={true} activeClass="active-text"  className="cursor-pointer hover:text-teal-500 transition-all">About</Link>
+              <Link to="contact" onClick={() => setIsMenuOpen(false)} spy={true} duration={700} smooth={true} activeClass="active-text"  className="cursor-pointer hover:text-teal-500 transition-all" >Contact</Link>
             </div>
             {/* <ThemeToggle/> */}
             <div className="flex justify-center items-center gap-8">
