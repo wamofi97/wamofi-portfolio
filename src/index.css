@@ -20,6 +20,29 @@
   @apply bg-neutral-400 dark:bg-neutral-600; 
 }
 
+@keyframes move-dots {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 18px 18px;
+  }
+}
+
+/* Define a small dotted background */
+.bg-dotted-light {
+  background-image: radial-gradient(circle, #b6b6b6 1px, transparent 1px);
+  background-size: 18px 18px;
+  animation: move-dots 8s linear infinite;
+}
+
+.dark .bg-dotted-dark {
+  background-image: radial-gradient(circle, #2b2b2b 1px, transparent 1px);
+  background-size: 18px 18px;
+  animation: move-dots 8s linear infinite;
+}
+
+
 
 @keyframes float {
     0%, 100% { transform: translateY(0); }

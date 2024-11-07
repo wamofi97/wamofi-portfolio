@@ -8,11 +8,12 @@ import Project from "./components/Project";
 import { Skills } from "./components/Skills";
 import { Element } from "react-scroll";
 import ThemeToggle from "./components/ThemeToggle";
+import DottedBackground from "./components/DottedBackground";
 
 function App() {
 
   return (
-    <div className="w-full relative bg-neutral-200 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-200 transition-colors duration-500">
+    <div className="w-full relative   text-neutral-900 dark:text-neutral-200 transition-colors duration-500">
       <Header/>
       <main className="max-w-5xl mx-auto relative overflow-hidden md:overflow-visible " >
         <Element name="hero" className="min-h-screen flex justify-center items-center">
@@ -34,6 +35,7 @@ function App() {
               <Contact/>
         </Element>
         <Footer/>
+        <DottedBackground/>
         <ThemeToggle/>
       </main>
     </div>
