@@ -9,8 +9,8 @@ export default {
     extend: {
       fontFamily: {
         'logo': ['JetBrainsMono-Variable', 'monospace'],
-        'heading': ['ClashDisplay-Bold'],
-        'body': ['Satoshi-Variable']
+        'heading': ['ClashDisplay-Medium', 'sans-serif'],
+        'body': ['Satoshi-Variable', 'sans-serif'],
       }
     },
   },

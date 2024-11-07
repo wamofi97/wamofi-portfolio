@@ -43,25 +43,25 @@ export default function Hero() {
           <div className="flex flex-wrap justify-center items-center gap-3">
             
             <div className="flex items-center justify-center gap-1">
-              <a href="https://github.com/wamofi97" target='_blank'  className="relative group bg-neutral-300/40 dark:bg-neutral-800  p-3 rounded-2xl transition-all duration-300 hover:-translate-y-1">
+              <a href="https://github.com/wamofi97" target='_blank'  className="relative group bg-neutral-300/80 dark:bg-neutral-800  p-3 rounded-2xl transition-all duration-300 hover:-translate-y-1">
                 <Github className="w-5 h-5" />
                 <span className="absolute left-1/2 -translate-x-1/2 -top-8 scale-0 group-hover:scale-75 transition-transform duration-300 bg-teal-900 text-white text-sm px-2 py-1 rounded-md shadow-md">
                   GITHUB
                 </span>
               </a>
-              <a href="https://linkedin.com/in/wanfirdausfauzi" target='_blank'  className="relative group bg-neutral-300/40 dark:bg-neutral-800  p-3 rounded-2xl transition-all duration-300 hover:-translate-y-1">
+              <a href="https://linkedin.com/in/wanfirdausfauzi" target='_blank'  className="relative group bg-neutral-300/80 dark:bg-neutral-800  p-3 rounded-2xl transition-all duration-300 hover:-translate-y-1">
                 <Linkedin className="w-5 h-5" />
                 <span className="absolute left-1/2 -translate-x-1/2 -top-8 scale-0 group-hover:scale-75 transition-transform duration-300 bg-teal-900 text-white text-sm px-2 py-1 rounded-md shadow-md">
                   LINKEDIN
                 </span>
               </a>
-              <a href="mailto:wamofi.dev@gmail.com" target='_blank'  className="relative group bg-neutral-300/40 dark:bg-neutral-800  p-3 rounded-2xl transition-all duration-300 hover:-translate-y-1">
+              <a href="mailto:wamofi.dev@gmail.com" target='_blank'  className="relative group bg-neutral-300/80 dark:bg-neutral-800  p-3 rounded-2xl transition-all duration-300 hover:-translate-y-1">
                 <Mail className="w-5 h-5" />
                 <span className="absolute left-1/2 -translate-x-1/2 -top-8 scale-0 group-hover:scale-75 transition-transform duration-300 bg-teal-900 text-white text-sm px-2 py-1 rounded-md shadow-md">
                   EMAIL
                 </span>
               </a>
-              <a href={resume} target='_blank'  className="flex items-center gap-1 border border-neutral-400/30 dark:border-neutral-700 bg-neutral-300/40 dark:bg-neutral-800 px-4 py-2 rounded-2xl transition-all duration-300 hover:-translate-y-1">
+              <a href={resume} target='_blank'  className="flex items-center gap-1 border border-neutral-400/30 dark:border-neutral-700 bg-neutral-300/80 dark:bg-neutral-800 px-4 py-2 rounded-2xl transition-all duration-300 hover:-translate-y-1">
                 <FileUser className="w-5 h-5" />
                 Resume
               </a>

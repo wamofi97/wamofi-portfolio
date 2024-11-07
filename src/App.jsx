@@ -15,22 +15,22 @@ function App() {
     <div className="w-full relative bg-neutral-200 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-200 transition-colors duration-500">
       <Header/>
       <main className="max-w-5xl mx-auto relative overflow-hidden md:overflow-visible " >
-        <Element name="hero" className="min-h-[60vh] flex justify-center items-center">
+        <Element name="hero" className="min-h-screen flex justify-center items-center">
             <Hero/>
         </Element>
-        <Element name="skills" className=" flex justify-center items-center">
+        <Element name="skills" className=" ">
           <Skills/>
         </Element>
-        <Element name="projects" className=" flex justify-center items-center">
+        <Element name="projects" className=" ">
             <Project/>
         </Element>
-        <Element name="experiences" className=" flex justify-center items-center">
+        <Element name="experiences" className=" ">
           <Experience/>
         </Element>
-        <Element name="about" className=" flex justify-center items-center">
+        <Element name="about" className=" ">
               <About/>
         </Element>
-        <Element name="contact" className="min-h-[90vh] flex justify-center items-center">
+        <Element name="contact" className="min-h-screen flex items-center justify-center">
               <Contact/>
         </Element>
         <Footer/>

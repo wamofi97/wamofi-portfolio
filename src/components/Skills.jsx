@@ -72,7 +72,7 @@ export function Skills() {
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-4 mx-auto max-w-5xl z-10">
         {skills.map((skill, index) => (
-            <div key={index} className="group bg-neutral-300/40 dark:bg-neutral-900/50 hover:bg-teal-600/10 dark:hover:bg-teal-900/20 rounded-2xl p-6 hover:animate-float">
+            <div key={index} className="group bg-neutral-300/40 dark:bg-neutral-900/70 hover:bg-teal-600/10 dark:hover:bg-teal-900/20 rounded-2xl p-6 hover:animate-float">
                 <div className=" flex flex-col sm:flex-row items-center gap-2 sm:gap-4 ">
                     <img src={skill.source} alt={skill.title} className="w-8 h-8 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-300" />
                     <div>

@@ -31,10 +31,10 @@ const ThemeToggle = () => {
   };
 
   return (
-    <div className="fixed max-w-5xl z-30 bottom-0 w-full"> 
+    <div className="fixed max-w-5xl z-30 top-0 w-full"> 
       <button onClick={toggleTheme} 
-      className={`absolute bottom-4 right-4 flex items-center justify-center bg-neutral-200 rounded-full w-10 h-10 transition-colors 
-      ${theme === 'dark' ? 'text-neutral-700 bg-neutral-300 hover:bg-neutral-400' : 'text-neutral-300 bg-neutral-600 hover:bg-neutral-800'} `}>
+      className={`absolute md:top-4 top-[74px] md:right-4 right-2 flex items-center justify-center bg-neutral-200 rounded-2xl w-11 h-11 transition-colors 
+      ${theme === 'dark' ? ' bg-neutral-800 hover:bg-neutral-700' : ' bg-neutral-300/80 hover:bg-neutral-400'} `}>
       {theme === 'dark' ? (
         <Moon className="w-6 h-6" />
       ) : (
