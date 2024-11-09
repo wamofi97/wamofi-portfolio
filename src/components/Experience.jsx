@@ -5,19 +5,25 @@ const works = [
     "title": "Service Desk Engineer",
     "company": "Infosys Sdn. Bhd.",
     "year": "Jan 2023 - Current",
-    "desc": ["Managed and resolved technical issues reported by end-users through various communication channels, including calls, emails and ticketing systems.","Cross trained in 2 different projects : Software as a Service(SAAS), Corporate Mobile","Provided L1 and & L1.5 support for SAAS with technical troubleshooting and set up for customers using applications like Office 365 and Google Workspace","Managed Domain Name & Hosting, website DNS and email DNS records." ]
+    "desc": ["Managed and resolved technical issues reported by end-users through various communication channels, including calls, emails and ticketing systems.",
+      "Cross trained in 2 different projects : Software as a Service(SAAS), Corporate Mobile",
+      "Provided L1 and & L1.5 support for SAAS with technical troubleshooting and set up for customers using applications like Office 365 and Google Workspace",
+      "Managed Domain Name & Hosting, website DNS and email DNS records." ]
   },
   {
     "title": "UI/UX Designer",
     "company": "Thifal Niaga Sdn. Bhd.",
     "year": "August 2022 - December 2022",
-    "desc": ["Developed high-fidelity wireframe & prototype for social entrepeneurship company Santai Artisan and Thifal Niaga.","Designed user interface, digital materials for websites, posters, banners & etc.","Created and translated business requirements into sitemaps, user journeys, wireframes and navigation flows that leads towards intuitive user experiences."]
+    "desc": ["Developed high-fidelity wireframe & prototype for social entrepeneurship company Santai Artisan and Thifal Niaga.",
+      "Designed user interface, digital materials for websites, posters, banners & etc.",
+      "Created and translated business requirements into sitemaps, user journeys, wireframes and navigation flows that leads towards intuitive user experiences."]
   },
   {
     "title": "Intern",
     "company": "ACTS Smart Solution Sdn. Bhd.",
     "year": "March 2021 - July 2021",
-    "desc": ["Worked on the systematic review of Safety Assist & Motorcyclist Safety technologies for ASEAN market.","Performed data collection & analysis of questionnaires and interviews ASEAN NCAP stakeholders."]
+    "desc": ["Worked on the systematic review of Safety Assist & Motorcyclist Safety technologies for ASEAN market.",
+      "Performed data collection & analysis of questionnaires and interviews ASEAN NCAP stakeholders."]
   }
 ]
 
@@ -53,30 +59,15 @@ const toggleAccordion = (index) => {
 };
 
     return (
-      <section id="project" className="flex flex-col justify-center py-20 px-4 max-w-5xl overflow-hidden">
+      <section id="project" className="flex flex-col justify-center pt-20 md:pb-32 sm:pb-48 pb-80 px-4 max-w-5xl">
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="sm:text-6xl text-4xl font-heading inline-flex items-center gap-2">
+            <h2 className="md:text-6xl sm:text-5xl text-[2.5rem] font-heading inline-flex items-center gap-2">
               EXPERIENCES
             </h2>
             <h3 className="text-teal-700 text-lg font-medium">Work and Education.</h3>
           </div>
         </div>
-
-        {/* <div className="flex p-0.5 mb-8 mx-auto max-w-6xl border rounded-2xl border-neutral-600/50 dark:border-neutral-400/50 transition-all">
-          <button
-            className={`rounded-xl px-4 py-2.5 ${option === 1 ? "font-medium bg-neutral-700 dark:bg-neutral-300 text-neutral-100 dark:text-neutral-800" : ""}`}
-            onClick={() => setOption(1)}
-          >
-            Work
-          </button>
-          <button
-            className={`rounded-xl px-4 py-2 ${option === 2 ? "font-medium bg-neutral-700 dark:bg-neutral-300 text-neutral-100 dark:text-neutral-800" : ""}`}
-            onClick={() => setOption(2)}
-          >
-            Education
-          </button>
-        </div> */}
         <div className="relative flex py-2 mb-8 mx-auto max-w-6xl border rounded-xl border-neutral-600/50 dark:border-neutral-400/50 transition-color">
           <button
             className={`z-10 rounded-xl w-16 transition-colors ${option === 1 && "text-neutral-100 dark:text-neutral-800"}`}
@@ -126,7 +117,7 @@ const toggleAccordion = (index) => {
               ))}
             </div>
       
-            <div className={`basis-1/2 max-w-3xl flex-grow flex flex-col gap-2 mx-auto  transition-all duration-1000 ${option === 2 ? "absolute " : "absolute translate-x-[700px] opacity-0"} `}>
+            <div className={`basis-1/2 max-w-3xl flex-grow flex flex-col gap-2 mx-auto  transition-all duration-1000 ${option === 2 ? "absolute " : "absolute translate-x-full opacity-0"} `}>
               {educations.map((education, index) => (
                 <div key={index} className="group bg-neutral-300/40 dark:bg-neutral-900/80 hover:bg-teal-600/10 dark:hover:bg-teal-900/20 rounded-2xl p-6">
                   <div className="flex flex-col">

@@ -59,25 +59,25 @@ const skills = [{
 
 export function Skills() {
   return (
-    <section id="skills" className="h-full flex flex-col justify-center py-20 px-4 relative">
+    <section id="skills" className="h-full flex flex-col justify-center pb-20 px-4 relative">
       
       <div className="max-w-5xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="sm:text-6xl text-5xl font-heading inline-flex items-center gap-2">
+          <h2 className="md:text-6xl sm:text-5xl text-[2.5rem]  font-heading inline-flex items-center gap-2">
             SKILLS
           </h2>
           <h3 className="text-teal-700 text-lg font-medium">My go-to technologies.</h3>
           
         </div>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-4 mx-auto max-w-5xl z-10">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 mx-auto max-w-5xl z-10">
         {skills.map((skill, index) => (
             <div key={index} className="group bg-neutral-300/40 dark:bg-neutral-900/70 hover:bg-teal-600/10 dark:hover:bg-teal-900/20 rounded-2xl p-6 hover:animate-float">
-                <div className=" flex flex-col sm:flex-row items-center gap-2 sm:gap-4 ">
+                <div className=" flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 r">
                     <img src={skill.source} alt={skill.title} className="w-8 h-8 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-300" />
                     <div>
                         <h3 className="text-lg font-body">{skill.title}</h3>
-                        <p className="text-neutral-500 text-sm hidden sm:block">{skill.desc}</p>
+                        <p className="text-neutral-500 text-sm block">{skill.desc}</p>
                     </div>
                 </div>
             </div>

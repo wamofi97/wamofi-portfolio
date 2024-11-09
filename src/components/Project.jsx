@@ -26,7 +26,7 @@ export default function Project() {
       <section id="project" className="flex flex-col justify-center py-20 px-4">
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="sm:text-6xl text-5xl font-heading inline-flex items-center gap-2">
+            <h2 className="md:text-6xl sm:text-5xl text-[2.5rem]  font-heading inline-flex items-center gap-2">
               PROJECTS
             </h2>
             <h3 className="text-teal-700 text-lg font-medium">Bringing ideas to life.</h3>

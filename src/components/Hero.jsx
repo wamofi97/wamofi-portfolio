@@ -10,8 +10,8 @@ import { Github, Linkedin, Mail, FileUser,  ChevronRight } from 'lucide-react';
 export default function Hero() {
   
   return (
-    <section className="flex items-center justify-center pt-16">
-      <div className="max-w-5xl px-4 py-20 flex flex-wrap gap-x-12 gap-y-8 items-center justify-center">
+    <section className="flex items-center justify-center pt-24 pb-20 lg:scale-[1.3] ">
+      <div className="max-w-5xl px-4 py-20 flex flex-wrap gap-x-8 gap-y-8 items-center justify-center">
         <div className='flex flex-col gap-4 items-center'>
           <span className='text-3xl'><span className=" animate-wave">👋 </span> Hello</span>
           <div className="relative group mx-auto">
@@ -20,7 +20,7 @@ export default function Hero() {
               <img 
                 src={profile4}
                 alt="Profile"
-                className="h-52 w-52 object-cover rounded-full transition-all duration-300"
+                className="h-40 w-40 object-cover rounded-full transition-all duration-300"
               />
             </div>
           </div>
