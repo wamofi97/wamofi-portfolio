@@ -1,11 +1,55 @@
 import { ChevronRight } from "lucide-react";
+import { useState } from "react";
+import emailjs from 'emailjs-com';
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const [isSending, setIsSending] = useState(false);
+  const [statusMessage, setStatusMessage] = useState('');
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSending(true);
+    setStatusMessage('');
+
+  emailjs
+      .sendForm(
+        'service_ea4bplr',
+        'template_mg73f1d',
+        e.target,
+        'WNGbpievNk53RhO-C'
+      )
+      .then(
+        (result) => {
+          setStatusMessage('Message sent successfully!');
+          setIsSending(false);
+          setFormData({ name: '', email: '', message: '' });
+        },
+        (error) => {
+          setStatusMessage('Failed to send message, please try again later.');
+          setIsSending(false);
+        }
+      );
+  };
+
   return (
     <section id="contact" className="flex flex-col justify-center py-20 px-4 relative">
       <div className="max-w-5xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="sm:text-6xl text-5xl font-heading inline-flex items-center gap-2">
+          <h2 className="md:text-6xl sm:text-5xl text-[2.5rem] font-heading inline-flex items-center gap-2">
             CONTACT
           </h2>
           <h3 className="text-teal-700 text-lg font-medium">Get in touch.</h3>
@@ -22,7 +66,7 @@ export default function Contact() {
         </div>
         <hr className="border-neutral-700/50 w-full mx-auto my-8"/>
         <div>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="grid sm:grid-cols-2 grid-flow-row gap-4">
               <div>
                 <label htmlFor="name">
@@ -31,6 +75,10 @@ export default function Contact() {
                 <input
                   type="text"
                   id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
                   placeholder="Your name"
                   className="w-full bg-neutral-300/50 dark:bg-neutral-900 border border-neutral-400/30 dark:border-neutral-800 rounded-2xl px-6 py-2 mt-2 focus:outline-none focus:ring-1 focus:ring-teal-500 placeholder:text-neutral-400/50"
                 />
@@ -42,6 +90,10 @@ export default function Contact() {
                 <input
                   type="email"
                   id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
                   placeholder="Your email"
                   className="w-full bg-neutral-300/50 dark:bg-neutral-900 border border-neutral-400/30 dark:border-neutral-800 rounded-2xl px-6 py-2 mt-2 focus:outline-none focus:ring-1 focus:ring-teal-500 placeholder:text-neutral-400/50"
                 />
@@ -53,6 +105,10 @@ export default function Contact() {
               </label>
               <textarea
                 id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
                 placeholder="Your message"
                 className="w-full bg-neutral-300/50 dark:bg-neutral-900 border border-neutral-400/30 dark:border-neutral-800 rounded-2xl px-6 py-2 mt-2 focus:outline-none focus:ring-1 focus:ring-teal-500 placeholder:text-neutral-400/50"
               ></textarea>
@@ -62,7 +118,7 @@ export default function Contact() {
                 type="submit"
                 className="cursor-pointer group relative inline-flex items-center gap-2 transition-all duration-300 bg-neutral-700 text-neutral-200 dark:bg-neutral-200 dark:text-neutral-700 hover:bg-teal-600 dark:hover:bg-teal-600 hover:text-neutral-50 hover:shadow-lg tracking-wide font-bold py-2 px-6 rounded-2xl mt-4"
               >
-                SEND
+                {isSending ? 'Sending...' : 'Send Message'}
                 <span 
                 className="w-0 overflow-hidden group-hover:w-5 transition-[width] duration-300 ease-in-out"
               >
@@ -71,9 +127,9 @@ export default function Contact() {
                 />
               </span>
               </button>
-              
             </div>
           </form>
+          {statusMessage && <p>{statusMessage}</p>}
         </div>
       </div>
       <div className="absolute top-10 sm:right-0 -right-20 sm:w-1/5 w-1/2 h-1/3 bg-teal-400 rounded-2xl blur-2xl opacity-20"></div>
