@@ -53,7 +53,7 @@ const toggleAccordion = (index) => {
 };
 
     return (
-      <section id="project" className="flex flex-col justify-center pt-20 pb-32  px-4 max-w-5xl overflow-hidden">
+      <section id="project" className="flex flex-col justify-center py-20 px-4 max-w-5xl overflow-hidden">
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="sm:text-6xl text-4xl font-heading inline-flex items-center gap-2">
@@ -63,7 +63,7 @@ const toggleAccordion = (index) => {
           </div>
         </div>
 
-        <div className="flex p-0.5 mb-8 mx-auto max-w-6xl border rounded-2xl border-neutral-600/50 dark:border-neutral-400/50 transition-all">
+        {/* <div className="flex p-0.5 mb-8 mx-auto max-w-6xl border rounded-2xl border-neutral-600/50 dark:border-neutral-400/50 transition-all">
           <button
             className={`rounded-xl px-4 py-2.5 ${option === 1 ? "font-medium bg-neutral-700 dark:bg-neutral-300 text-neutral-100 dark:text-neutral-800" : ""}`}
             onClick={() => setOption(1)}
@@ -76,6 +76,21 @@ const toggleAccordion = (index) => {
           >
             Education
           </button>
+        </div> */}
+        <div className="relative flex py-2 mb-8 mx-auto max-w-6xl border rounded-xl border-neutral-600/50 dark:border-neutral-400/50 transition-color">
+          <button
+            className={`z-10 rounded-xl w-16 transition-colors ${option === 1 && "text-neutral-100 dark:text-neutral-800"}`}
+            onClick={() => setOption(1)}
+          >
+          Work
+          </button>
+          <button
+            className={`z-10 rounded-xl w-24 transition-colors ${option === 2 && "text-neutral-100 dark:text-neutral-800"}`}
+            onClick={() => setOption(2)}
+          >
+          Education
+          </button>
+          <div className={`absolute top-0 ${option === 1 ? "w-16" : "w-24 translate-x-16"} h-10 rounded-[0.7rem] bg-neutral-700 dark:bg-neutral-300  transition-all duration-500`}></div>
         </div>
 
         <div className={` flex flex-wrap justify-center gap-4 mx-auto relative`}>
