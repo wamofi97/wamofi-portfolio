@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 ::-webkit-scrollbar {
   width: 12px; 
 }
@@ -20,16 +19,6 @@
   @apply bg-neutral-400 dark:bg-neutral-600; 
 }
 
-/* @keyframes move-dots {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 25px 25px;
-  }
-} */
-
-/* Define a small dotted background */
 .bg-dotted-light {
   background-image: radial-gradient(circle, #bcbcbc 1px, transparent 1px);
   background-size: 20px 20px;
