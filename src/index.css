@@ -20,29 +20,27 @@
   @apply bg-neutral-400 dark:bg-neutral-600; 
 }
 
-@keyframes move-dots {
+/* @keyframes move-dots {
   0% {
     background-position: 0 0;
   }
   100% {
-    background-position: 18px 18px;
+    background-position: 25px 25px;
   }
-}
+} */
 
 /* Define a small dotted background */
 .bg-dotted-light {
-  background-image: radial-gradient(circle, #b6b6b6 1px, transparent 1px);
-  background-size: 18px 18px;
+  background-image: radial-gradient(circle, #bcbcbc 1px, transparent 1px);
+  background-size: 20px 20px;
   animation: move-dots 8s linear infinite;
 }
 
 .dark .bg-dotted-dark {
-  background-image: radial-gradient(circle, #2b2b2b 1px, transparent 1px);
-  background-size: 18px 18px;
+  background-image: radial-gradient(circle , #162424 1px, transparent 1px);
+  background-size: 20px 20px;
   animation: move-dots 8s linear infinite;
 }
-
-
 
 @keyframes float {
     0%, 100% { transform: translateY(0); }
