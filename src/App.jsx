@@ -31,7 +31,7 @@ function App() {
         <Element name="about" className=" ">
               <About/>
         </Element>
-        <Element name="contact" className="min-h-screen flex items-center justify-center">
+        <Element name="contact" className="min-h-screen">
               <Contact/>
         </Element>
         <Footer/>
