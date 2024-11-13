@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 ::-webkit-scrollbar {
-  width: 12px; 
+  width: 8px; 
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-neutral-100 dark:bg-neutral-800;
+  @apply bg-neutral-100 dark:bg-neutral-900;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-neutral-300 dark:bg-neutral-700;
+  @apply bg-neutral-300 dark:bg-neutral-800;
 }
 
 
@@ -20,7 +20,7 @@
 }
 
 .bg-dotted-light {
-  background-image: radial-gradient(circle, #bcbcbc 1px, transparent 1px);
+  background-image: radial-gradient(circle, #8b8b8b 1px, transparent 1px);
   background-size: 20px 20px;
   animation: move-dots 8s linear infinite;
 }
