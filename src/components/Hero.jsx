@@ -10,7 +10,8 @@ import { Github, Linkedin, Mail, FileUser,  ChevronRight } from 'lucide-react';
 export default function Hero() {
   
   return (
-    <section className="flex items-center justify-center pt-24 pb-20 lg:scale-[1.3] ">
+    <section className="flex z-10 items-center justify-center pt-24 pb-20 lg:scale-[1.3] ">
+      
       <div className="max-w-5xl px-4 py-20 flex flex-wrap gap-x-8 gap-y-8 items-center justify-center">
         <div className='flex flex-col gap-4 items-center'>
           <span className='text-3xl'><span className=" animate-wave">👋 </span> Hello</span>
@@ -73,7 +74,7 @@ export default function Hero() {
             >
               See My Work
               <span 
-                className="w-0 overflow-hidden group-hover:w-5 transition-[width] duration-300 ease-in-out"
+                className="w-0 group-hover:w-5 transition-[width] duration-300 ease-in-out"
               >
                 <ChevronRight 
                   className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"

@@ -59,7 +59,7 @@ const toggleAccordion = (index) => {
 };
 
     return (
-      <section id="project" className="flex flex-col justify-center pt-20 md:pb-32 sm:pb-48 pb-80 px-4 max-w-5xl">
+      <section id="project" className="flex flex-col justify-center pt-20 md:pb-32 sm:pb-48 pb-80 px-4 max-w-5xl overflow-hidden">
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="md:text-6xl sm:text-5xl text-[2.5rem] font-heading inline-flex items-center gap-2">

@@ -12,9 +12,9 @@ import DottedBackground from "./components/DottedBackground";
 function App() {
 
   return (
-    <div className="w-full relative text-neutral-900 dark:text-neutral-200 transition-colors duration-500 overflow-hidden ">
+    <div className="w-full relative text-neutral-900 dark:text-neutral-200 transition-colors duration-500 overflow-hidden md:overflow-visible ">
       <Header/>
-      <main className="max-w-5xl mx-auto relative overflow-hidden md:overflow-visible " >
+      <main className="max-w-5xl mx-auto relative" >
         <Element name="hero" className="min-h-screen flex justify-center items-center">
             <Hero/>
         </Element>
@@ -35,7 +35,7 @@ function App() {
         </Element>
         <Footer/>
         <DottedBackground/>
-
+        
       </main>
     </div>
   )
