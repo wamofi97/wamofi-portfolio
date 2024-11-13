@@ -1,11 +1,20 @@
 import { ExternalLink, Github } from 'lucide-react';
 import portfolio from '../assets/portfolio.png';
 import walimatul from '../assets/walimatul.png';
+import biarkamimasak from '../assets/biarkamimasak.png';
 
 const projects = [
   {
+    "title": "Biar Kami Masak",
+    "desc": " A recipe app that suggests recipes based on user input. Integrate with AI model like OpenAI's GPT to suggest recipes based on available ingredients.",
+    "tech": ["React", "Tailwind CSS", "TypeScript", "Clerk"],
+    "link": "https://biarkamimasak.vercel.app/",
+    "source": "https://github.com/wamofi97/biarkamimasak",
+    "img": biarkamimasak
+  },
+  {
     "title": "Wedding RSVP",
-    "desc": "A simple RSVP website for wedding invitation",
+    "desc": "A simple website for wedding invitation where users can RSVP and manage their attendance for the wedding.",
     "tech": ["React", "Tailwind CSS", "Node.js", "Express", "PostgreSQL", ],
     "link": "https://walimatul-rsvp.onrender.com/",
     "source": "https://github.com/wamofi97/wedding-rsvp",
@@ -33,12 +42,12 @@ export default function Project() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mx-auto max-w-5xl z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto max-w-5xl z-10">
           {projects.map((project, index) => (
             <div key={index} className="group flex flex-col justify-between bg-gradient-to-t from-neutral-300/50 to-neutral-300/80 dark:from-teal-700/10 dark:to-neutral-900 rounded-2xl  hover:animate-float p-4">
                 <div className="flex flex-col gap-2 sm:gap-4">
                     <div className='relative bg-black rounded-2xl rounded-b-none transition-all duration-300 overflow-hidden'>
-                      <img src={project.img} alt={project.title} className="w-full h-full rounded-2xl rounded-b-none opacity-80 group-hover:opacity-40 transition-opacity duration-500" />
+                      <img src={project.img} alt={project.title} className="w-full md:h-60 h-full object-cover rounded-2xl rounded-b-none opacity-80 group-hover:opacity-40 transition-opacity duration-500" />
                       <div className="absolute left-4 opacity-0 translate-y-full group-hover:translate-y-0 group-hover:opacity-100 bottom-4  flex flex-wrap items-center gap-1 transition-all duration-500">
                           {project.tech.map((tech, index) => (
                               <p key={index} className="bg-neutral-400/30 text-neutral-300  py-1 px-2 rounded-lg text-sm font-medium ">{tech}</p>
