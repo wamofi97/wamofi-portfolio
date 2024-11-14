@@ -1,18 +1,25 @@
 import figma from "../assets/logos/figma.svg";
 import react from "../assets/logos/react.svg";
-import supabase from "../assets/logos/supabase.svg";
 import tailwind from "../assets/logos/tailwind.svg";
 import typescript from "../assets/logos/typescript.svg";
+import nextjs from "../assets/logos/nextjs.svg";
+import vite from "../assets/logos/vite.png";
+import github from "../assets/logos/github.svg";
+import javascript from "../assets/logos/javascript.svg";
+import postgres from "../assets/logos/postgres.png";
+import nodejs from "../assets/logos/nodejs.png";
+import express from "../assets/logos/express.svg";
 
-const skills = [{
-    title: "Figma",
-    source: figma,
-    desc: "Design tool"
+const skills = [
+  {
+    title: "JavaScript",
+    source: javascript,
+    desc: "Language"
   },
   {
-    title: "Github",
-    source: "https://github.com/favicon.ico",
-    desc: "Version control"
+    title: "Vite",
+    source: vite,
+    desc: "Frontend build tool"
   },
   {
     title: "React",
@@ -25,43 +32,47 @@ const skills = [{
     desc: "Language"
   },
   {
-    title: "Supabase",
-    source: supabase,
-    desc: "Database"  
-  },
-  {
     title: "Tailwind",
     source: tailwind,
     desc: "CSS framework"
   },   
   {
     title: "Next.js",
-    source: "https://nextjs.org/static/favicon/favicon-32x32.png",
-    desc: "Frontend framework"
+    source: nextjs,
+    desc: "Fullstack framework"
+  },
+  {
+    title: "Node.js",
+    source: nodejs,
+    desc: "Backend framework"
+  },
+  {
+    title: "Express",
+    source: express,
+    desc: "Backend framework"
   },
   {
     title: "PostgreSQL",
-    source: "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg",
+    source: postgres,
     desc: "Database"
   },
   {
-    title: "Vite",
-    source: "https://vitejs.dev/logo.svg",
-    desc: "Frontend build tool"
+    title: "Github",
+    source: github,
+    desc: "Version control"
   },
   {
-    title: "Vercel",
-    source: "https://vercel.com/favicon.ico",
-    desc: "Deployment platform"
-  }
-  
+    title: "Figma",
+    source: figma,
+    desc: "Design tool"
+  },
 ]
 
 export function Skills() {
   return (
-    <section  id="skills" className="h-full flex flex-col justify-center pb-20 px-4 relative">
+    <section  id="skills" className="h-full flex flex-col justify-center py-20 px-4 relative">
       
-      <div className="max-w-5xl mx-auto px-4">
+      <div className=" mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="md:text-6xl sm:text-5xl text-[2.5rem]  font-heading inline-flex items-center gap-2">
             SKILLS
@@ -70,14 +81,14 @@ export function Skills() {
           
         </div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 mx-auto max-w-5xl z-10">
+      <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mx-auto">
         {skills.map((skill, index) => (
-            <div key={index} className="group bg-neutral-300/40 dark:bg-neutral-900/70 hover:bg-teal-600/10 dark:hover:bg-teal-900/20 rounded-2xl p-6 hover:animate-float">
-                <div className=" flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 r">
-                    <img src={skill.source} alt={skill.title} className="w-8 h-8 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-300" />
+            <div key={index} className="group bg-neutral-300/60 dark:bg-neutral-900/60 hover:bg-teal-600/20 dark:hover:bg-teal-900/20 rounded-2xl p-4">
+                <div className=" flex flex-col sm:flex-row items-center gap-2 sm:gap-4 ">
+                    <img src={skill.source} alt={skill.title} className={`${skill.source === github ||  skill.source === nextjs || skill.source === express  ? "dark:invert" : ""}  h-8 object-cover group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500`} />
                     <div>
                         <h3 className="text-lg font-body">{skill.title}</h3>
-                        <p className="text-neutral-500 text-sm block">{skill.desc}</p>
+                        {/* <p className="text-neutral-500 text-sm md:block hidden">{skill.desc}</p> */}
                     </div>
                 </div>
             </div>
