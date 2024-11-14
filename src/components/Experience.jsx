@@ -99,7 +99,7 @@ const toggleAccordion = (index) => {
         </div>
 
         <div className={` flex flex-wrap justify-center gap-4 mx-auto relative`}>
-            <div className={`basis-1/2 max-w-3xl flex-grow  flex flex-col gap-2 mb-4 mx-auto transition-all duration-1000 ${option === 1 ? "" : "-translate-x-full opacity-0"} `}>
+            <div className={`basis-1/2 max-w-3xl flex-grow  flex flex-col gap-2 mb-4 mx-auto transition-all duration-700 ${option === 1 ? "" : "-translate-x-full opacity-0"} `}>
               {works.map((work, index) => (
                 <div key={index} onClick={() => toggleAccordion(index)} className="cursor-pointer group transition-all bg-neutral-300/60 dark:bg-neutral-900/80 hover:bg-teal-600/20  dark:hover:bg-teal-900/20 rounded-2xl p-6">
                   
@@ -137,7 +137,7 @@ const toggleAccordion = (index) => {
               ))}
             </div>
       
-            <div className={`basis-1/2 max-w-3xl flex-grow flex flex-col gap-2 mx-auto  transition-all duration-1000 ${option === 2 ? "absolute " : "absolute translate-x-full opacity-0"} `}>
+            <div className={`basis-1/2 max-w-3xl flex-grow flex flex-col gap-2 mx-auto  transition-all duration-700 ${option === 2 ? "absolute delay-100" : "absolute translate-x-full opacity-0 "} `}>
               {educations.map((education, index) => (
                 <div key={index} className="group bg-neutral-300/40 dark:bg-neutral-900/80 hover:bg-teal-600/10 dark:hover:bg-teal-900/20 rounded-2xl p-6">
                     <div className="flex sm:flex-row flex-col gap-x-2 justify-between">
