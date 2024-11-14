@@ -1,9 +1,17 @@
+import { ChevronRight } from "lucide-react";
 import {  useState } from "react";
+import infosyslogo from "/infosyslogo.png";
+import thifalniagalogo from "/thifalniagalogo.png";
+import actslogo from "/actslogo.png";
+import kelasprogramming from "/kelasprogramming.png";
+import generalassembly from "/generalassembly.svg";
+import iium from "/iium.png";
 
 const works = [
   {
     "title": "Service Desk Engineer",
     "company": "Infosys Sdn. Bhd.",
+    "logo": infosyslogo,
     "year": "Jan 2023 - Current",
     "desc": ["Managed and resolved technical issues reported by end-users through various communication channels, including calls, emails and ticketing systems.",
       "Cross trained in 2 different projects : Software as a Service(SAAS), Corporate Mobile",
@@ -13,14 +21,16 @@ const works = [
   {
     "title": "UI/UX Designer",
     "company": "Thifal Niaga Sdn. Bhd.",
-    "year": "August 2022 - December 2022",
+    "logo": thifalniagalogo,
+    "year": "Aug 2022 - Dec 2022",
     "desc": ["Developed high-fidelity wireframe & prototype for social entrepeneurship company Santai Artisan and Thifal Niaga.",
       "Designed user interface, digital materials for websites, posters, banners & etc.",
       "Created and translated business requirements into sitemaps, user journeys, wireframes and navigation flows that leads towards intuitive user experiences."]
   },
   {
-    "title": "Intern",
+    "title": "Intern Trainee",
     "company": "ACTS Smart Solution Sdn. Bhd.",
+    "logo": actslogo,
     "year": "March 2021 - July 2021",
     "desc": ["Worked on the systematic review of Safety Assist & Motorcyclist Safety technologies for ASEAN market.",
       "Performed data collection & analysis of questionnaires and interviews ASEAN NCAP stakeholders."]
@@ -31,21 +41,25 @@ const educations = [
   {
     "title": "Online Coding Bootcamp – PERN STACK 2024",
     "company": "KelasProgramming.com",
+    logo: kelasprogramming,
     "year": "Jan 2024 – June 2024"
   },
   {
     "title": "User Experience Design Bootcamp",
     "company": "General Assembly",
-    "year": "Aug 2023 – December 2023"
+    logo: generalassembly,
+    "year": "Aug 2023 – Dec 2023"
   },
   {
     "title": "Bachelor of Engineering (Aerospace Engineering) (Honours)",
     "company": "International Islamic University Malaysia (IIUM)",
+    logo: iium,
     "year": "Feb 2017 – Aug 2021"
   },
   {
     "title": "Foundation in Engineering and Computer Science",
     "company": "International Islamic University Malaysia (IIUM)",
+    logo: iium,
     "year": "Sep 2015 - Dec 2016"
   }
 ]
@@ -55,7 +69,7 @@ export default function Experience() {
   const [openIndex, setOpenIndex] = useState(null);
 
 const toggleAccordion = (index) => {
-  setOpenIndex(openIndex === index ? null : index);
+  setOpenIndex(index === openIndex ? null : index);
 };
 
     return (
@@ -85,50 +99,67 @@ const toggleAccordion = (index) => {
         </div>
 
         <div className={` flex flex-wrap justify-center gap-4 mx-auto relative`}>
-            <div className={`basis-1/2 max-w-3xl  flex-grow flex flex-col gap-2 mb-4 mx-auto transition-all duration-1000 ${option === 1 ? "" : "-translate-x-full opacity-0"} `}>
+            <div className={`basis-1/2 max-w-3xl flex-grow  flex flex-col gap-2 mb-4 mx-auto transition-all duration-1000 ${option === 1 ? "" : "-translate-x-full opacity-0"} `}>
               {works.map((work, index) => (
-                <div key={index} className={` group transition-all bg-neutral-300/40 dark:bg-neutral-900/80 hover:bg-teal-600/10  dark:hover:bg-teal-900/20 rounded-2xl p-6`}>
-                  <div className="flex justify-between items-start">
-                    <div className="overflow-hidden">
-                      <h3 className="text-xl font-body">{work.title}</h3>
-                      <p className="text-teal-700">{work.company}</p>
-                      <p className="text-neutral-500 text-sm">{work.year}</p>
-                      <hr className="w-[75vw] opacity-0"></hr>
-                      
-                      {openIndex === index && (
-                        <div className="">
-                          {work.desc.map((item, lowerIndex) => (
-                              <p key={lowerIndex} className="text-neutral-600 dark:text-neutral-400/80 mt-1"><span>• </span>{item}</p>
-                          ))}
+                <div key={index} onClick={() => toggleAccordion(index)} className="cursor-pointer group transition-all bg-neutral-300/60 dark:bg-neutral-900/80 hover:bg-teal-600/20  dark:hover:bg-teal-900/20 rounded-2xl p-6">
+                  
+                      <div className="">
+                        <div className="flex sm:flex-row flex-col gap-x-2 justify-between">
+                          <div className="flex sm:gap-6 ">
+                            <div className="flex justify-center items-center">
+                              <img src={work.logo} alt={work.title} className="saturate-[.7] w-14 sm:block hidden" />
+                            </div>
+                            <div>
+                              <div className="flex items-center gap-2">
+                                <p className="text-teal-700">{work.company}</p>
+                                <span className={`text-xl w-5 overflow-hidden ${openIndex === index ? "rotate-90" : "rotate-0"} transition-transform `}>
+                                <ChevronRight className="w-5 h-5 opacity-60 -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
+                              </span>
+
+                              </div>
+                              <h3 className="text-xl font-body">{work.title}</h3>
+                            </div>
+                          </div>
+                          <p className="text-neutral-500 text-sm sm:text-end">{work.year}</p>
                         </div>
-                      )}
-                      
-                    </div>
-                    <button
-                        className="absolute  right-8 text-xl text-neutral-600 hover:text-teal-700 dark:text-neutral-400 dark:hover:text-teal-700"
-                        onClick={() => toggleAccordion(index)}
-                      >
-                        <span className={`transform ${openIndex === index ? "rotate-180" : ""} transition-transform`}>
-                          ▼
-                        </span>
-                      </button>
-                  </div>
+                        
+                        <hr className="w-[60vw] opacity-0"></hr>
+                        
+
+                        {openIndex === index && (
+                          <div className="">
+                            {work.desc.map((item, lowerIndex) => (
+                                <p key={lowerIndex} className="text-neutral-600 dark:text-neutral-400/80 mt-1"><span>• </span>{item}</p>
+                            ))}
+                          </div>
+                        )}
+                      </div>  
+                  
+                  
+                  
                 </div>
               ))}
             </div>
+            
       
             <div className={`basis-1/2 max-w-3xl flex-grow flex flex-col gap-2 mx-auto  transition-all duration-1000 ${option === 2 ? "absolute " : "absolute translate-x-full opacity-0"} `}>
               {educations.map((education, index) => (
                 <div key={index} className="group bg-neutral-300/40 dark:bg-neutral-900/80 hover:bg-teal-600/10 dark:hover:bg-teal-900/20 rounded-2xl p-6">
-                  <div className="flex flex-col">
-                    <div>
-                      <h3 className="text-xl font-body">{education.title}</h3>
-                      <p className="text-teal-700">{education.company}</p>
-                      <p className="text-neutral-500 text-sm">{education.year}</p>
-                    </div>
+                    <div className="flex sm:flex-row flex-col gap-x-2 justify-between">
+                        <div className="flex sm:gap-6 ">
+                            <div className="flex justify-center items-center">
+                              <img src={education.logo} alt={education.title} className="saturate-[.7] w-14 sm:block hidden" />
+                            </div>
+                            <div>
+                              <p className="text-teal-700">{education.company}</p>
+                              <h3 className="text-xl font-body">{education.title}</h3>
+                            </div>
+                          </div>
+                          <p className="text-neutral-500 text-sm sm:text-end">{education.year}</p>
+                      </div>
                   </div>
-                </div>
               ))}
+            <hr className="w-[60vw] opacity-0"></hr>
             </div>
             
         </div>
