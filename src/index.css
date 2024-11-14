@@ -22,18 +22,16 @@
 .bg-dotted-light {
   background-image: radial-gradient(circle, #b1b1b1 1px, transparent 1px);
   background-size: 20px 20px;
-  animation: move-dots 8s linear infinite;
 }
 
 .dark .bg-dotted-dark {
   background-image: radial-gradient(circle , #162424 1px, transparent 1px);
   background-size: 20px 20px;
-  animation: move-dots 8s linear infinite;
 }
 
 @keyframes float {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-5px); }
   }
   
   @keyframes wave {
@@ -46,7 +44,7 @@
   }
   
   .animate-float {
-    animation: float 3s ease-in-out infinite;
+    animation: float 5s ease-in-out infinite;
   }
   
   .animate-wave {
@@ -62,7 +60,7 @@
   }
   
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-t from-teal-800 dark:from-teal-400 to-teal-500 dark:to-teal-200
+    @apply bg-clip-text text-transparent bg-gradient-to-t from-teal-800 dark:from-teal-600 to-teal-500 dark:to-teal-100
   }
 
   .active-text {
