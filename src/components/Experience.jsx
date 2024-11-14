@@ -73,7 +73,7 @@ const toggleAccordion = (index) => {
 };
 
     return (
-      <section id="project" className="flex flex-col justify-center pt-20 md:pb-32 sm:pb-48 pb-80 px-4 max-w-5xl overflow-hidden">
+      <section id="project" className={`flex flex-col justify-center ${option === 1 ? "" : "lg:pb-44 md:pb-68 pb-80"} py-24 px-4 max-w-5xl overflow-hidden`}>
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="md:text-6xl sm:text-5xl text-[2.5rem] font-heading inline-flex items-center gap-2">
@@ -105,7 +105,7 @@ const toggleAccordion = (index) => {
                   
                       <div className="">
                         <div className="flex sm:flex-row flex-col gap-x-2 justify-between">
-                          <div className="flex sm:gap-6 ">
+                          <div className="flex sm:gap-4 ">
                             <div className="flex justify-center items-center">
                               <img src={work.logo} alt={work.title} className="saturate-[.7] w-14 sm:block hidden" />
                             </div>
@@ -124,7 +124,6 @@ const toggleAccordion = (index) => {
                         </div>
                         
                         <hr className="w-[60vw] opacity-0"></hr>
-                        
 
                         {openIndex === index && (
                           <div className="">
@@ -134,19 +133,15 @@ const toggleAccordion = (index) => {
                           </div>
                         )}
                       </div>  
-                  
-                  
-                  
                 </div>
               ))}
             </div>
-            
       
             <div className={`basis-1/2 max-w-3xl flex-grow flex flex-col gap-2 mx-auto  transition-all duration-1000 ${option === 2 ? "absolute " : "absolute translate-x-full opacity-0"} `}>
               {educations.map((education, index) => (
                 <div key={index} className="group bg-neutral-300/40 dark:bg-neutral-900/80 hover:bg-teal-600/10 dark:hover:bg-teal-900/20 rounded-2xl p-6">
                     <div className="flex sm:flex-row flex-col gap-x-2 justify-between">
-                        <div className="flex sm:gap-6 ">
+                        <div className="flex sm:gap-4 ">
                             <div className="flex justify-center items-center">
                               <img src={education.logo} alt={education.title} className="saturate-[.7] w-14 sm:block hidden" />
                             </div>
@@ -155,7 +150,7 @@ const toggleAccordion = (index) => {
                               <h3 className="text-xl font-body">{education.title}</h3>
                             </div>
                           </div>
-                          <p className="text-neutral-500 text-sm sm:text-end">{education.year}</p>
+                          <p className="text-neutral-500 text-sm sm:text-end md:min-w-36">{education.year}</p>
                       </div>
                   </div>
               ))}
