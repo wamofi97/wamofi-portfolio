@@ -15,19 +15,19 @@ function App() {
     <div className="w-full relative text-neutral-900 dark:text-neutral-200 transition-colors duration-500 overflow-hidden md:overflow-visible ">
       <Header/>
       <main className="max-w-5xl mx-auto relative" >
-        <Element name="hero" className="min-h-screen flex justify-center items-center">
+        <Element name="hero" className="lg:min-h-screen flex justify-center items-center">
             <Hero/>
         </Element>
-        <Element name="skills" className="min-h-screen flex justify-center items-center">
+        <Element name="skills" >
           <Skills/>
         </Element>
-        <Element name="projects" className=" min-h-screen flex justify-center items-center">
+        <Element name="projects">
             <Project/>
         </Element>
-        <Element name="experiences" className=" min-h-screen flex justify-center items-center">
+        <Element name="experiences">
           <Experience/>
         </Element>
-        <Element name="about" className="min-h-screen flex justify-center items-center">
+        <Element name="about">
               <About/>
         </Element>
         <Element name="contact" className="min-h-screen flex justify-center items-center">
