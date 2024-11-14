@@ -15,7 +15,7 @@ function App() {
     <div className="w-full relative text-neutral-900 dark:text-neutral-200 transition-colors duration-500 overflow-hidden md:overflow-visible ">
       <Header/>
       <main className="max-w-5xl mx-auto relative" >
-        <Element name="hero" className="lg:min-h-screen flex justify-center items-center">
+        <Element name="hero" className="min-h-screen flex justify-center items-center">
             <Hero/>
         </Element>
         <Element name="skills" >

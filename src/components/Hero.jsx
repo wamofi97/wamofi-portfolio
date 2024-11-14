@@ -7,7 +7,7 @@ import malaysia from '/malaysia.svg';
 export default function Hero() {
   
   return (
-    <section className="flex md:flex-row flex-col items-center justify-center gap-x-8 gap-y-4 py-52 px-4">
+    <section className="flex md:flex-row flex-col items-center justify-center gap-x-8 gap-y-4 py-20 px-4">
         <div className="relative group flex flex-col items-center justify-center">
           <div className="absolute inset-0 bg-gradient-to-r from-teal-200 to-teal-400 rounded-full blur-2xl opacity-40 group-hover:opacity-70 transition-opacity"></div>
           <div className="relative rounded-full shadow-xl rotate-3 hover:rotate-0 transition-transform duration-300">
