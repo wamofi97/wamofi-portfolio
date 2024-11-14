@@ -34,11 +34,11 @@ export function Header() {
             <Link to="hero" duration={700} smooth={true} className="cursor-pointer text-xl font-bold font-logo gradient-text group">wamofi.dev</Link>
            
             <div className="flex items-center gap-8 font-medium uppercase text-md">
-              <Link to="skills" spy={true} duration={700} smooth={true} offset={-40} activeClass="active-text" className="cursor-pointer hover:text-teal-500 transition-all">Skills</Link>
-              <Link to="projects" spy={true} duration={700} smooth={true} offset={-40} activeClass="active-text" className="cursor-pointer hover:text-teal-500 transition-all" >Projects</Link>
-              <Link to="experiences" spy={true} duration={700} smooth={true} offset={-40} activeClass="active-text"  className="cursor-pointer hover:text-teal-500 transition-all" >Experiences</Link>
-              <Link to="about" spy={true} duration={700} smooth={true} offset={-40} activeClass="active-text"  className="cursor-pointer hover:text-teal-500 transition-all">About</Link>
-              <Link to="contact" spy={true} duration={700} smooth={true} offset={-40} activeClass="active-text"  className="cursor-pointer hover:text-teal-500 transition-all" >Contact</Link>
+              <Link to="skills" spy={true} duration={700} smooth={true} offset={-80} activeClass="active-text" className="cursor-pointer hover:text-teal-500 transition-all">Skills</Link>
+              <Link to="projects" spy={true} duration={700} smooth={true} offset={-80} activeClass="active-text" className="cursor-pointer hover:text-teal-500 transition-all" >Projects</Link>
+              <Link to="experiences" spy={true} duration={700} smooth={true} offset={-80} activeClass="active-text"  className="cursor-pointer hover:text-teal-500 transition-all" >Experiences</Link>
+              <Link to="about" spy={true} duration={700} smooth={true} offset={-80} activeClass="active-text"  className="cursor-pointer hover:text-teal-500 transition-all">About</Link>
+              <Link to="contact" spy={true} duration={700} smooth={true} offset={-20} activeClass="active-text"  className="cursor-pointer hover:text-teal-500 transition-all" >Contact</Link>
             </div>
             {/* <ThemeToggle/> */}
           </div>
