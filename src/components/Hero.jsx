@@ -7,7 +7,7 @@ import malaysia from '/malaysia.svg';
 export default function Hero() {
   
   return (
-    <section className="flex md:flex-row flex-col items-center justify-center gap-8 py-52 px-4">
+    <section className="flex md:flex-row flex-col items-center justify-center gap-x-8 gap-y-4 py-52 px-4">
         <div className="relative group flex flex-col items-center justify-center">
           <div className="absolute inset-0 bg-gradient-to-r from-teal-200 to-teal-400 rounded-full blur-2xl opacity-40 group-hover:opacity-70 transition-opacity"></div>
           <div className="relative rounded-full shadow-xl rotate-3 hover:rotate-0 transition-transform duration-300">
@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="space-y-4">
           <div className="space-y-2 flex flex-col md:text-start text-center">
             <p className='z-10 w-fit md:mx-0 mx-auto bg-neutral-300/50 dark:bg-neutral-800/50 px-4 py-2 rounded-full text-sm flex items-center'><span className='w-[6px] h-[6px] inline-block rounded-full bg-teal-600 dark:bg-teal-300 mr-2 animate-pulse'></span>Available for work</p>  
-            <h1 className='lg:text-6xl sm:text-5xl text-3xl font-bold'> Hi, I'm <span className='gradient-text'>Wan Firdaus</span> <span className=" animate-wave">👋 </span></h1>
+            <h1 className='lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-bold'> Hi, I'm <span className='gradient-text'>Wan Firdaus</span> <span className=" animate-wave">👋 </span></h1>
             <h2 className="md:text-3xl sm:text-2xl text-xl">A <span className=' font-bold'>frontend developer</span> that love to learn and build things. Based from Malaysia
             <img className='w-8 ml-2 inline' src={malaysia} alt="malaysia flag" />
             </h2>
