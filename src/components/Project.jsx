@@ -33,9 +33,9 @@ const projects = [
 export default function Project() {
     return (
       <section id="project" className="flex flex-col justify-center py-20 px-4">
-        <div className="max-w-5xl mx-auto px-4">
+        <div className="mx-auto">
           <div className="text-center mb-16">
-            <h2 className="md:text-6xl sm:text-5xl text-[2.5rem]  font-heading inline-flex items-center gap-2">
+            <h2 className="md:text-6xl sm:text-5xl text-[2.5rem] font-heading inline-flex items-center gap-2">
               PROJECTS
             </h2>
             <h3 className="text-teal-700 text-lg font-medium">Bringing ideas to life.</h3>
@@ -44,7 +44,7 @@ export default function Project() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto max-w-5xl z-10">
           {projects.map((project, index) => (
-            <div key={index} className="group flex flex-col justify-between bg-gradient-to-t from-neutral-300/50 to-neutral-300/80 dark:from-teal-700/10 dark:to-neutral-900 rounded-2xl  hover:animate-float p-4">
+            <div key={index} className="group flex flex-col justify-between bg-gradient-to-t from-neutral-300/50 to-neutral-300/80 dark:from-teal-700/10 dark:to-neutral-900 rounded-2xl p-5">
                 <div className="flex flex-col gap-2 sm:gap-4">
                     <div className='relative bg-black rounded-2xl rounded-b-none transition-all duration-300 overflow-hidden'>
                       <img src={project.img} alt={project.title} className="w-full md:h-60 h-full object-cover rounded-2xl rounded-b-none opacity-80 group-hover:opacity-40 transition-opacity duration-500" />
@@ -58,11 +58,6 @@ export default function Project() {
                         <h3 className="text-xl font-body text">{project.title}</h3>
                         <p className="text-neutral-500">{project.desc}</p>
                     </div>
-                    {/* <div className="flex flex-wrap items-center gap-1 transition-all duration-500">
-                          {project.tech.map((tech, index) => (
-                              <p key={index} className="bg-neutral-400/30  py-1 px-2 rounded-lg text-sm font-medium ">{tech}</p>
-                          ))}
-                      </div> */}
                 </div>
                 
                 <div className="flex items-center justify-end gap-2 m-4">

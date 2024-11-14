@@ -83,12 +83,12 @@ export function Skills() {
       </div>
       <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mx-auto">
         {skills.map((skill, index) => (
-            <div key={index} className="group bg-neutral-300/60 dark:bg-neutral-900/60 hover:bg-teal-600/20 dark:hover:bg-teal-900/20 rounded-2xl p-4">
+            <div key={index} className="group bg-neutral-300/60 dark:bg-neutral-900/60 hover:bg-teal-600/20 dark:hover:bg-teal-900/20 rounded-2xl p-5">
                 <div className=" flex flex-col sm:flex-row items-center gap-2 sm:gap-4 ">
                     <img src={skill.source} alt={skill.title} className={`${skill.source === github ||  skill.source === nextjs || skill.source === express  ? "dark:invert" : ""}  h-8 object-cover group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500`} />
                     <div>
                         <h3 className="text-lg font-body">{skill.title}</h3>
-                        {/* <p className="text-neutral-500 text-sm md:block hidden">{skill.desc}</p> */}
+                        <p className="text-neutral-500 text-sm md:block hidden">{skill.desc}</p>
                     </div>
                 </div>
             </div>
