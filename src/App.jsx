@@ -10,35 +10,39 @@ import { Element } from "react-scroll";
 import DottedBackground from "./components/DottedBackground";
 
 function App() {
-
   return (
-    <div className="w-full relative text-neutral-900 dark:text-neutral-200 transition-colors duration-500 overflow-hidden md:overflow-visible ">
-      <Header/>
-      <main className="max-w-5xl mx-auto relative" >
-        <Element name="hero" className="min-h-screen flex justify-center items-center">
-            <Hero/>
+    <div className="relative w-full overflow-hidden text-neutral-900 transition-colors duration-500 dark:text-neutral-200 md:overflow-visible">
+      <Header />
+      <main className="relative mx-auto max-w-5xl">
+        <Element
+          name="hero"
+          className="flex min-h-screen items-center justify-center"
+        >
+          <Hero />
         </Element>
-        <Element name="skills" >
-          <Skills/>
+        <Element name="skills">
+          <Skills />
         </Element>
         <Element name="projects">
-            <Project/>
+          <Project />
         </Element>
         <Element name="experiences">
-          <Experience/>
+          <Experience />
         </Element>
         <Element name="about">
-              <About/>
+          <About />
         </Element>
-        <Element name="contact" className="min-h-screen flex justify-center items-center">
-              <Contact/>
+        <Element
+          name="contact"
+          className="flex min-h-screen items-center justify-center"
+        >
+          <Contact />
         </Element>
-        <Footer/>
-        <DottedBackground/>
-        
+        <Footer />
+        <DottedBackground />
       </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

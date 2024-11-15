@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 ::-webkit-scrollbar {
-  width: 8px; 
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -14,9 +14,8 @@
   @apply bg-neutral-300 dark:bg-neutral-800;
 }
 
-
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-neutral-400 dark:bg-neutral-600; 
+  @apply bg-neutral-400 dark:bg-neutral-600;
 }
 
 .bg-dotted-light {
@@ -25,126 +24,148 @@
 }
 
 .dark .bg-dotted-dark {
-  background-image: radial-gradient(circle , #162424 1px, transparent 1px);
+  background-image: radial-gradient(circle, #162424 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
+  0%,
+  100% {
+    transform: translateY(0);
   }
-  
-  @keyframes wave {
-    0% { transform: rotate(0deg); }
-    20% { transform: rotate(14deg); }
-    40% { transform: rotate(-4deg); }
-    60% { transform: rotate(10deg); }
-    80% { transform: rotate(-4deg); }
-    100% { transform: rotate(0deg); }
+  50% {
+    transform: translateY(-5px);
   }
-  
-  .animate-float {
-    animation: float 5s ease-in-out infinite;
-  }
-  
-  .animate-wave {
-    animation: wave 2.5s ease-in-out infinite;
-    transform-origin: 70% 70%;
-    display: inline-block;
-  }
+}
 
-  .animate-hover-wave {
-    animation: wave 2.5s ease-in-out infinite;
-    transform-origin: 70% 70%;
-    display: inline-block;
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-t from-teal-800 dark:from-teal-600 to-teal-500 dark:to-teal-100
+  20% {
+    transform: rotate(14deg);
   }
+  40% {
+    transform: rotate(-4deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-4deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 
-  .active-text {
-    @apply gradient-text font-bold scale-105
-  }
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
 
-  @layer base {
-    @font-face {
-        font-family: 'ClashDisplay-Extralight';
-        src: url('../fonts/ClashDisplay-Extralight.woff2') format('woff2'),
-             url('../fonts/ClashDisplay-Extralight.woff') format('woff'),
-             url('../fonts/ClashDisplay-Extralight.ttf') format('truetype');
-        font-weight: 200;
-        font-display: swap;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'ClashDisplay-Light';
-        src: url('../fonts/ClashDisplay-Light.woff2') format('woff2'),
-             url('../fonts/ClashDisplay-Light.woff') format('woff'),
-             url('../fonts/ClashDisplay-Light.ttf') format('truetype');
-        font-weight: 300;
-        font-display: swap;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'ClashDisplay-Regular';
-        src: url('../fonts/ClashDisplay-Regular.woff2') format('woff2'),
-             url('../fonts/ClashDisplay-Regular.woff') format('woff'),
-             url('../fonts/ClashDisplay-Regular.ttf') format('truetype');
-        font-weight: 400;
-        font-display: swap;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'ClashDisplay-Medium';
-        src: url('../fonts/ClashDisplay-Medium.woff2') format('woff2'),
-             url('../fonts/ClashDisplay-Medium.woff') format('woff'),
-             url('../fonts/ClashDisplay-Medium.ttf') format('truetype');
-        font-weight: 500;
-        font-display: swap;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'ClashDisplay-Semibold';
-        src: url('../fonts/ClashDisplay-Semibold.woff2') format('woff2'),
-             url('../fonts/ClashDisplay-Semibold.woff') format('woff'),
-             url('../fonts/ClashDisplay-Semibold.ttf') format('truetype');
-        font-weight: 600;
-        font-display: swap;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'ClashDisplay-Bold';
-        src: url('../fonts/ClashDisplay-Bold.woff2') format('woff2'),
-             url('../fonts/ClashDisplay-Bold.woff') format('woff'),
-             url('../fonts/ClashDisplay-Bold.ttf') format('truetype');
-        font-weight: 700;
-        font-display: swap;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'JetBrainsMono-Variable';
-        src: url('../fonts/JetBrainsMono-Variable.woff2') format('woff2'),
-             url('../fonts/JetBrainsMono-Variable.woff') format('woff'),
-             url('../fonts/JetBrainsMono-Variable.ttf') format('truetype');
-        font-weight: 100 800;
-        font-display: swap;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'Satoshi-Variable';
-        src: url('../fonts/Satoshi-Variable.woff2') format('woff2'),
-             url('../fonts/Satoshi-Variable.woff') format('woff'),
-             url('../fonts/Satoshi-Variable.ttf') format('truetype');
-        font-weight: 300 900;
-        font-display: swap;
-        font-style: normal;
-      }
-  }
+.animate-wave {
+  animation: wave 2.5s ease-in-out infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
 
-  body{
-    font-family: Satoshi-Variable;
-  }
-  
+.animate-hover-wave {
+  animation: wave 2.5s ease-in-out infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
 
-  
+.gradient-text {
+  @apply bg-gradient-to-t from-teal-800 to-teal-500 bg-clip-text text-transparent dark:from-teal-600 dark:to-teal-100;
+}
+
+.active-text {
+  @apply gradient-text scale-105 font-bold;
+}
+
+@layer base {
+  @font-face {
+    font-family: "ClashDisplay-Extralight";
+    src:
+      url("../fonts/ClashDisplay-Extralight.woff2") format("woff2"),
+      url("../fonts/ClashDisplay-Extralight.woff") format("woff"),
+      url("../fonts/ClashDisplay-Extralight.ttf") format("truetype");
+    font-weight: 200;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "ClashDisplay-Light";
+    src:
+      url("../fonts/ClashDisplay-Light.woff2") format("woff2"),
+      url("../fonts/ClashDisplay-Light.woff") format("woff"),
+      url("../fonts/ClashDisplay-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "ClashDisplay-Regular";
+    src:
+      url("../fonts/ClashDisplay-Regular.woff2") format("woff2"),
+      url("../fonts/ClashDisplay-Regular.woff") format("woff"),
+      url("../fonts/ClashDisplay-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "ClashDisplay-Medium";
+    src:
+      url("../fonts/ClashDisplay-Medium.woff2") format("woff2"),
+      url("../fonts/ClashDisplay-Medium.woff") format("woff"),
+      url("../fonts/ClashDisplay-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "ClashDisplay-Semibold";
+    src:
+      url("../fonts/ClashDisplay-Semibold.woff2") format("woff2"),
+      url("../fonts/ClashDisplay-Semibold.woff") format("woff"),
+      url("../fonts/ClashDisplay-Semibold.ttf") format("truetype");
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "ClashDisplay-Bold";
+    src:
+      url("../fonts/ClashDisplay-Bold.woff2") format("woff2"),
+      url("../fonts/ClashDisplay-Bold.woff") format("woff"),
+      url("../fonts/ClashDisplay-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "JetBrainsMono-Variable";
+    src:
+      url("../fonts/JetBrainsMono-Variable.woff2") format("woff2"),
+      url("../fonts/JetBrainsMono-Variable.woff") format("woff"),
+      url("../fonts/JetBrainsMono-Variable.ttf") format("truetype");
+    font-weight: 100 800;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Satoshi-Variable";
+    src:
+      url("../fonts/Satoshi-Variable.woff2") format("woff2"),
+      url("../fonts/Satoshi-Variable.woff") format("woff"),
+      url("../fonts/Satoshi-Variable.ttf") format("truetype");
+    font-weight: 300 900;
+    font-display: swap;
+    font-style: normal;
+  }
+}
+
+body {
+  font-family: Satoshi-Variable;
+}

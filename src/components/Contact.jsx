@@ -1,16 +1,16 @@
 import { ChevronRight } from "lucide-react";
 import { useState } from "react";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   const [isSending, setIsSending] = useState(false);
-  const [statusMessage, setStatusMessage] = useState('');
+  const [statusMessage, setStatusMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,55 +23,56 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSending(true);
-    setStatusMessage('');
+    setStatusMessage("");
 
-  emailjs
+    emailjs
       .sendForm(
-        'service_ea4bplr',
-        'template_mg73f1d',
+        "service_ea4bplr",
+        "template_mg73f1d",
         e.target,
-        'WNGbpievNk53RhO-C'
+        "WNGbpievNk53RhO-C",
       )
       .then(
         (result) => {
-          setStatusMessage('Message sent successfully!');
+          setStatusMessage("Message sent successfully!");
           setIsSending(false);
-          setFormData({ name: '', email: '', message: '' });
+          setFormData({ name: "", email: "", message: "" });
         },
         (error) => {
-          setStatusMessage('Failed to send message, please try again later.');
+          setStatusMessage("Failed to send message, please try again later.");
           setIsSending(false);
-        }
+        },
       );
   };
 
   return (
-    <section id="contact" className="flex flex-col justify-center py-20 px-4 relative">
-      <div className="max-w-5xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="md:text-6xl sm:text-5xl text-[2.5rem] font-heading inline-flex items-center gap-2">
+    <section
+      id="contact"
+      className="relative flex flex-col justify-center px-4 py-20"
+    >
+      <div className="mx-auto max-w-5xl px-4">
+        <div className="mb-16 text-center">
+          <h2 className="inline-flex items-center gap-2 font-heading text-[2.5rem] sm:text-5xl md:text-6xl">
             CONTACT
           </h2>
-          <h3 className="text-teal-700 text-lg font-medium">Get in touch.</h3>
+          <h3 className="text-lg font-medium text-teal-700">Get in touch.</h3>
         </div>
       </div>
-      <div className="grid mx-auto max-w-3xl px-4 z-10">
+      <div className="z-10 mx-auto grid max-w-3xl px-4">
         <div>
-          <p className="text-neutral-700 dark:text-neutral-400 text-lg leading-relaxed sm:text-center">
-            I'm always looking for new opportunities. If you'd like to chat, feel
-            free to get in touch. I am currently looking for a{" "}
-            <span className="font-medium">full-time position</span> as a software
-            developer.
+          <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-400 sm:text-center">
+            I'm always looking for new opportunities. If you'd like to chat,
+            feel free to get in touch. I am currently looking for a{" "}
+            <span className="font-medium">full-time position</span> as a
+            software developer.
           </p>
         </div>
-        <hr className="border-neutral-700/50 w-full mx-auto my-8"/>
+        <hr className="mx-auto my-8 w-full border-neutral-700/50" />
         <div>
           <form onSubmit={handleSubmit}>
-            <div className="grid sm:grid-cols-2 grid-flow-row gap-4">
+            <div className="grid grid-flow-row gap-4 sm:grid-cols-2">
               <div>
-                <label htmlFor="name">
-                  Name
-                </label>
+                <label htmlFor="name">Name</label>
                 <input
                   type="text"
                   id="name"
@@ -80,13 +81,11 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder="Your name"
-                  className="w-full bg-neutral-300/50 dark:bg-neutral-900 border border-neutral-400/30 dark:border-neutral-800 rounded-2xl px-6 py-2 mt-2 focus:outline-none focus:ring-1 focus:ring-teal-500 placeholder:text-neutral-400/50"
+                  className="mt-2 w-full rounded-2xl border border-neutral-400/30 bg-neutral-300/50 px-6 py-2 placeholder:text-neutral-400/50 focus:outline-none focus:ring-1 focus:ring-teal-500 dark:border-neutral-800 dark:bg-neutral-900"
                 />
               </div>
               <div>
-                <label htmlFor="email">
-                  Email address
-                </label>
+                <label htmlFor="email">Email address</label>
                 <input
                   type="email"
                   id="email"
@@ -95,14 +94,12 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder="Your email"
-                  className="w-full bg-neutral-300/50 dark:bg-neutral-900 border border-neutral-400/30 dark:border-neutral-800 rounded-2xl px-6 py-2 mt-2 focus:outline-none focus:ring-1 focus:ring-teal-500 placeholder:text-neutral-400/50"
+                  className="mt-2 w-full rounded-2xl border border-neutral-400/30 bg-neutral-300/50 px-6 py-2 placeholder:text-neutral-400/50 focus:outline-none focus:ring-1 focus:ring-teal-500 dark:border-neutral-800 dark:bg-neutral-900"
                 />
               </div>
             </div>
             <div className="mt-4">
-              <label htmlFor="message">
-                Message
-              </label>
+              <label htmlFor="message">Message</label>
               <textarea
                 id="message"
                 name="message"
@@ -110,31 +107,27 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 placeholder="Your message"
-                className="w-full bg-neutral-300/50 dark:bg-neutral-900 border border-neutral-400/30 dark:border-neutral-800 rounded-2xl px-6 py-2 mt-2 focus:outline-none focus:ring-1 focus:ring-teal-500 placeholder:text-neutral-400/50"
+                className="mt-2 w-full rounded-2xl border border-neutral-400/30 bg-neutral-300/50 px-6 py-2 placeholder:text-neutral-400/50 focus:outline-none focus:ring-1 focus:ring-teal-500 dark:border-neutral-800 dark:bg-neutral-900"
               ></textarea>
             </div>
             <div className="flex items-center justify-end">
               <button
                 type="submit"
-                className="cursor-pointer group relative inline-flex items-center gap-2 transition-all duration-300 bg-neutral-700 text-neutral-200 dark:bg-neutral-200 dark:text-neutral-700 hover:bg-teal-600 dark:hover:bg-teal-600 hover:text-neutral-50 hover:shadow-lg tracking-wide font-bold py-2 px-6 rounded-2xl mt-4"
+                className="group relative mt-4 inline-flex cursor-pointer items-center gap-2 rounded-2xl bg-neutral-700 px-6 py-2 font-bold tracking-wide text-neutral-200 transition-all duration-300 hover:bg-teal-600 hover:text-neutral-50 hover:shadow-lg dark:bg-neutral-200 dark:text-neutral-700 dark:hover:bg-teal-600"
               >
-                {isSending ? 'Sending...' : 'Send Message'}
-                <span 
-                className="w-0 overflow-hidden group-hover:w-5 transition-[width] duration-300 ease-in-out"
-              >
-                <ChevronRight
-                  className=" w-6 h-6 text-neutral-200  dark:text-neutral-700 animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                />
-              </span>
+                {isSending ? "Sending..." : "Send Message"}
+                <span className="w-0 overflow-hidden transition-[width] duration-300 ease-in-out group-hover:w-5">
+                  <ChevronRight className="h-6 w-6 animate-pulse text-neutral-200 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:text-neutral-700" />
+                </span>
               </button>
             </div>
           </form>
           {statusMessage && <p>{statusMessage}</p>}
         </div>
       </div>
-      <div className="absolute top-10 sm:right-0 -right-20 sm:w-1/5 w-1/2 h-1/3 bg-teal-400 rounded-2xl blur-2xl opacity-20"></div>
-      <div className="absolute top-32 sm:left-10 -left-20 sm:w-1/5 w-1/2 h-1/3 bg-teal-400 rounded-3xl blur-3xl opacity-20"></div>
+      <div className="absolute -right-20 top-10 h-1/3 w-1/2 rounded-2xl bg-teal-400 opacity-20 blur-2xl sm:right-0 sm:w-1/5"></div>
+      <div className="absolute -left-20 top-32 h-1/3 w-1/2 rounded-3xl bg-teal-400 opacity-20 blur-3xl sm:left-10 sm:w-1/5"></div>
       {/* <div className="absolute -bottom-72 sm:-left-80 -left-24 w-1/2 h-1/2 rotate-12 bg-teal-400 rounded-full blur-3xl opacity-30"></div> */}
     </section>
-  )
+  );
 }
