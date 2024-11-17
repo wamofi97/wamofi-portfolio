@@ -11,7 +11,7 @@ import DottedBackground from "./components/DottedBackground";
 
 function App() {
   return (
-    <div className="relative w-full overflow-hidden text-neutral-900 transition-colors duration-500 dark:text-neutral-200 md:overflow-visible">
+    <div className="relative w-full overflow-hidden text-neutral-900 dark:text-neutral-200 md:overflow-visible">
       <Header />
       <main className="relative mx-auto max-w-5xl">
         <Element
