@@ -178,11 +178,11 @@ export default function Experience() {
             >
               <div className="flex flex-col justify-between gap-x-2 sm:flex-row">
                 <div className="flex sm:gap-4">
-                  <div className="flex items-center justify-center">
+                  <div className="flex max-w-12 items-center justify-center">
                     <img
                       src={education.logo}
                       alt={education.title}
-                      className="hidden w-14 saturate-[.7] sm:block"
+                      className="hidden object-cover saturate-[.7] sm:block"
                     />
                   </div>
                   <div>
