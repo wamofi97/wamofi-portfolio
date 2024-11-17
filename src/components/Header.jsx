@@ -28,7 +28,7 @@ export function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="z-10 transition-all hover:text-neutral-400 md:hidden"
+            className="z-10 hover:text-neutral-400 md:hidden"
           >
             <div className="flex flex-col gap-[4px]">
               <div
@@ -104,7 +104,6 @@ export function Header() {
                 spy={true}
                 duration={700}
                 smooth={true}
-                offset={-20}
                 activeClass="active-text"
                 className="cursor-pointer transition-all hover:text-teal-500"
               >
@@ -128,6 +127,7 @@ export function Header() {
                 spy={true}
                 duration={700}
                 smooth={true}
+                offset={-80}
                 activeClass="active-text"
                 className="cursor-pointer transition-all hover:text-teal-500"
               >
@@ -139,6 +139,7 @@ export function Header() {
                 spy={true}
                 duration={700}
                 smooth={true}
+                offset={-80}
                 activeClass="active-text"
                 className="cursor-pointer transition-all hover:text-teal-500"
               >
@@ -150,6 +151,7 @@ export function Header() {
                 spy={true}
                 duration={700}
                 smooth={true}
+                offset={-80}
                 activeClass="active-text"
                 className="cursor-pointer transition-all hover:text-teal-500"
               >
@@ -161,6 +163,7 @@ export function Header() {
                 spy={true}
                 duration={700}
                 smooth={true}
+                offset={-80}
                 activeClass="active-text"
                 className="cursor-pointer transition-all hover:text-teal-500"
               >
