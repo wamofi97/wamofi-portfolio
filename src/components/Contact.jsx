@@ -112,10 +112,15 @@ export default function Contact() {
                 className="mt-2 w-full rounded-2xl border border-neutral-400/30 bg-neutral-300/50 px-6 py-2 placeholder:text-neutral-400/50 focus:outline-none focus:ring-1 focus:ring-teal-500 dark:border-neutral-800 dark:bg-neutral-900"
               ></textarea>
             </div>
-            <div className="flex items-center justify-end">
+            <div
+              className={`mt-4 flex items-center ${statusMessage ? "justify-between" : "justify-end"}`}
+            >
+              {statusMessage && (
+                <p className="text-teal-700">{statusMessage}</p>
+              )}
               <button
                 type="submit"
-                className="group relative mt-4 inline-flex cursor-pointer items-center gap-2 rounded-2xl bg-neutral-700 px-6 py-2 font-bold tracking-wide text-neutral-200 transition-all duration-300 hover:bg-teal-600 hover:text-neutral-50 hover:shadow-lg dark:bg-neutral-200 dark:text-neutral-700 dark:hover:bg-teal-600"
+                className="group relative inline-flex cursor-pointer items-center gap-2 rounded-2xl bg-neutral-700 px-6 py-2 font-bold tracking-wide text-neutral-200 transition-all duration-300 hover:bg-teal-600 hover:text-neutral-50 hover:shadow-lg dark:bg-neutral-200 dark:text-neutral-700 dark:hover:bg-teal-600"
               >
                 {isSending ? "Sending..." : "Send Message"}
                 <span className="w-0 overflow-hidden transition-[width] duration-300 ease-in-out group-hover:w-5">
@@ -124,7 +129,6 @@ export default function Contact() {
               </button>
             </div>
           </form>
-          {statusMessage && <p>{statusMessage}</p>}
         </div>
       </div>
       <div className="absolute -right-20 top-10 h-1/3 w-1/2 rounded-2xl bg-teal-400 opacity-20 blur-2xl sm:right-0 sm:w-1/5"></div>
