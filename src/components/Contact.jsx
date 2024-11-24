@@ -33,11 +33,13 @@ export default function Contact() {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       )
       .then((result) => {
+        console.log(result.text);
         setStatusMessage("Message sent successfully!");
         setIsSending(false);
         setFormData({ name: "", email: "", message: "" });
       })
       .catch((error) => {
+        console.log(error.text);
         setStatusMessage("Failed to send message, please try again later.");
         setIsSending(false);
       });
