@@ -27,10 +27,10 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_ea4bplr",
-        "template_mg73f1d",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         e.target,
-        "WNGbpievNk53RhO-C",
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       )
       .then(
         (result) => {
