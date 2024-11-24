@@ -12,7 +12,7 @@ export default function Contact() {
   const [isSending, setIsSending] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
 
-  const handleChange = (e) => {
+  const handleChange = async (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
@@ -32,11 +32,13 @@ export default function Contact() {
         e.target,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       )
-      .then((result) => {
+      .then(async (result) => {
         console.log(result.text);
         setStatusMessage("Message sent successfully!");
         setIsSending(false);
         setFormData({ name: "", email: "", message: "" });
+        await new Promise((resolve) => setTimeout(resolve, 5000));
+        setStatusMessage("");
       })
       .catch((error) => {
         console.log(error.text);
