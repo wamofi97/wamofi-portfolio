@@ -32,17 +32,15 @@ export default function Contact() {
         e.target,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       )
-      .then(
-        (result) => {
-          setStatusMessage("Message sent successfully!");
-          setIsSending(false);
-          setFormData({ name: "", email: "", message: "" });
-        },
-        (error) => {
-          setStatusMessage("Failed to send message, please try again later.");
-          setIsSending(false);
-        },
-      );
+      .then((result) => {
+        setStatusMessage("Message sent successfully!");
+        setIsSending(false);
+        setFormData({ name: "", email: "", message: "" });
+      })
+      .catch((error) => {
+        setStatusMessage("Failed to send message, please try again later.");
+        setIsSending(false);
+      });
   };
 
   return (
