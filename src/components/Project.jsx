@@ -2,19 +2,28 @@ import { ExternalLink, Github } from "lucide-react";
 import portfolio from "../assets/portfolio.png";
 import walimatul from "../assets/walimatul.png";
 import biarkamimasak from "../assets/biarkamimasak.png";
+import kampungdunedin from "../assets/kampungdunedin.png";
 
 const projects = [
   {
+    title: "Kampung Dunedin",
+    desc: "A responsive website for a Malaysian family-owned food business based in Dunedin, New Zealand. The website highlights their authentic Malaysian cuisine, menu offerings, and business story while ensuring a user-friendly interface.",
+    tech: ["Next.js", "Tailwind CSS"],
+    link: "https://kampung-dunedin.vercel.app/",
+    source: "https://github.com/wamofi97/kampung-dunedin",
+    img: kampungdunedin,
+  },
+  {
     title: "Biar Kami Masak",
-    desc: " A recipe app that suggests recipes based on user input. Integrate with AI model like OpenAI's GPT to suggest recipes based on available ingredients.",
+    desc: "An AI-powered recipe app that suggests recipes based on user-provided ingredients. Leveraging OpenAI's GPT, the app delivers personalized recipe recommendations in a modern, user-friendly interface.",
     tech: ["React", "Tailwind CSS", "TypeScript", "Clerk"],
     link: "https://biarkamimasak.vercel.app/",
     source: "https://github.com/wamofi97/biarkamimasak",
     img: biarkamimasak,
   },
   {
-    title: "Wedding RSVP",
-    desc: "A simple website for wedding invitation where users can RSVP and manage their attendance for the wedding.",
+    title: "Walimatul RSVP",
+    desc: "A wedding invitation platform allowing guests to RSVP and manage their attendance effortlessly. The website features secure user registration, dynamic RSVP management, and a modern, responsive design.",
     tech: ["React", "Tailwind CSS", "Node.js", "Express", "PostgreSQL"],
     link: "https://walimatul-rsvp.onrender.com/",
     source: "https://github.com/wamofi97/wedding-rsvp",
@@ -22,7 +31,7 @@ const projects = [
   },
   {
     title: "Wan Firdaus Portfolio",
-    desc: "My personal portfolio website ",
+    desc: "A personal portfolio website designed with a clean and modern interface showcasing my skills, projects, and experiences as a developer.",
     tech: ["React", "Tailwind CSS", "Vercel"],
     link: "https://wnfrds.vercel.app/",
     source: "https://github.com/wamofi97/wamofi-portfolio",
@@ -55,7 +64,7 @@ export default function Project() {
                 <img
                   src={project.img}
                   alt={project.title}
-                  className="h-full w-full rounded-2xl rounded-b-none object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-40 md:h-60"
+                  className="h-full w-full rounded-2xl rounded-b-none object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-30 md:h-60"
                 />
                 <div className="absolute bottom-4 left-4 flex translate-y-full flex-wrap items-center gap-1 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
                   {project.tech.map((tech, index) => (
