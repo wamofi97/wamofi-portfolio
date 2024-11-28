@@ -150,8 +150,10 @@ export default function Experience() {
 
                 <hr className="w-[60vw] opacity-0"></hr>
 
-                {openIndex === index && (
-                  <div className="">
+                <div
+                  className={`grid ${openIndex === index ? "grid-rows-[1fr]" : "grid-rows-[0fr]"} transition-[grid-template-rows] duration-500`}
+                >
+                  <div className="overflow-hidden">
                     {work.desc.map((item, lowerIndex) => (
                       <p
                         key={lowerIndex}
@@ -162,7 +164,7 @@ export default function Experience() {
                       </p>
                     ))}
                   </div>
-                )}
+                </div>
               </div>
             </div>
           ))}
