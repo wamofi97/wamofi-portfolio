@@ -7,7 +7,7 @@ import kampungdunedin from "../assets/kampungdunedin.png";
 const projects = [
   {
     title: "Kampung Dunedin",
-    desc: "A responsive website for a Malaysian family-owned food business based in Dunedin, New Zealand. The website highlights their authentic Malaysian cuisine, menu offerings, and business story while ensuring a user-friendly interface.",
+    desc: "A responsive website for a Malaysian family-owned food business based in Dunedin, New Zealand highlighting their authentic Malaysian cuisine, menu offerings, and business story while ensuring a user-friendly interface.",
     tech: ["Next.js", "Tailwind CSS"],
     link: "https://kampung-dunedin.vercel.app/",
     source: "https://github.com/wamofi97/kampung-dunedin",
@@ -15,7 +15,7 @@ const projects = [
   },
   {
     title: "Biar Kami Masak",
-    desc: "An AI-powered recipe app that suggests recipes based on user-provided ingredients. Leveraging OpenAI's GPT, the app delivers personalized recipe recommendations in a modern, user-friendly interface.",
+    desc: "A fun AI-powered recipe app that suggests recipes based on user-provided ingredients. Leveraging GPT-4o-mini, the app delivers personalized recipe recommendations in a modern, user-friendly interface.",
     tech: ["React", "Tailwind CSS", "TypeScript", "Clerk"],
     link: "https://biarkamimasak.vercel.app/",
     source: "https://github.com/wamofi97/biarkamimasak",
