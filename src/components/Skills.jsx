@@ -9,8 +9,20 @@ import javascript from "../assets/logos/javascript.svg";
 import postgres from "../assets/logos/postgres.png";
 import nodejs from "../assets/logos/nodejs.png";
 import express from "../assets/logos/express.svg";
+import html from "../assets/logos/html.png";
+import css from "../assets/logos/css.png";
 
 const skills = [
+  {
+    title: "HTML",
+    source: html,
+    desc: "Markup language",
+  },
+  {
+    title: "CSS",
+    source: css,
+    desc: "Styling pages",
+  },
   {
     title: "JavaScript",
     source: javascript,
@@ -19,7 +31,7 @@ const skills = [
   {
     title: "Vite",
     source: vite,
-    desc: "Frontend build tool",
+    desc: "Build tool",
   },
   {
     title: "React",
@@ -27,14 +39,14 @@ const skills = [
     desc: "Frontend framework",
   },
   {
-    title: "TypeScript",
-    source: typescript,
-    desc: "Language",
-  },
-  {
     title: "Tailwind",
     source: tailwind,
     desc: "CSS framework",
+  },
+  {
+    title: "TypeScript",
+    source: typescript,
+    desc: "Typed JavaScript",
   },
   {
     title: "Next.js",
@@ -44,7 +56,7 @@ const skills = [
   {
     title: "Node.js",
     source: nodejs,
-    desc: "Backend framework",
+    desc: "Server runtime",
   },
   {
     title: "Express",
@@ -84,13 +96,13 @@ export function Skills() {
           </h3>
         </div>
       </div>
-      <div className="mx-auto flex flex-wrap justify-center gap-3 sm:gap-4">
+      <div className="mx-auto flex flex-wrap justify-center gap-4">
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="group rounded-2xl bg-neutral-300/60 p-5 hover:bg-teal-600/20 dark:bg-neutral-900/60 dark:hover:bg-teal-900/20"
+            className="group basis-[130px] rounded-2xl bg-neutral-300/60 p-5 hover:bg-teal-600/20 dark:bg-neutral-900/80 dark:hover:bg-teal-900/20 sm:basis-[160px] md:basis-auto"
           >
-            <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-4">
+            <div className="flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-4">
               <img
                 src={skill.source}
                 alt={skill.title}
@@ -98,9 +110,9 @@ export function Skills() {
               />
               <div>
                 <h3 className="font-body text-lg">{skill.title}</h3>
-                <p className="hidden text-sm text-neutral-500 md:block">
+                {/* <p className="hidden text-sm text-neutral-500 md:block">
                   {skill.desc}
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
