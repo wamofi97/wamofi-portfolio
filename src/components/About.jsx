@@ -143,7 +143,7 @@ export default function About() {
             something new—like playing the{" "}
             <span
               disabled={done}
-              className="cursor-pointer font-medium underline"
+              className={`${done ? "pointer-events-none" : "cursor-pointer font-medium underline"} `}
               onClick={() => {
                 if (done) return;
                 console.log("Playing sound");
@@ -161,8 +161,8 @@ export default function About() {
             <span className="font-medium">Frontend Developer</span> where I can
             grow, contribute, and create meaningful work.
           </p>
-          <span
-            className={`${done ? "block" : "hidden"} sticky bottom-8 mx-auto w-fit cursor-pointer rounded-full px-1 py-1 text-5xl transition-all duration-700`}
+          <div
+            className={`${done ? "block" : "hidden"} fixed bottom-2 right-2 z-10 mx-auto w-fit cursor-pointer rounded-full px-1 py-1 text-4xl transition-all duration-700 sm:text-5xl lg:bottom-8 lg:right-8`}
           >
             <span
               onClick={() => {
@@ -182,7 +182,7 @@ export default function About() {
             >
               🎸
             </span>
-          </span>
+          </div>
         </div>
       </div>
     </section>
