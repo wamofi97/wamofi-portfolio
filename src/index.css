@@ -83,10 +83,6 @@ html {
   @apply bg-gradient-to-t from-teal-800 to-teal-500 bg-clip-text text-transparent dark:from-teal-600 dark:to-teal-100;
 }
 
-.active-text {
-  @apply gradient-text scale-105 font-bold;
-}
-
 @layer base {
   @font-face {
     font-family: "ClashDisplay-Extralight";

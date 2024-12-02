@@ -6,18 +6,23 @@ import ThemeToggle from "./ThemeToggle";
 export function Header({ activeSection }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    section.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <header
       className={`fixed left-0 right-0 top-0 z-20 border-b border-neutral-400/80 shadow-md backdrop-blur-sm dark:border-neutral-700/80 dark:bg-transparent md:border-none md:bg-transparent md:shadow-none md:backdrop-blur-none`}
     >
       <nav className="mx-auto max-w-5xl px-4 py-4">
         <div className="flex items-center justify-between md:justify-center">
-          <a
-            href="#hero"
+          <button
+            onClick={() => scrollToSection("hero")}
             className="gradient-text cursor-pointer font-logo text-xl font-bold md:hidden"
           >
             wamofi.dev
-          </a>
+          </button>
           <ThemeToggle />
           {/* Mobile menu button */}
           <button
@@ -38,45 +43,45 @@ export function Header({ activeSection }) {
           </button>
 
           {/* Desktop menu */}
-          <div className="hidden items-center gap-12 rounded-2xl border border-neutral-400/80 px-4 py-3 backdrop-blur-sm transition-colors dark:border-neutral-700/80 md:flex">
-            <a
-              href="#hero"
+          <div className="hidden items-center gap-16 rounded-2xl border border-neutral-400/80 px-4 py-3 backdrop-blur-sm transition-colors dark:border-neutral-700/80 md:flex">
+            <button
+              onClick={() => scrollToSection("hero")}
               className="gradient-text group cursor-pointer font-logo text-xl font-bold"
             >
               wamofi.dev
-            </a>
+            </button>
 
-            <div className="text-md flex items-center gap-8 font-medium uppercase">
-              <a
-                href="#skills"
-                className={`${activeSection === "skills" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
+            <div className="text-md flex items-center gap-8 font-medium *:uppercase">
+              <button
+                onClick={() => scrollToSection("skills")}
+                className={`${activeSection === "skills" ? "gradient-text" : ""} cursor-pointer transition-colors duration-500 hover:text-teal-500`}
               >
                 Skills
-              </a>
-              <a
-                href="#projects"
-                className={`${activeSection === "projects" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
+              </button>
+              <button
+                onClick={() => scrollToSection("projects")}
+                className={`${activeSection === "projects" ? "gradient-text" : ""} cursor-pointer transition-colors duration-500 hover:text-teal-500`}
               >
                 Projects
-              </a>
-              <a
-                href="#experiences"
-                className={`${activeSection === "experiences" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
+              </button>
+              <button
+                onClick={() => scrollToSection("experiences")}
+                className={`${activeSection === "experiences" ? "gradient-text" : ""} cursor-pointer transition-colors duration-500 hover:text-teal-500`}
               >
                 Experiences
-              </a>
-              <a
-                href="#about"
-                className={`${activeSection === "about" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
+              </button>
+              <button
+                onClick={() => scrollToSection("about")}
+                className={`${activeSection === "about" ? "gradient-text" : ""} cursor-pointer transition-colors duration-500 hover:text-teal-500`}
               >
                 About
-              </a>
-              <a
-                href="#contact"
-                className={`${activeSection === "contact" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
+              </button>
+              <button
+                onClick={() => scrollToSection("contact")}
+                className={`${activeSection === "contact" ? "gradient-text" : ""} cursor-pointer transition-colors duration-500 hover:text-teal-500`}
               >
                 Contact
-              </a>
+              </button>
             </div>
             {/* <ThemeToggle/> */}
           </div>
@@ -89,59 +94,59 @@ export function Header({ activeSection }) {
         >
           <div className="flex min-h-screen flex-col items-center justify-evenly">
             <div className="flex flex-col gap-12 text-2xl font-medium uppercase">
-              <a
-                href="#skills"
+              <button
+                onClick={() => scrollToSection("skills")}
                 className={`${activeSection === "skills" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
               >
                 Skills
-              </a>
-              <a
-                href="#projects"
+              </button>
+              <button
+                onClick={() => scrollToSection("projects")}
                 className={`${activeSection === "projects" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
               >
                 Projects
-              </a>
-              <a
-                href="#experiences"
+              </button>
+              <button
+                onClick={() => scrollToSection("experiences")}
                 className={`${activeSection === "experiences" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
               >
                 Experiences
-              </a>
-              <a
-                href="#about"
+              </button>
+              <button
+                onClick={() => scrollToSection("about")}
                 className={`${activeSection === "about" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
               >
                 About
-              </a>
-              <a
-                href="#contact"
+              </button>
+              <button
+                onClick={() => scrollToSection("contact")}
                 className={`${activeSection === "contact" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
               >
                 Contact
-              </a>
+              </button>
             </div>
             {/* <ThemeToggle/> */}
             <div className="flex items-center justify-center gap-8">
-              <a
+              <button
                 href="https://github.com/wamofi97"
                 target="_blank"
                 className="transition-colors"
               >
                 <Github className="h-8 w-8" />
-              </a>
-              <a
+              </button>
+              <button
                 href="https://linkedin.com/in/wanfirdausfauzi"
                 target="_blank"
                 className="transition-colors"
               >
                 <Linkedin className="h-8 w-8" />
-              </a>
-              <a
+              </button>
+              <button
                 href="mailto:wamofi.dev@gmail.com"
                 className="transition-colors"
               >
                 <Mail className="h-8 w-8" />
-              </a>
+              </button>
             </div>
           </div>
         </div>
