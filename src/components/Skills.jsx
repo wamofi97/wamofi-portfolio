@@ -93,11 +93,11 @@ export function Skills() {
           </h3>
         </div>
       </div>
-      <div className="mx-auto flex flex-wrap justify-center gap-4">
+      <div className="mx-auto flex flex-wrap justify-center gap-2 sm:gap-4">
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="group basis-[130px] rounded-2xl bg-neutral-300/60 p-5 hover:bg-teal-600/20 dark:bg-neutral-900/80 dark:hover:bg-teal-900/20 sm:basis-[160px] md:basis-auto"
+            className="group flex-grow basis-[110px] rounded-2xl bg-neutral-300/60 p-3 hover:bg-teal-600/20 dark:bg-neutral-900/80 dark:hover:bg-teal-900/20 xs:flex-grow-0 sm:basis-[160px] sm:p-5 md:basis-auto"
           >
             <div className="flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-4">
               <img

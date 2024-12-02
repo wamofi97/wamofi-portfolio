@@ -8,7 +8,7 @@ const projects = [
   {
     title: "Kampung Dunedin",
     desc: "A responsive website for a Malaysian family-owned food business based in Dunedin, New Zealand highlighting their authentic Malaysian cuisine, menu offerings, and business story while ensuring a user-friendly interface.",
-    tech: ["Next.js", "Tailwind CSS"],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
     link: "https://kampung-dunedin.vercel.app/",
     source: "https://github.com/wamofi97/kampung-dunedin",
     img: kampungdunedin,
@@ -16,7 +16,7 @@ const projects = [
   {
     title: "Biar Kami Masak",
     desc: "A fun AI-powered recipe app that suggests recipes based on user-provided ingredients. Leveraging GPT-4o-mini, the app delivers personalized recipe recommendations in a modern, user-friendly interface.",
-    tech: ["React", "Tailwind CSS", "TypeScript", "Clerk"],
+    tech: ["React", "TypeScript", "Tailwind CSS"],
     link: "https://biarkamimasak.vercel.app/",
     source: "https://github.com/wamofi97/biarkamimasak",
     img: biarkamimasak,
@@ -57,33 +57,35 @@ export default function Project() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="group flex flex-col justify-between rounded-2xl bg-gradient-to-t from-neutral-300/50 to-neutral-300/80 p-5 dark:from-teal-700/10 dark:to-neutral-900"
+            className="group flex flex-col justify-between rounded-2xl bg-neutral-300/60 p-1 transition-colors duration-300 hover:bg-teal-700/20 dark:bg-neutral-900/80 dark:hover:bg-teal-900/20"
           >
-            <div className="flex flex-col gap-2 sm:gap-4">
+            <div className="flex flex-col gap-2">
               <div className="relative overflow-hidden rounded-2xl rounded-b-none bg-black transition-all duration-300">
                 <img
                   src={project.img}
                   alt={project.title}
-                  className="h-full w-full rounded-2xl rounded-b-none object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-30 md:h-60"
+                  className="h-full w-full rounded-2xl rounded-b-none object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-30 md:h-80"
                 />
-                <div className="absolute bottom-4 left-4 flex translate-y-full flex-wrap items-center gap-1 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              </div>
+              <div className="space-y-2 px-4 py-4 md:py-2">
+                <h3 className="text font-body text-xl">{project.title}</h3>
+                <div className="flex flex-wrap items-center gap-1 md:hidden">
                   {project.tech.map((tech, index) => (
                     <p
                       key={index}
-                      className="rounded-lg bg-neutral-400/30 px-2 py-1 text-sm font-medium text-neutral-300"
+                      className="rounded-md bg-neutral-400/30 px-2 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-300/20 dark:text-neutral-300"
                     >
                       {tech}
                     </p>
                   ))}
                 </div>
-              </div>
-              <div className="">
-                <h3 className="text font-body text-xl">{project.title}</h3>
-                <p className="text-neutral-500">{project.desc}</p>
+                <p className="text-neutral-600/80 dark:text-neutral-400/70">
+                  {project.desc}
+                </p>
               </div>
             </div>
 
-            <div className="m-4 flex items-center justify-end gap-2">
+            <div className="flex items-center justify-end gap-2 pb-4 pr-4">
               <a
                 href={project.source}
                 target="_blank"
