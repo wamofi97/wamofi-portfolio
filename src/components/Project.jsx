@@ -64,10 +64,20 @@ export default function Project() {
                 <img
                   src={project.img}
                   alt={project.title}
-                  className="h-full w-full rounded-2xl rounded-b-none object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-30 md:h-80"
+                  className="h-80 w-full rounded-2xl rounded-b-none object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-30"
                 />
+                <div className="absolute bottom-4 left-4 hidden translate-y-full flex-wrap items-center gap-1 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 md:flex">
+                  {project.tech.map((tech, index) => (
+                    <p
+                      key={index}
+                      className="rounded-lg bg-neutral-400/30 px-2 py-1 text-sm font-medium text-neutral-300"
+                    >
+                      {tech}
+                    </p>
+                  ))}
+                </div>
               </div>
-              <div className="space-y-2 px-4 py-4 md:py-2">
+              <div className="space-y-2 px-4 py-2">
                 <h3 className="text font-body text-xl">{project.title}</h3>
                 <div className="flex flex-wrap items-center gap-1 md:hidden">
                   {project.tech.map((tech, index) => (
