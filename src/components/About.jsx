@@ -34,9 +34,8 @@ export default function About() {
 
         <div className="text-lg leading-relaxed text-neutral-700 *:mb-6 dark:font-light dark:text-neutral-400 sm:text-center sm:text-xl">
           <p>
-            Hi there! I'm Wan Firdaus, a frontend developer with a bit of an
-            unconventional journey a.k.a self taught. I started off with a
-            degree in{" "}
+            Hi there! I'm Wan Firdaus, a self taught frontend developer with a
+            bit of an unconventional journey. I started off with a degree in{" "}
             <span className="group relative inline font-medium">
               <button
                 onClick={() => {
@@ -60,10 +59,11 @@ export default function About() {
                 ✈️
               </span>
             </span>
-            {""} but soon realized my true passion was in creating things with
+            {""} but soon discovered my true passion was in creating things with
             code. So, I decided to switch gears and dive into web
             development—and I’ve loved every step of the way.
           </p>
+
           <p>
             These days, I enjoy building projects using{" "}
             <span className="group relative inline">
@@ -131,16 +131,18 @@ export default function About() {
             when everything clicks into place and you see your work come to
             life.
           </p>
+
           <p>
             I’m always looking for new challenges and opportunities to grow my
             skills. Whether it’s diving into a new technology or finding
             creative solutions to problems, I’m driven by a curiosity to keep
             learning and improving.
           </p>
+
           <p className="">
             <span className="italic">When I’m not coding,</span> you can usually
-            find me relaxing with video games, watching movies, or learning
-            something new—like playing the{" "}
+            find me relaxing with video games, exploring movies/series, or
+            learning something new—like playing the{" "}
             <span
               disabled={done}
               className={`${done ? "pointer-events-none" : "cursor-pointer font-medium underline"} `}
@@ -161,6 +163,7 @@ export default function About() {
             <span className="font-medium">Frontend Developer</span> where I can
             grow, contribute, and create meaningful work.
           </p>
+
           <div
             className={`${done ? "block" : "hidden"} fixed bottom-2 right-2 z-10 mx-auto w-fit cursor-pointer rounded-full px-1 py-1 text-4xl transition-all duration-700 sm:text-5xl lg:bottom-8 lg:right-8`}
           >
