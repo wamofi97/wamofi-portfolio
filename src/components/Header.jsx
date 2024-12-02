@@ -54,36 +54,35 @@ export function Header({ activeSection }) {
             <div className="text-md flex items-center gap-8 font-medium *:uppercase">
               <button
                 onClick={() => scrollToSection("skills")}
-                className={`${activeSection === "skills" ? "gradient-text" : ""} cursor-pointer transition-colors duration-500 hover:text-teal-500`}
+                className={`${activeSection === "skills" ? "gradient-text" : ""} hover:gradient-text cursor-pointer transition-colors duration-500`}
               >
                 Skills
               </button>
               <button
                 onClick={() => scrollToSection("projects")}
-                className={`${activeSection === "projects" ? "gradient-text" : ""} cursor-pointer transition-colors duration-500 hover:text-teal-500`}
+                className={`${activeSection === "projects" ? "gradient-text" : ""} hover:gradient-text cursor-pointer transition-colors duration-500`}
               >
                 Projects
               </button>
               <button
                 onClick={() => scrollToSection("experiences")}
-                className={`${activeSection === "experiences" ? "gradient-text" : ""} cursor-pointer transition-colors duration-500 hover:text-teal-500`}
+                className={`${activeSection === "experiences" ? "gradient-text" : ""} hover:gradient-text cursor-pointer transition-colors duration-500`}
               >
                 Experiences
               </button>
               <button
                 onClick={() => scrollToSection("about")}
-                className={`${activeSection === "about" ? "gradient-text" : ""} cursor-pointer transition-colors duration-500 hover:text-teal-500`}
+                className={`${activeSection === "about" ? "gradient-text" : ""} hover:gradient-text cursor-pointer transition-colors duration-500`}
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className={`${activeSection === "contact" ? "gradient-text" : ""} cursor-pointer transition-colors duration-500 hover:text-teal-500`}
+                className={`${activeSection === "contact" ? "gradient-text" : ""} hover:gradient-text cursor-pointer transition-colors duration-500`}
               >
                 Contact
               </button>
             </div>
-            {/* <ThemeToggle/> */}
           </div>
         </div>
 
@@ -96,31 +95,31 @@ export function Header({ activeSection }) {
             <div className="flex flex-col gap-12 text-2xl font-medium uppercase">
               <button
                 onClick={() => scrollToSection("skills")}
-                className={`${activeSection === "skills" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
+                className={`${activeSection === "skills" ? "gradient-text" : ""} hover:gradient-text cursor-pointer transition-colors duration-500`}
               >
                 Skills
               </button>
               <button
                 onClick={() => scrollToSection("projects")}
-                className={`${activeSection === "projects" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
+                className={`${activeSection === "projects" ? "gradient-text" : ""} hover:gradient-text cursor-pointer transition-colors duration-500`}
               >
                 Projects
               </button>
               <button
                 onClick={() => scrollToSection("experiences")}
-                className={`${activeSection === "experiences" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
+                className={`${activeSection === "experiences" ? "gradient-text" : ""} hover:gradient-text cursor-pointer transition-colors duration-500`}
               >
                 Experiences
               </button>
               <button
                 onClick={() => scrollToSection("about")}
-                className={`${activeSection === "about" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
+                className={`${activeSection === "about" ? "gradient-text" : ""} hover:gradient-text cursor-pointer transition-colors duration-500`}
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className={`${activeSection === "contact" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
+                className={`${activeSection === "contact" ? "gradient-text" : ""} hover:gradient-text cursor-pointer transition-colors duration-500`}
               >
                 Contact
               </button>
