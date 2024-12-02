@@ -4,13 +4,25 @@ import typescript from "../assets/logos/typescript.svg";
 import nextjs from "../assets/logos/nextjs.svg";
 import postgres from "../assets/logos/postgres.png";
 import { useState } from "react";
+import guitar from "/guitar.wav";
+import guitar2 from "/guitar2.wav";
+import guitar3 from "/guitar3.wav";
+import guitar4 from "/guitar4.wav";
+import useSound from "use-sound";
+import californication from "/californication.mp3";
 
 export default function About() {
   const [aero, setAero] = useState(false);
   const [love, setLove] = useState(0);
-  const [grow, setGrow] = useState(false);
+  const guitars = [guitar, guitar2, guitar3, guitar4];
+  const [now, setNow] = useState(1);
+  const [done, setDone] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  console.log(love);
+  console.log(now);
+
+  const [play] = useSound(guitars[now], { volume: 0.5 });
+  const [play2, { pause }] = useSound(californication, { volume: 0.5 });
 
   return (
     <section id="about" className="flex flex-col justify-center px-4 py-20">
@@ -58,33 +70,33 @@ export default function About() {
             These days, I enjoy building projects using{" "}
             <span className="group relative inline">
               <span className="font-medium">React, </span>
-              <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 transition-transform group-hover:scale-100">
+              <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 transition-transform duration-300 group-hover:scale-100">
                 <img src={react} alt="react" className="size-8" />
               </span>
             </span>
             <span className="group relative inline">
               <span className="font-medium">Next.js, </span>
-              <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 transition-transform group-hover:scale-100">
+              <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 transition-transform duration-300 group-hover:scale-100">
                 <img src={nextjs} alt="nextjs" className="size-8 dark:invert" />
               </span>
             </span>
             <span className="group relative inline">
               <span className="font-medium">Tailwind CSS, </span>
-              <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 transition-transform group-hover:scale-100">
+              <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 transition-transform duration-300 group-hover:scale-100">
                 <img src={tailwind} alt="tailwind" className="size-8" />
               </span>
             </span>
             and
             <span className="group relative inline">
               <span className="font-medium"> PostgreSQL</span>
-              <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 transition-transform group-hover:scale-100">
+              <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 transition-transform duration-300 group-hover:scale-100">
                 <img src={postgres} alt="postgres" className="size-8" />
               </span>
             </span>
             . I’m also picking up{" "}
             <span className="group relative inline">
               <span className="font-medium">Typescript </span>
-              <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 transition-transform group-hover:scale-100">
+              <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 transition-transform duration-300 group-hover:scale-100">
                 <img
                   src={typescript}
                   alt="typescript"
@@ -112,7 +124,7 @@ export default function About() {
                     setLove(0);
                   }
                 }}
-                className={`absolute -top-8 left-1/2 -translate-x-1/2 ${love === 0 && "scale-0"} ${love === 1 && "scale-[1]"} ${love === 2 && "-top-10 scale-[2]"} ${love === 3 && "-top-12 scale-[3]"} cursor-pointer transition-[transform,top]`}
+                className={`absolute -top-10 left-1/2 -translate-x-1/2 ${love === 0 && "scale-0"} ${love === 1 && "-top-10 scale-[1]"} ${love === 2 && "-top-12 scale-[2]"} ${love === 3 && "-top-12 scale-[3]"} cursor-pointer transition-[transform,top]`}
               >
                 ❤️
               </span>
@@ -122,33 +134,57 @@ export default function About() {
             life.
           </p>
           <p>
-            I’m always looking for new challenges and opportunities to{" "}
-            <span
-              onClick={() => {
-                setGrow(true);
-                setTimeout(() => {
-                  setGrow(false);
-                }, 3000);
-              }}
-              disabled={grow}
-              className={`${grow && "text-4xl"} cursor-pointer font-medium transition-[font-size] duration-1000`}
-            >
-              grow
-            </span>{" "}
-            my skills. Whether it’s diving into a new technology or finding
+            I’m always looking for new challenges and opportunities to grow my
+            skills. Whether it’s diving into a new technology or finding
             creative solutions to problems, I’m driven by a curiosity to keep
             learning and improving.
           </p>
-          <p>
-            <span className="italic">
-              When I’m not <span className="font-medium">coding</span>,
-            </span>{" "}
-            you can usually find me relaxing with video games, watching movies,
-            or learning something new—like playing the guitar! I’m currently
-            looking for a full-time role as a{" "}
+          <p className="">
+            <span className="italic">When I’m not coding,</span> you can usually
+            find me relaxing with video games, watching movies, or learning
+            something new—like playing the{" "}
+            <span
+              disabled={done}
+              className="cursor-pointer font-medium underline"
+              onClick={() => {
+                if (done) return;
+                console.log("Playing sound");
+                if (now < guitars.length && !done) {
+                  setNow(now + 1);
+                } else {
+                  setDone(true);
+                }
+                play();
+              }}
+            >
+              guitar
+            </span>
+            ! I’m currently looking for a full-time role as a{" "}
             <span className="font-medium">Frontend Developer</span> where I can
             grow, contribute, and create meaningful work.
           </p>
+          <span
+            className={`${done ? "block" : "hidden"} sticky bottom-8 mx-auto w-fit cursor-pointer rounded-full px-1 py-1 text-5xl transition-all duration-700`}
+          >
+            <span
+              onClick={() => {
+                play2();
+                setIsPlaying(true);
+              }}
+              className={`${isPlaying && "hidden"} `}
+            >
+              🎸
+            </span>
+            <span
+              onClick={() => {
+                pause();
+                setIsPlaying(false);
+              }}
+              className={`${isPlaying ? "animate-wave" : "hidden"}`}
+            >
+              🎸
+            </span>
+          </span>
         </div>
       </div>
     </section>
