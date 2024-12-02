@@ -82,10 +82,7 @@ const skills = [
 
 export function Skills() {
   return (
-    <section
-      id="skills"
-      className="relative flex h-full flex-col justify-center px-4 py-20"
-    >
+    <section className="relative flex h-full flex-col justify-center px-4 py-20">
       <div className="mx-auto px-4">
         <div className="mb-16 text-center">
           <h2 className="inline-flex items-center gap-2 font-heading text-[2.5rem] sm:text-5xl md:text-6xl">

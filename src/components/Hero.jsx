@@ -1,6 +1,5 @@
 import profile from "../assets/frame.png";
 import resume from "/resume.pdf";
-import { Link } from "react-scroll";
 import { Github, Linkedin, Mail, BookUser, ChevronRight } from "lucide-react";
 import malaysia from "/malaysia.svg";
 // import { TextEffect } from "./motion-ui/TextEffect";
@@ -23,7 +22,7 @@ const item = {
 
 export default function Hero() {
   return (
-    <section className="">
+    <section>
       <motion.div
         className="flex flex-col items-center justify-center gap-x-8 gap-y-4 px-4 py-20 md:flex-row"
         variants={container}
@@ -124,16 +123,12 @@ export default function Hero() {
                 Resume
               </a>
             </div>
-            <Link
-              to="projects"
-              smooth={true}
-              className="group relative inline-flex cursor-pointer items-center gap-2 rounded-xl bg-neutral-700 px-4 py-2 font-medium text-neutral-200 transition-all duration-300 hover:bg-teal-700 hover:text-neutral-50 hover:shadow-lg dark:bg-neutral-200 dark:text-neutral-700 dark:hover:bg-teal-300 dark:hover:text-neutral-700"
-            >
+            <a className="group relative inline-flex cursor-pointer items-center gap-2 rounded-xl bg-neutral-700 px-4 py-2 font-medium text-neutral-200 transition-all duration-300 hover:bg-teal-700 hover:text-neutral-50 hover:shadow-lg dark:bg-neutral-200 dark:text-neutral-700 dark:hover:bg-teal-300 dark:hover:text-neutral-700">
               See My Work
               <span className="w-0 transition-[width] duration-300 ease-in-out group-hover:w-5">
                 <ChevronRight className="h-5 w-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               </span>
-            </Link>
+            </a>
           </motion.div>
         </div>
       </motion.div>

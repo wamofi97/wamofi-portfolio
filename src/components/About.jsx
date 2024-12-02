@@ -19,13 +19,11 @@ export default function About() {
   const [done, setDone] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  console.log(now);
-
   const [play] = useSound(guitars[now], { volume: 0.5 });
   const [play2, { pause }] = useSound(californication, { volume: 0.5 });
 
   return (
-    <section id="about" className="flex flex-col justify-center px-4 py-20">
+    <section className="flex flex-col justify-center px-4 py-20">
       <div className="mx-auto max-w-5xl px-4">
         <div className="mb-16 text-center">
           <h2 className="inline-flex items-center gap-2 font-heading text-[2.5rem] font-bold sm:text-5xl md:text-6xl">

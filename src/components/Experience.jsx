@@ -80,7 +80,6 @@ export default function Experience() {
 
   return (
     <section
-      id="project"
       className={`flex flex-col justify-center ${option === 1 ? "" : "md:pb-68 pb-80 lg:pb-44"} max-w-5xl overflow-hidden px-4 py-24`}
     >
       <div className="mx-auto max-w-5xl px-4">

@@ -1,14 +1,10 @@
-import { useEffect, useState } from "react";
-import { Link, scrollSpy } from "react-scroll";
+import { useState } from "react";
+// import { Link, scrollSpy } from "react-scroll";
 import { Github, Linkedin, Mail } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 
-export function Header() {
+export function Header({ activeSection }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    scrollSpy.update();
-  }, []);
 
   return (
     <header
@@ -16,14 +12,12 @@ export function Header() {
     >
       <nav className="mx-auto max-w-5xl px-4 py-4">
         <div className="flex items-center justify-between md:justify-center">
-          <Link
-            to="hero"
-            duration={700}
-            smooth={true}
+          <a
+            href="#hero"
             className="gradient-text cursor-pointer font-logo text-xl font-bold md:hidden"
           >
             wamofi.dev
-          </Link>
+          </a>
           <ThemeToggle />
           {/* Mobile menu button */}
           <button
@@ -45,70 +39,44 @@ export function Header() {
 
           {/* Desktop menu */}
           <div className="hidden items-center gap-12 rounded-2xl border border-neutral-400/80 px-4 py-3 backdrop-blur-sm transition-colors dark:border-neutral-700/80 md:flex">
-            <Link
-              to="hero"
-              duration={700}
-              smooth={true}
+            <a
+              href="#hero"
               className="gradient-text group cursor-pointer font-logo text-xl font-bold"
             >
               wamofi.dev
-            </Link>
+            </a>
 
             <div className="text-md flex items-center gap-8 font-medium uppercase">
-              <Link
-                to="skills"
-                spy={true}
-                duration={700}
-                smooth={true}
-                offset={-80}
-                activeClass="active-text"
-                className="cursor-pointer transition-all hover:text-teal-500"
+              <a
+                href="#skills"
+                className={`${activeSection === "skills" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
               >
                 Skills
-              </Link>
-              <Link
-                to="projects"
-                spy={true}
-                duration={700}
-                smooth={true}
-                offset={-80}
-                activeClass="active-text"
-                className="cursor-pointer transition-all hover:text-teal-500"
+              </a>
+              <a
+                href="#projects"
+                className={`${activeSection === "projects" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
               >
                 Projects
-              </Link>
-              <Link
-                to="experiences"
-                spy={true}
-                duration={700}
-                smooth={true}
-                offset={-80}
-                activeClass="active-text"
-                className="cursor-pointer transition-all hover:text-teal-500"
+              </a>
+              <a
+                href="#experiences"
+                className={`${activeSection === "experiences" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
               >
                 Experiences
-              </Link>
-              <Link
-                to="about"
-                spy={true}
-                duration={700}
-                smooth={true}
-                offset={-80}
-                activeClass="active-text"
-                className="cursor-pointer transition-all hover:text-teal-500"
+              </a>
+              <a
+                href="#about"
+                className={`${activeSection === "about" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
               >
                 About
-              </Link>
-              <Link
-                to="contact"
-                spy={true}
-                duration={700}
-                smooth={true}
-                activeClass="active-text"
-                className="cursor-pointer transition-all hover:text-teal-500"
+              </a>
+              <a
+                href="#contact"
+                className={`${activeSection === "contact" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
               >
                 Contact
-              </Link>
+              </a>
             </div>
             {/* <ThemeToggle/> */}
           </div>
@@ -121,65 +89,36 @@ export function Header() {
         >
           <div className="flex min-h-screen flex-col items-center justify-evenly">
             <div className="flex flex-col gap-12 text-2xl font-medium uppercase">
-              <Link
-                to="skills"
-                onClick={() => setIsMenuOpen(false)}
-                spy={true}
-                duration={700}
-                smooth={true}
-                offset={-80}
-                activeClass="active-text"
-                className="cursor-pointer transition-all hover:text-teal-500"
+              <a
+                href="#skills"
+                className={`${activeSection === "skills" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
               >
                 Skills
-              </Link>
-              <Link
-                to="projects"
-                onClick={() => setIsMenuOpen(false)}
-                spy={true}
-                duration={700}
-                smooth={true}
-                offset={-80}
-                activeClass="active-text"
-                className="cursor-pointer transition-all hover:text-teal-500"
+              </a>
+              <a
+                href="#projects"
+                className={`${activeSection === "projects" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
               >
                 Projects
-              </Link>
-              <Link
-                to="experiences"
-                onClick={() => setIsMenuOpen(false)}
-                spy={true}
-                duration={700}
-                smooth={true}
-                offset={-80}
-                activeClass="active-text"
-                className="cursor-pointer transition-all hover:text-teal-500"
+              </a>
+              <a
+                href="#experiences"
+                className={`${activeSection === "experiences" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
               >
                 Experiences
-              </Link>
-              <Link
-                to="about"
-                onClick={() => setIsMenuOpen(false)}
-                spy={true}
-                duration={700}
-                smooth={true}
-                offset={-80}
-                activeClass="active-text"
-                className="cursor-pointer transition-all hover:text-teal-500"
+              </a>
+              <a
+                href="#about"
+                className={`${activeSection === "about" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
               >
                 About
-              </Link>
-              <Link
-                to="contact"
-                onClick={() => setIsMenuOpen(false)}
-                spy={true}
-                duration={700}
-                smooth={true}
-                activeClass="active-text"
-                className="cursor-pointer transition-all hover:text-teal-500"
+              </a>
+              <a
+                href="#contact"
+                className={`${activeSection === "contact" ? "active-text" : ""} cursor-pointer transition-all hover:text-teal-500`}
               >
                 Contact
-              </Link>
+              </a>
             </div>
             {/* <ThemeToggle/> */}
             <div className="flex items-center justify-center gap-8">

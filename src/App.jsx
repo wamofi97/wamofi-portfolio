@@ -6,38 +6,83 @@ import { Header } from "./components/Header";
 import Hero from "./components/Hero";
 import Project from "./components/Project";
 import { Skills } from "./components/Skills";
-import { Element } from "react-scroll";
 import DottedBackground from "./components/DottedBackground";
+import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 function App() {
+  const [activeSection, setActiveSection] = useState("");
+
+  const { ref: homeRef, inView: isHomeInView } = useInView({ threshold: 0.5 });
+  const { ref: skillsRef, inView: isSkillsInView } = useInView({
+    threshold: 0.5,
+  });
+  const { ref: projectsRef, inView: isProjectsInView } = useInView({
+    threshold: 0.5,
+  });
+  const { ref: experiencesRef, inView: isExperiencesInView } = useInView({
+    threshold: 0.5,
+  });
+  const { ref: aboutRef, inView: isAboutInView } = useInView({
+    threshold: 0.5,
+  });
+  const { ref: contactRef, inView: isContactInView } = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (isHomeInView) {
+      setActiveSection("home");
+    } else if (isSkillsInView) {
+      setActiveSection("skills");
+    } else if (isProjectsInView) {
+      setActiveSection("projects");
+    } else if (isExperiencesInView) {
+      setActiveSection("experiences");
+    } else if (isAboutInView) {
+      setActiveSection("about");
+    } else if (isContactInView) {
+      setActiveSection("contact");
+    }
+
+    console.log(activeSection);
+  }, [
+    isHomeInView,
+    isSkillsInView,
+    isProjectsInView,
+    isExperiencesInView,
+    isAboutInView,
+    isContactInView,
+    activeSection,
+  ]);
+
   return (
     <div className="relative w-full overflow-hidden text-neutral-900 dark:text-neutral-200 md:overflow-visible">
-      <Header />
+      <Header activeSection={activeSection} />
       <main className="relative mx-auto max-w-5xl">
-        <Element
-          name="hero"
+        <div
+          id="hero"
+          ref={homeRef}
           className="flex min-h-screen items-center justify-center"
         >
           <Hero />
-        </Element>
-        <Element name="skills">
+        </div>
+        <div id="skills" ref={skillsRef}>
           <Skills />
-        </Element>
-        <Element name="projects">
+        </div>
+        <div id="projects" ref={projectsRef}>
           <Project />
-        </Element>
-        <Element name="experiences">
+        </div>
+        <div id="experiences" ref={experiencesRef}>
           <Experience />
-        </Element>
-        <Element name="about">
+        </div>
+        <div id="about" ref={aboutRef}>
           <About />
-        </Element>
-        <Element
-          name="contact"
-          className="flex min-h-screen items-center justify-center"
-        >
+        </div>
+        <div id="contact" ref={contactRef} className="min-h-[80vh]">
           <Contact />
-        </Element>
+        </div>
+
         <Footer />
         <DottedBackground />
       </main>

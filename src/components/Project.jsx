@@ -41,7 +41,7 @@ const projects = [
 
 export default function Project() {
   return (
-    <section id="project" className="flex flex-col justify-center px-4 py-20">
+    <section className="flex flex-col justify-center px-4 py-20">
       <div className="mx-auto">
         <div className="mb-16 text-center">
           <h2 className="inline-flex items-center gap-2 font-heading text-[2.5rem] sm:text-5xl md:text-6xl">

@@ -1,4 +1,4 @@
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Github, Linkedin, Mail } from "lucide-react";
 import { useState } from "react";
 import emailjs from "emailjs-com";
 
@@ -48,11 +48,8 @@ export default function Contact() {
   };
 
   return (
-    <section
-      id="contact"
-      className="relative flex flex-col justify-center px-4 py-20"
-    >
-      <div className="mx-auto max-w-5xl px-4">
+    <section className="relative flex flex-col justify-center px-4 py-20">
+      <div className="mx-auto px-4">
         <div className="mb-16 text-center">
           <h2 className="inline-flex items-center gap-2 font-heading text-[2.5rem] sm:text-5xl md:text-6xl">
             CONTACT
@@ -60,13 +57,11 @@ export default function Contact() {
           <h3 className="text-lg font-medium text-teal-700">Get in touch.</h3>
         </div>
       </div>
-      <div className="z-10 mx-auto grid max-w-3xl px-4">
+      <div className="z-10 mx-auto px-4">
         <div>
           <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-400 sm:text-center">
             I'm always looking for new opportunities. If you'd like to chat,
-            feel free to get in touch. I am currently looking for a{" "}
-            <span className="font-medium">full-time position</span> as a
-            software developer.
+            feel free to get in touch.
           </p>
         </div>
         <hr className="mx-auto my-8 w-full border-neutral-700/50" />
@@ -130,6 +125,38 @@ export default function Contact() {
             </div>
           </form>
         </div>
+      </div>
+      <div className="mt-20 flex items-center justify-center gap-4">
+        <a
+          href="https://github.com/wamofi97"
+          target="_blank"
+          className="group relative rounded-2xl bg-neutral-300/80 p-3 transition-all duration-300 hover:-translate-y-1 dark:bg-neutral-800"
+        >
+          <Github className="h-5 w-5" />
+          <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 rounded-md bg-teal-900 px-2 py-1 text-sm text-white shadow-md transition-transform group-hover:scale-75">
+            GITHUB
+          </span>
+        </a>
+        <a
+          href="https://linkedin.com/in/wanfirdausfauzi"
+          target="_blank"
+          className="group relative rounded-2xl bg-neutral-300/80 p-3 transition-all duration-300 hover:-translate-y-1 dark:bg-neutral-800"
+        >
+          <Linkedin className="h-5 w-5" />
+          <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 rounded-md bg-teal-900 px-2 py-1 text-sm text-white shadow-md transition-transform group-hover:scale-75">
+            LINKEDIN
+          </span>
+        </a>
+        <a
+          href="mailto:wamofi.dev@gmail.com"
+          target="_blank"
+          className="group relative rounded-2xl bg-neutral-300/80 p-3 transition-all duration-300 hover:-translate-y-1 dark:bg-neutral-800"
+        >
+          <Mail className="h-5 w-5" />
+          <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 rounded-md bg-teal-900 px-2 py-1 text-sm text-white shadow-md transition-transform group-hover:scale-75">
+            EMAIL
+          </span>
+        </a>
       </div>
       <div className="absolute -right-20 top-10 h-1/3 w-1/2 rounded-2xl bg-teal-400 opacity-20 blur-2xl sm:right-0 sm:w-1/5"></div>
       <div className="absolute -left-20 top-32 h-1/3 w-1/2 rounded-3xl bg-teal-400 opacity-20 blur-3xl sm:left-10 sm:w-1/5"></div>
