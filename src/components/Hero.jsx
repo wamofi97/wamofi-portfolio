@@ -65,7 +65,7 @@ export default function Hero() {
               className="text-3xl font-semibold sm:text-4xl md:text-5xl lg:text-6xl"
             >
               {" "}
-              Hi, I'm{" "}
+              Hi, I&apos;m{" "}
               <span className="gradient-text font-bold">Wan Firdaus</span>{" "}
               <span className="animate-wave">👋 </span>
             </motion.h1>

@@ -34,8 +34,9 @@ export default function About() {
 
         <div className="text-lg leading-relaxed text-neutral-700 *:mb-6 dark:font-light dark:text-neutral-400 sm:text-center sm:text-xl">
           <p>
-            Hi there! I'm Wan Firdaus, a self taught frontend developer with a
-            bit of an unconventional journey. I started off with a degree in{" "}
+            Hi there! I&apos;m Wan Firdaus, a self taught frontend developer
+            with a bit of an unconventional journey. I started off with a degree
+            in{" "}
             <span className="group relative inline font-medium">
               <button
                 onClick={() => {
