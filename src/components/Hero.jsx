@@ -1,7 +1,7 @@
 import profile from "../assets/frame.png";
 import resume from "/resume.pdf";
 import { Github, Linkedin, Mail, BookUser, ChevronRight } from "lucide-react";
-import malaysia from "/malaysia.svg";
+import malaysia from "../assets/malaysia.svg";
 // import { TextEffect } from "./motion-ui/TextEffect";
 import { motion } from "framer-motion";
 
