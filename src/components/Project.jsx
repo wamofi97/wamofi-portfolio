@@ -1,8 +1,8 @@
 import { ExternalLink, Github } from "lucide-react";
-import portfolio from "../assets/portfolio.png";
-import walimatul from "../assets/walimatul.png";
-import biarkamimasak from "../assets/biarkamimasak.png";
-import kampungdunedin from "../assets/kampungdunedin.png";
+import portfolio from "../assets/portfolio.webp";
+import walimatul from "../assets/walimatul.webp";
+import biarkamimasak from "../assets/biarkamimasak.webp";
+import kampungdunedin from "../assets/kampungdunedin.webp";
 
 const projects = [
   {
