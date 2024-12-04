@@ -64,7 +64,7 @@ export default function Project() {
                 <img
                   src={project.img}
                   alt={project.title}
-                  className="h-80 w-full rounded-2xl rounded-b-none object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-30"
+                  className="h-80 w-full rounded-2xl rounded-b-none object-cover opacity-80 transition-opacity duration-500 md:group-hover:opacity-30"
                 />
                 <div className="absolute bottom-4 left-4 hidden translate-y-full flex-wrap items-center gap-1 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 md:flex">
                   {project.tech.map((tech, index) => (
