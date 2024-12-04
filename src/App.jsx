@@ -44,8 +44,6 @@ function App() {
     } else if (isContactInView) {
       setActiveSection("contact");
     }
-
-    console.log(activeSection);
   }, [
     isHomeInView,
     isSkillsInView,
