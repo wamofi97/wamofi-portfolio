@@ -160,7 +160,6 @@ export default function About() {
               className={`${done ? "pointer-events-none" : "cursor-pointer font-medium underline dark:text-neutral-300/90"} `}
               onClick={() => {
                 if (done) return;
-                console.log("Playing sound");
                 if (now < guitars.length && !done) {
                   setNow(now + 1);
                 } else {
