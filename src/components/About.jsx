@@ -24,7 +24,7 @@ export default function About() {
 
   return (
     <section className="flex flex-col justify-center px-4 py-20">
-      <div className="mx-auto max-w-5xl px-4">
+      <div className="mx-auto max-w-5xl">
         <div className="mb-16 text-center">
           <h2 className="inline-flex items-center gap-2 font-heading text-[2.5rem] font-bold sm:text-5xl md:text-6xl">
             ABOUT
