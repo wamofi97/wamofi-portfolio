@@ -4,8 +4,8 @@ import { Sun, Moon } from "lucide-react";
 
 import useSound from "use-sound";
 
-import switchon from "/switchon.mp3";
-import switchoff from "/switchoff.mp3";
+import switchon from "../assets/switchon.mp3";
+import switchoff from "../assets/switchoff.mp3";
 
 const ThemeToggle = () => {
   const [darkMode, setDarkMode] = useState(false);

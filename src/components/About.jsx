@@ -4,12 +4,12 @@ import typescript from "../assets/logos/typescript.svg";
 import nextjs from "../assets/logos/nextjs.svg";
 import postgres from "../assets/logos/postgres.png";
 import { useState } from "react";
-import guitar from "/guitar.wav";
-import guitar2 from "/guitar2.wav";
-import guitar3 from "/guitar3.wav";
-import guitar4 from "/guitar4.wav";
+import guitar from "../assets/guitar.wav";
+import guitar2 from "../assets/guitar2.wav";
+import guitar3 from "../assets/guitar3.wav";
+import guitar4 from "../assets/guitar4.wav";
 import useSound from "use-sound";
-import californication from "/californication.mp3";
+import californication from "../assets/californication.mp3";
 
 export default function About() {
   const [aero, setAero] = useState(false);
@@ -165,7 +165,7 @@ export default function About() {
           </p>
 
           <div
-            className={`${done ? "block" : "hidden"} fixed bottom-2 right-2 z-10 mx-auto w-fit cursor-pointer rounded-full px-1 py-1 text-4xl transition-all duration-700 sm:text-5xl lg:bottom-8 lg:right-8`}
+            className={`${done ? "block" : "hidden"} sticky bottom-2 right-2 z-10 mx-auto w-fit cursor-pointer rounded-full px-1 py-1 text-4xl transition-all duration-700 sm:text-5xl lg:bottom-8 lg:right-8`}
           >
             <span
               onClick={() => {
