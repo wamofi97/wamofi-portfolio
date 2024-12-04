@@ -49,7 +49,7 @@ export default function Contact() {
 
   return (
     <section className="relative flex flex-col justify-center px-4 py-20">
-      <div className="mx-auto px-4">
+      <div className="mx-auto">
         <div className="mb-16 text-center">
           <h2 className="inline-flex items-center gap-2 font-heading text-[2.5rem] sm:text-5xl md:text-6xl">
             CONTACT
@@ -57,7 +57,7 @@ export default function Contact() {
           <h3 className="text-lg font-medium text-teal-700">Get in touch.</h3>
         </div>
       </div>
-      <div className="z-10 mx-auto px-4">
+      <div className="z-10 mx-auto">
         <div>
           <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-400 sm:text-center">
             I'm always looking for new opportunities. If you'd like to chat,
