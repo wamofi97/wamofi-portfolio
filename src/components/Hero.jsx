@@ -1,4 +1,4 @@
-import profile from "../assets/frame.png";
+import profile from "../assets/frame.webp";
 import resume from "/resume.pdf";
 import { Github, Linkedin, Mail, BookUser, ChevronRight } from "lucide-react";
 import malaysia from "../assets/malaysia.svg";

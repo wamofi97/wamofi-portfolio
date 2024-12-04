@@ -1,10 +1,10 @@
 import { ChevronRight } from "lucide-react";
 import { useState } from "react";
-import infosyslogo from "../assets/infosyslogo.png";
-import thifalniagalogo from "../assets/thifalniagalogo.png";
-import actslogo from "../assets/actslogo.png";
+import infosyslogo from "../assets/infosyslogo.webp";
+import thifalniagalogo from "../assets/thifalniagalogo.webp";
+import actslogo from "../assets/actslogo.webp";
 import generalassembly from "../assets/generalassembly.svg";
-import iium from "../assets/iium.png";
+import iium from "../assets/iium.webp";
 
 const works = [
   {

@@ -3,14 +3,14 @@ import react from "../assets/logos/react.svg";
 import tailwind from "../assets/logos/tailwind.svg";
 import typescript from "../assets/logos/typescript.svg";
 import nextjs from "../assets/logos/nextjs.svg";
-import vite from "../assets/logos/vite.png";
+import vite from "../assets/logos/vite.webp";
 import github from "../assets/logos/github.svg";
 import javascript from "../assets/logos/javascript.svg";
-import postgres from "../assets/logos/postgres.png";
-import nodejs from "../assets/logos/nodejs.png";
+import postgres from "../assets/logos/postgres.webp";
+import nodejs from "../assets/logos/nodejs.webp";
 import express from "../assets/logos/express.svg";
-import html from "../assets/logos/html.png";
-import css from "../assets/logos/css.png";
+import html from "../assets/logos/html.webp";
+import css from "../assets/logos/css.webp";
 
 const skills = [
   {
