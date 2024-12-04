@@ -107,9 +107,9 @@ export function Skills() {
               />
               <div>
                 <h3 className="font-body text-lg">{skill.title}</h3>
-                <p className="hidden text-sm text-neutral-500 md:block">
+                {/* <p className="hidden text-sm text-neutral-500 md:block">
                   {skill.desc}
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
