@@ -165,26 +165,28 @@ export default function About() {
           </p>
 
           <div
-            className={`${done ? "block" : "hidden"} sticky bottom-2 right-2 z-10 mx-auto w-fit cursor-pointer rounded-full px-1 py-1 text-4xl transition-all duration-700 sm:text-5xl lg:bottom-8 lg:right-8`}
+            className={`${done ? "block" : "hidden"} fixed bottom-0 left-0 z-10 mx-[50%] h-[1vh] w-full max-w-5xl -translate-x-[50%] cursor-pointer text-4xl transition-all duration-700 sm:text-5xl`}
           >
-            <span
-              onClick={() => {
-                play2();
-                setIsPlaying(true);
-              }}
-              className={`${isPlaying && "hidden"} `}
-            >
-              🎸
-            </span>
-            <span
-              onClick={() => {
-                pause();
-                setIsPlaying(false);
-              }}
-              className={`${isPlaying ? "animate-wave" : "hidden"}`}
-            >
-              🎸
-            </span>
+            <div className="absolute bottom-0 right-0">
+              <span
+                onClick={() => {
+                  play2();
+                  setIsPlaying(true);
+                }}
+                className={`${isPlaying && "hidden"} `}
+              >
+                🎸
+              </span>
+              <span
+                onClick={() => {
+                  pause();
+                  setIsPlaying(false);
+                }}
+                className={`${isPlaying ? "animate-wave" : "hidden"}`}
+              >
+                🎸
+              </span>
+            </div>
           </div>
         </div>
       </div>
