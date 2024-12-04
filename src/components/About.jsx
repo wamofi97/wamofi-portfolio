@@ -26,18 +26,18 @@ export default function About() {
     <section className="flex flex-col justify-center px-4 py-20">
       <div className="mx-auto max-w-5xl">
         <div className="mb-16 text-center">
-          <h2 className="inline-flex items-center gap-2 font-heading text-[2.5rem] font-bold sm:text-5xl md:text-6xl">
+          <h2 className="inline-flex items-center gap-2 font-heading text-[2.5rem] sm:text-5xl md:text-6xl">
             ABOUT
           </h2>
           <h3 className="text-lg font-medium text-teal-700">Get to know me.</h3>
         </div>
 
-        <div className="text-lg leading-relaxed text-neutral-700 *:mb-6 dark:font-light dark:text-neutral-400 sm:text-center sm:text-xl">
+        <div className="text-lg leading-relaxed text-neutral-700 *:mb-6 dark:text-neutral-400 sm:text-center sm:text-xl">
           <p>
             Hi there! I&apos;m Wan Firdaus, a self taught frontend developer
             with a bit of an unconventional journey. I started off with a degree
             in{" "}
-            <span className="group relative inline font-medium">
+            <span className="group relative inline font-medium dark:text-neutral-300/90">
               <button
                 onClick={() => {
                   setAero(true);
@@ -68,33 +68,44 @@ export default function About() {
           <p>
             These days, I enjoy building projects using{" "}
             <span className="group relative inline">
-              <span className="font-medium">React, </span>
+              <span className="font-medium dark:text-neutral-300/90">
+                React,{" "}
+              </span>
               <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 transition-transform duration-300 group-hover:scale-100">
                 <img src={react} alt="react" className="size-8" />
               </span>
             </span>
             <span className="group relative inline">
-              <span className="font-medium">Next.js, </span>
+              <span className="font-medium dark:text-neutral-300/90">
+                Next.js,{" "}
+              </span>
               <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 transition-transform duration-300 group-hover:scale-100">
                 <img src={nextjs} alt="nextjs" className="size-8 dark:invert" />
               </span>
             </span>
             <span className="group relative inline">
-              <span className="font-medium">Tailwind CSS, </span>
+              <span className="font-medium dark:text-neutral-300/90">
+                Tailwind CSS,{" "}
+              </span>
               <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 transition-transform duration-300 group-hover:scale-100">
                 <img src={tailwind} alt="tailwind" className="size-8" />
               </span>
             </span>
             and
             <span className="group relative inline">
-              <span className="font-medium"> PostgreSQL</span>
+              <span className="font-medium dark:text-neutral-300/90">
+                {" "}
+                PostgreSQL
+              </span>
               <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 transition-transform duration-300 group-hover:scale-100">
                 <img src={postgres} alt="postgres" className="size-8" />
               </span>
             </span>
             . I’m also picking up{" "}
             <span className="group relative inline">
-              <span className="font-medium">Typescript </span>
+              <span className="font-medium dark:text-neutral-300/90">
+                Typescript{" "}
+              </span>
               <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 transition-transform duration-300 group-hover:scale-100">
                 <img
                   src={typescript}
@@ -146,7 +157,7 @@ export default function About() {
             learning something new—like playing the{" "}
             <span
               disabled={done}
-              className={`${done ? "pointer-events-none" : "cursor-pointer font-medium underline"} `}
+              className={`${done ? "pointer-events-none" : "cursor-pointer font-medium underline dark:text-neutral-300/90"} `}
               onClick={() => {
                 if (done) return;
                 console.log("Playing sound");
@@ -161,8 +172,10 @@ export default function About() {
               guitar
             </span>
             ! I’m currently looking for a full-time role as a{" "}
-            <span className="font-medium">Frontend Developer</span> where I can
-            grow, contribute, and create meaningful work.
+            <span className="font-medium dark:text-neutral-300/90">
+              Frontend Developer
+            </span>{" "}
+            where I can grow, contribute, and create meaningful work.
           </p>
 
           <div
