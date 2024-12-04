@@ -2,7 +2,7 @@ import react from "../assets/logos/react.svg";
 import tailwind from "../assets/logos/tailwind.svg";
 import typescript from "../assets/logos/typescript.svg";
 import nextjs from "../assets/logos/nextjs.svg";
-import postgres from "../assets/logos/postgres.png";
+import postgres from "../assets/logos/postgres.webp";
 import { useState } from "react";
 import guitar from "../assets/guitar.wav";
 import guitar2 from "../assets/guitar2.wav";
