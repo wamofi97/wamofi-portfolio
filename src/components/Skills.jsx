@@ -11,6 +11,8 @@ import nodejs from "../assets/logos/nodejs.webp";
 import express from "../assets/logos/express.svg";
 import html from "../assets/logos/html.webp";
 import css from "../assets/logos/css.webp";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const skills = [
   {
@@ -80,9 +82,32 @@ const skills = [
   },
 ];
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, filter: "blur(20px)", y: -50 },
+  show: { opacity: 1, filter: "blur(0px)", y: 0 },
+};
+
 export function Skills() {
+  const { ref, inView } = useInView({
+    threshold: 0.6,
+    triggerOnce: true,
+  });
+
   return (
-    <section className="relative flex h-full flex-col justify-center px-4 py-20">
+    <section
+      ref={ref}
+      className="relative flex h-full flex-col justify-center px-4 py-20"
+    >
       <div className="mx-auto px-4">
         <div className="mb-16 text-center">
           <h2 className="inline-flex items-center gap-2 font-heading text-[2.5rem] sm:text-5xl md:text-6xl">
@@ -93,9 +118,15 @@ export function Skills() {
           </h3>
         </div>
       </div>
-      <div className="mx-auto flex flex-wrap justify-center gap-2 sm:gap-4">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate={inView && "show"}
+        className="mx-auto flex flex-wrap justify-center gap-2 sm:gap-4"
+      >
         {skills.map((skill, index) => (
-          <div
+          <motion.div
+            variants={item}
             key={index}
             className="group flex-grow basis-[110px] rounded-2xl bg-neutral-300/60 p-3 hover:bg-teal-600/20 dark:bg-neutral-900 dark:hover:bg-teal-900/30 xs:flex-grow-0 sm:basis-[160px] sm:p-5 md:basis-auto"
           >
@@ -112,9 +143,9 @@ export function Skills() {
                 </p> */}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
       <div className="absolute -right-20 top-10 h-1/3 w-1/2 rounded-2xl bg-teal-400 opacity-20 blur-2xl sm:right-0 sm:w-1/5"></div>
       <div className="absolute -bottom-32 -left-20 h-1/3 w-1/2 rounded-3xl bg-teal-400 opacity-20 blur-3xl sm:left-10 sm:w-1/5"></div>
     </section>
