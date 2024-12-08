@@ -7,16 +7,16 @@ import kampungdunedin from "../assets/kampungdunedin.webp";
 const projects = [
   {
     title: "Kampung Dunedin",
-    desc: "A responsive website for a Malaysian family-owned food business based in Dunedin, New Zealand highlighting their authentic Malaysian cuisine, menu offerings, and business story while ensuring a user-friendly interface.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    desc: "A responsive website for a Malaysian family-owned food business based in Dunedin, New Zealand, highlighting their authentic Malaysian cuisine, menu offerings, and business story. Integrated with Sanity CMS to allow clients to manage and update content easily through a user-friendly interface.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Sanity.io"],
     link: "https://kampung-dunedin.vercel.app/",
     source: "https://github.com/wamofi97/kampung-dunedin",
     img: kampungdunedin,
   },
   {
     title: "Biar Kami Masak",
-    desc: "A fun AI-powered recipe app that suggests recipes based on user-provided ingredients. Leveraging GPT-4o-mini, the app delivers personalized recipe recommendations in a modern, user-friendly interface.",
-    tech: ["React", "TypeScript", "Tailwind CSS"],
+    desc: "A fun AI-powered recipe app that suggests recipes based on user-provided ingredients. Leveraging GPT-4o-mini, the app delivers personalized recipe recommendations in a modern, user-friendly interface. It also incorporates AI response streaming for faster and more efficient results.",
+    tech: ["React", "TypeScript", "Tailwind CSS", "Clerk"],
     link: "https://biarkamimasak.vercel.app/",
     source: "https://github.com/wamofi97/biarkamimasak",
     img: biarkamimasak,
@@ -31,7 +31,7 @@ const projects = [
   },
   {
     title: "Wan Firdaus Portfolio",
-    desc: "A personal portfolio website designed with a clean and modern interface showcasing my skills, projects, and experiences as a developer.",
+    desc: "A sleek and modern portfolio website that offers a glimpse into my journey as a developer, featuring a showcase of my skills and projects. Designed to leave a lasting impression with a user-friendly interface and responsive design.",
     tech: ["React", "Tailwind CSS", "Vercel"],
     link: "https://wnfrds.vercel.app/",
     source: "https://github.com/wamofi97/wamofi-portfolio",
@@ -95,7 +95,7 @@ export default function Project() {
               </div>
             </div>
 
-            <div className="flex items-center justify-end gap-2 pb-4 pr-4">
+            <div className="flex items-center justify-end gap-2 pb-4 pr-4 pt-2">
               <a
                 href={project.source}
                 target="_blank"
