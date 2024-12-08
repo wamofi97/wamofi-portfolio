@@ -32,7 +32,7 @@ const projects = [
   {
     title: "Wan Firdaus Portfolio",
     desc: "A sleek and modern portfolio website that offers a glimpse into my journey as a developer, featuring a showcase of my skills and projects. Designed to leave a lasting impression with a user-friendly interface and responsive design.",
-    tech: ["React", "Tailwind CSS", "Vercel"],
+    tech: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
     link: "https://wnfrds.vercel.app/",
     source: "https://github.com/wamofi97/wamofi-portfolio",
     img: portfolio,
