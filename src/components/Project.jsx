@@ -57,7 +57,7 @@ export default function Project() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="group flex flex-col justify-between rounded-2xl bg-neutral-300/60 p-1 transition-colors duration-300 hover:bg-teal-700/20 dark:bg-neutral-900/80 dark:hover:bg-teal-900/20"
+            className="group flex flex-col justify-between rounded-2xl bg-neutral-300/60 p-1 transition-colors duration-300 hover:bg-teal-600/20 dark:bg-neutral-900 dark:hover:bg-teal-900/30"
           >
             <div className="flex flex-col gap-2">
               <div className="relative overflow-hidden rounded-2xl rounded-b-none bg-black transition-all duration-300">

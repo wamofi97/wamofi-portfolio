@@ -117,7 +117,7 @@ export default function Experience() {
             <div
               key={index}
               onClick={() => toggleAccordion(index)}
-              className="group cursor-pointer rounded-2xl bg-neutral-300/60 p-6 transition-all hover:bg-teal-600/20 dark:bg-neutral-900/80 dark:hover:bg-teal-900/20"
+              className="group cursor-pointer rounded-2xl bg-neutral-300/60 p-6 transition-all hover:bg-teal-600/20 dark:bg-neutral-900 dark:hover:bg-teal-900/30"
             >
               <div className="">
                 <div className="flex flex-col justify-between gap-x-2 sm:flex-row">
@@ -174,7 +174,7 @@ export default function Experience() {
           {educations.map((education, index) => (
             <div
               key={index}
-              className="group rounded-2xl bg-neutral-300/40 p-6 hover:bg-teal-600/10 dark:bg-neutral-900/80 dark:hover:bg-teal-900/20"
+              className="group rounded-2xl bg-neutral-300/40 p-6 hover:bg-teal-600/20 dark:bg-neutral-900/80 dark:hover:bg-teal-900/30"
             >
               <div className="flex flex-col justify-between gap-x-2 sm:flex-row">
                 <div className="flex sm:gap-4">
