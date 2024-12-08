@@ -14,13 +14,12 @@ import californication from "../assets/californication.mp3";
 export default function About() {
   const [aero, setAero] = useState(false);
   const [love, setLove] = useState(0);
-  const guitars = [guitar, guitar2, guitar3, guitar4];
-  const [now, setNow] = useState(1);
+  const guitars = [guitar, guitar2, guitar3, guitar4, californication];
+  const [now, setNow] = useState(0);
   const [done, setDone] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const [play] = useSound(guitars[now], { volume: 0.5 });
-  const [play2, { pause }] = useSound(californication, { volume: 0.5 });
+  const [play, { pause }] = useSound(guitars[now], { volume: 0.5 });
 
   return (
     <section className="flex flex-col justify-center px-4 py-20">
@@ -159,12 +158,14 @@ export default function About() {
               disabled={done}
               className={`${done ? "pointer-events-none" : "cursor-pointer font-medium underline dark:text-neutral-300/90"} `}
               onClick={() => {
-                if (done) return;
-                if (now < guitars.length && !done) {
-                  setNow(now + 1);
+                if (now < guitars.length - 1 && !done) {
+                  setNow((prev) => prev + 1);
                 } else {
                   setDone(true);
+                  setNow(4);
+                  setIsPlaying(true);
                 }
+                console.log(now);
                 play();
               }}
             >
@@ -177,28 +178,30 @@ export default function About() {
             where I can grow, contribute, and create meaningful work.
           </p>
 
-          <div
-            className={`${done ? "block" : "hidden"} fixed bottom-0 left-0 z-10 mx-[50%] h-[1vh] w-full max-w-5xl -translate-x-[50%] cursor-pointer text-4xl transition-all duration-700 sm:text-5xl`}
-          >
-            <div className="absolute bottom-0 right-0">
-              <span
-                onClick={() => {
-                  play2();
-                  setIsPlaying(true);
-                }}
-                className={`${isPlaying && "hidden"} `}
-              >
-                🎸
-              </span>
-              <span
-                onClick={() => {
-                  pause();
-                  setIsPlaying(false);
-                }}
-                className={`${isPlaying ? "animate-wave" : "hidden"}`}
-              >
-                🎸
-              </span>
+          <div className="fixed bottom-0 z-20 mx-auto h-[6vh] w-full overflow-hidden">
+            <div
+              className={`${done ? "translate-x-[40%] opacity-100" : "-translate-x-full opacity-0"} absolute w-full max-w-5xl cursor-pointer text-4xl transition-all duration-[1500ms] ease-out sm:text-5xl`}
+            >
+              <div className="">
+                <span
+                  onClick={() => {
+                    play();
+                    setIsPlaying(true);
+                  }}
+                  className={`${isPlaying && "hidden"} `}
+                >
+                  🎸
+                </span>
+                <span
+                  onClick={() => {
+                    pause();
+                    setIsPlaying(false);
+                  }}
+                  className={`${isPlaying ? "animate-wave" : "hidden"}`}
+                >
+                  🎸
+                </span>
+              </div>
             </div>
           </div>
         </div>
