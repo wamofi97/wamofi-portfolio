@@ -30,7 +30,6 @@ export default function Hero() {
         animate="show"
       >
         <motion.div
-          // variants={item}
           initial={{ opacity: 0, filter: "blur(30px)", x: -100 }}
           animate={{ opacity: 1, filter: "blur(0px)", x: 0 }}
           transition={{ duration: 1, ease: "easeInOut" }}
@@ -52,7 +51,7 @@ export default function Hero() {
               className="animate-float mx-auto flex w-fit items-center rounded-full bg-neutral-300/50 px-4 py-2 text-sm dark:bg-neutral-800/40 md:mx-0"
             >
               <span className="mr-2 h-[6px] w-[6px] animate-pulse rounded-full bg-teal-600 dark:bg-teal-300"></span>
-              Based from Malaysia
+              Based in Malaysia
               <img
                 className="ml-2 inline w-4"
                 src={malaysia}
@@ -62,7 +61,7 @@ export default function Hero() {
 
             <motion.h1
               variants={item}
-              className="text-3xl font-semibold sm:text-4xl md:text-5xl lg:text-6xl"
+              className="text-3xl font-semibold sm:text-4xl md:text-5xl lg:text-[4.25rem]"
             >
               {" "}
               Hi, I&apos;m{" "}
