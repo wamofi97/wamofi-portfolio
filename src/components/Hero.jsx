@@ -122,10 +122,13 @@ export default function Hero() {
                 Resume
               </a>
             </div>
-            <a className="group relative inline-flex cursor-pointer items-center gap-2 rounded-xl bg-neutral-700 px-4 py-2 font-medium text-neutral-200 transition-all duration-300 hover:bg-teal-700 hover:text-neutral-50 hover:shadow-lg dark:bg-neutral-200 dark:text-neutral-700 dark:hover:bg-teal-300 dark:hover:text-neutral-700">
+            <a
+              href="#projects"
+              className="dar:hover:text-neutral-50 group relative inline-flex cursor-pointer items-center gap-2 rounded-xl bg-neutral-700 px-4 py-2 font-medium text-neutral-200 transition-all duration-300 hover:-translate-y-1 hover:bg-teal-600 hover:text-neutral-50 hover:shadow-lg dark:bg-neutral-200 dark:text-neutral-700 dark:hover:bg-teal-600 dark:hover:text-neutral-100"
+            >
               See My Work
-              <span className="w-0 transition-[width] duration-300 ease-in-out group-hover:w-5">
-                <ChevronRight className="h-5 w-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              <span className="w-0 transition-[width] duration-300 ease-in-out group-hover:w-3">
+                <ChevronRight className="h-5 w-5 opacity-0 transition-opacity duration-300 group-hover:scale-110 group-hover:opacity-100" />
               </span>
             </a>
           </motion.div>
