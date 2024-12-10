@@ -14,7 +14,13 @@ const ThemeToggle = () => {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark" || savedTheme === null) {
+    if (
+      savedTheme === null &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      setDarkMode(true);
+      document.documentElement.classList.add("dark");
+    } else if (savedTheme === "dark") {
       setDarkMode(true);
       document.documentElement.classList.add("dark");
     } else if (savedTheme === "light") {
@@ -35,9 +41,9 @@ const ThemeToggle = () => {
     <div className="fixed top-0 z-30 w-full max-w-5xl">
       <button
         onClick={toggleDarkMode}
-        className={`absolute right-[72px] top-[11px] flex h-10 w-10 items-center justify-center rounded-2xl bg-neutral-200 bg-transparent transition-colors md:right-4 md:top-[23px] ${darkMode ? "bg-transparent md:bg-neutral-800 md:hover:bg-neutral-700" : "bg-transparent md:bg-neutral-300/80 md:hover:bg-neutral-400"}`}
+        className={`absolute right-[72px] top-[11px] flex h-10 w-10 items-center justify-center rounded-2xl bg-neutral-200 bg-transparent shadow-lg transition-colors md:right-4 md:top-[23px] ${darkMode ? "md:bg-neutral-800 md:hover:bg-neutral-700" : "md:bg-neutral-300/80 md:hover:bg-neutral-400"}`}
       >
-        {darkMode ? <Moon className="h-7 w-7" /> : <Sun className="h-7 w-7" />}
+        {darkMode ? <Moon className="h-6 w-6" /> : <Sun className="h-6 w-6" />}
       </button>
     </div>
   );
