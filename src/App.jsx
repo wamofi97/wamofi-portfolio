@@ -18,7 +18,7 @@ function App() {
     threshold: 0.5,
   });
   const { ref: projectsRef, inView: isProjectsInView } = useInView({
-    threshold: 0.5,
+    threshold: 0.2,
   });
   const { ref: experiencesRef, inView: isExperiencesInView } = useInView({
     threshold: 0.5,
