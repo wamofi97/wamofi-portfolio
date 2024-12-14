@@ -11,7 +11,6 @@ import nodejs from "../assets/logos/nodejs.webp";
 import express from "../assets/logos/express.svg";
 import html from "../assets/logos/html.webp";
 import css from "../assets/logos/css.webp";
-import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 
 const skills = [
@@ -93,21 +92,13 @@ const container = {
 };
 
 const item = {
-  hidden: { opacity: 0, filter: "blur(20px)", y: -50 },
+  hidden: { opacity: 0, filter: "blur(15px)", y: -50 },
   show: { opacity: 1, filter: "blur(0px)", y: 0 },
 };
 
 export function Skills() {
-  const { ref, inView } = useInView({
-    threshold: 0.6,
-    triggerOnce: true,
-  });
-
   return (
-    <section
-      ref={ref}
-      className="relative flex h-full flex-col justify-center px-4 py-20"
-    >
+    <section className="relative flex h-full flex-col justify-center px-4 py-20">
       <div className="mx-auto px-4">
         <div className="mb-16 text-center">
           <h2 className="inline-flex items-center gap-2 font-heading text-[2.5rem] sm:text-5xl md:text-6xl">
@@ -121,7 +112,8 @@ export function Skills() {
       <motion.div
         variants={container}
         initial="hidden"
-        animate={inView && "show"}
+        whileInView={"show"}
+        viewport={{ once: true }}
         className="mx-auto flex flex-wrap justify-center gap-2 sm:gap-4"
       >
         {skills.map((skill, index) => (
