@@ -3,6 +3,7 @@ import portfolio from "../assets/portfolio.webp";
 import walimatul from "../assets/walimatul.webp";
 import biarkamimasak from "../assets/biarkamimasak.webp";
 import kampungdunedin from "../assets/kampungdunedin.webp";
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -55,7 +56,14 @@ export default function Project() {
 
       <div className="z-10 mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
         {projects.map((project, index) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, filter: "blur(10px)", y: -50 }}
+            whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              delay: index * 0.2,
+              duration: 0.5,
+            }}
             key={index}
             className="group flex flex-col justify-between rounded-2xl bg-neutral-300/60 p-1 transition-colors duration-300 hover:bg-teal-600/20 dark:bg-neutral-900 dark:hover:bg-teal-900/30"
           >
@@ -117,7 +125,7 @@ export default function Project() {
                 </span>
               </a>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
