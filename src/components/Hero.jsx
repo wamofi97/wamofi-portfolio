@@ -10,13 +10,30 @@ const container = {
   show: {
     opacity: 1,
     transition: {
+      delayChildren: 0.6,
       staggerChildren: 0.2,
     },
   },
 };
 
 const item = {
-  hidden: { opacity: 0, filter: "blur(30px)", y: -20 },
+  hidden: { opacity: 0, filter: "blur(15px)", y: -50 },
+  show: { opacity: 1, filter: "blur(0px)", y: 0 },
+};
+
+const callToAction = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.1,
+      staggerChildren: 0.125,
+    },
+  },
+};
+
+const callToActionItem = {
+  hidden: { opacity: 0, filter: "blur(15px)", y: -15 },
   show: { opacity: 1, filter: "blur(0px)", y: 0 },
 };
 
@@ -30,9 +47,9 @@ export default function Hero() {
         animate="show"
       >
         <motion.div
-          initial={{ opacity: 0, filter: "blur(30px)", x: -100 }}
+          initial={{ opacity: 0, filter: "blur(30px)", x: -200 }}
           animate={{ opacity: 1, filter: "blur(0px)", x: 0 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          transition={{ delay: 0.2, duration: 0.6, ease: "easeInOut" }}
           className="group relative flex flex-col items-center justify-center"
         >
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-200 to-teal-400 opacity-40 blur-2xl transition-opacity group-hover:opacity-70"></div>
@@ -79,11 +96,12 @@ export default function Hero() {
           </div>
 
           <motion.div
-            variants={item}
+            variants={callToAction}
             className="flex flex-wrap items-center justify-center gap-3 md:justify-start"
           >
-            <div className="flex items-center justify-center gap-1">
-              <a
+            <div className="flex items-center justify-center gap-2">
+              <motion.a
+                variants={callToActionItem}
                 href="https://github.com/wamofi97"
                 target="_blank"
                 className="group relative rounded-2xl bg-neutral-300/80 p-3 transition-all duration-300 hover:-translate-y-1 dark:bg-neutral-800"
@@ -92,8 +110,9 @@ export default function Hero() {
                 <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 rounded-md bg-teal-900 px-2 py-1 text-sm text-white shadow-md transition-transform group-hover:scale-75">
                   GITHUB
                 </span>
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                variants={callToActionItem}
                 href="https://linkedin.com/in/wanfirdausfauzi"
                 target="_blank"
                 className="group relative rounded-2xl bg-neutral-300/80 p-3 transition-all duration-300 hover:-translate-y-1 dark:bg-neutral-800"
@@ -102,8 +121,9 @@ export default function Hero() {
                 <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 rounded-md bg-teal-900 px-2 py-1 text-sm text-white shadow-md transition-transform group-hover:scale-75">
                   LINKEDIN
                 </span>
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                variants={callToActionItem}
                 href="mailto:wamofi.dev@gmail.com"
                 target="_blank"
                 className="group relative rounded-2xl bg-neutral-300/80 p-3 transition-all duration-300 hover:-translate-y-1 dark:bg-neutral-800"
@@ -112,17 +132,19 @@ export default function Hero() {
                 <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 rounded-md bg-teal-900 px-2 py-1 text-sm text-white shadow-md transition-transform group-hover:scale-75">
                   EMAIL
                 </span>
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                variants={callToActionItem}
                 href={resume}
                 target="_blank"
                 className="flex items-center gap-1 rounded-2xl border border-neutral-400/30 bg-neutral-300/80 px-4 py-2 transition-all duration-300 hover:-translate-y-1 dark:border-neutral-700 dark:bg-neutral-800"
               >
                 <BookUser className="h-5 w-5" />
                 Resume
-              </a>
+              </motion.a>
             </div>
-            <a
+            <motion.a
+              variants={callToActionItem}
               href="#projects"
               className="dar:hover:text-neutral-50 group relative inline-flex cursor-pointer items-center gap-2 rounded-xl bg-neutral-700 px-4 py-2 font-medium text-neutral-200 transition-all duration-300 hover:-translate-y-1 hover:bg-teal-600 hover:text-neutral-50 hover:shadow-lg dark:bg-neutral-200 dark:text-neutral-700 dark:hover:bg-teal-600 dark:hover:text-neutral-100"
             >
@@ -130,7 +152,7 @@ export default function Hero() {
               <span className="w-0 transition-[width] duration-300 ease-in-out group-hover:w-3">
                 <ChevronRight className="h-5 w-5 opacity-0 transition-opacity duration-300 group-hover:scale-110 group-hover:opacity-100" />
               </span>
-            </a>
+            </motion.a>
           </motion.div>
         </div>
       </motion.div>
