@@ -11,6 +11,7 @@ const projects = [
     desc: "A responsive website for a Malaysian family-owned food business based in Dunedin, New Zealand, highlighting their authentic Malaysian cuisine, menu offerings, and business story. Integrated with Sanity CMS to allow clients to manage and update content easily through a user-friendly interface.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Sanity.io"],
     link: "https://kampung-dunedin.vercel.app/",
+    status: "Live",
     source: "https://github.com/wamofi97/kampung-dunedin",
     img: kampungdunedin,
   },
@@ -19,6 +20,7 @@ const projects = [
     desc: "A fun AI-powered recipe app that suggests recipes based on user-provided ingredients. Leveraging GPT-4o-mini, the app delivers personalized recipe recommendations in a modern, user-friendly interface. It also incorporates AI response streaming for faster and more efficient results.",
     tech: ["React", "TypeScript", "Tailwind CSS", "Clerk"],
     link: "https://biarkamimasak.vercel.app/",
+    status: "Live",
     source: "https://github.com/wamofi97/biarkamimasak",
     img: biarkamimasak,
   },
@@ -27,14 +29,16 @@ const projects = [
     desc: "A wedding invitation platform allowing guests to RSVP and manage their attendance effortlessly. The website features secure user registration, dynamic RSVP management, and a modern, responsive design.",
     tech: ["React", "Tailwind CSS", "Node.js", "Express", "PostgreSQL"],
     link: "https://walimatul-rsvp.onrender.com/",
+    status: "Ongoing",
     source: "https://github.com/wamofi97/wedding-rsvp",
     img: walimatul,
   },
   {
     title: "Wan Firdaus Portfolio",
-    desc: "A sleek and modern portfolio website that offers a glimpse into my journey as a developer, featuring a showcase of my skills and projects. Designed to leave a lasting impression with a user-friendly interface and responsive design.",
+    desc: "A modern portfolio website that offers a glimpse into my journey as a developer, featuring a showcase of my skills and projects. Designed to leave a lasting impression with a user-friendly interface and responsive design.",
     tech: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
     link: "https://wnfrds.vercel.app/",
+    status: "Live",
     source: "https://github.com/wamofi97/wamofi-portfolio",
     img: portfolio,
   },
@@ -86,7 +90,14 @@ export default function Project() {
                 </div>
               </div>
               <div className="space-y-2 px-4 py-2">
-                <h3 className="text font-body text-xl">{project.title}</h3>
+                <div className="flex items-center justify-between">
+                  <h3 className="text font-body text-xl">{project.title}</h3>
+                  {/* <p
+                    className={`rounded-lg ${project.status === "Live" ? "bg-teal-600 text-neutral-300 dark:bg-teal-900" : "bg-neutral-400/30 dark:bg-neutral-300/20"} px-2 py-1 text-sm font-medium`}
+                  >
+                    {project.status}
+                  </p> */}
+                </div>
                 <div className="flex flex-wrap items-center gap-1 md:hidden">
                   {project.tech.map((tech, index) => (
                     <p
@@ -103,27 +114,34 @@ export default function Project() {
               </div>
             </div>
 
-            <div className="flex items-center justify-end gap-2 pb-4 pr-4 pt-2">
-              <a
-                href={project.source}
-                target="_blank"
-                className="group flex items-center gap-2 rounded-xl bg-neutral-700/20 py-2 pl-3 pr-1 font-medium hover:text-teal-700 dark:bg-neutral-300/20 dark:hover:text-teal-300"
+            <div className="flex items-center justify-between gap-2 px-4 pb-4 pt-2">
+              <p
+                className={`rounded-lg ${project.status === "Live" ? "bg-teal-600 text-neutral-300 dark:bg-teal-900" : "bg-neutral-400/30 dark:bg-neutral-300/20"} px-2 py-1 text-sm font-medium`}
               >
-                <Github className="h-5 w-5" />
-                <span className="w-0 opacity-0 transition-all duration-300 group-hover:w-16 group-hover:opacity-100">
-                  Source
-                </span>
-              </a>
-              <a
-                href={project.link}
-                target="_blank"
-                className="group flex items-center gap-2 rounded-xl bg-neutral-700 py-2 pl-3 pr-1 font-medium text-neutral-200 hover:bg-teal-600 hover:text-neutral-50 dark:bg-neutral-200 dark:text-neutral-700 dark:hover:bg-teal-600"
-              >
-                <ExternalLink className="h-5 w-5" />
-                <span className="w-0 opacity-0 transition-all duration-300 group-hover:w-10 group-hover:opacity-100">
-                  Visit
-                </span>
-              </a>
+                {project.status}
+              </p>
+              <div className="flex items-center gap-2">
+                <a
+                  href={project.source}
+                  target="_blank"
+                  className="group flex items-center gap-2 rounded-xl bg-neutral-700/20 py-2 pl-3 pr-1 font-medium hover:text-teal-700 dark:bg-neutral-300/20 dark:hover:text-teal-300"
+                >
+                  <Github className="h-5 w-5" />
+                  <span className="w-0 opacity-0 transition-all duration-300 group-hover:w-16 group-hover:opacity-100">
+                    Source
+                  </span>
+                </a>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  className="group flex items-center gap-2 rounded-xl bg-neutral-700 py-2 pl-3 pr-1 font-medium text-neutral-200 hover:bg-teal-600 hover:text-neutral-50 dark:bg-neutral-200 dark:text-neutral-700 dark:hover:bg-teal-600"
+                >
+                  <ExternalLink className="h-5 w-5" />
+                  <span className="w-0 opacity-0 transition-all duration-300 group-hover:w-10 group-hover:opacity-100">
+                    Visit
+                  </span>
+                </a>
+              </div>
             </div>
           </motion.div>
         ))}
