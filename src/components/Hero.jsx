@@ -78,7 +78,7 @@ export default function Hero() {
 
             <motion.h1
               variants={item}
-              className="text-3xl font-semibold sm:text-4xl md:text-5xl lg:text-[4.25rem]"
+              className="text-3xl font-semibold sm:text-4xl md:text-5xl lg:text-6xl"
             >
               {" "}
               Hi, I&apos;m{" "}
@@ -88,10 +88,10 @@ export default function Hero() {
 
             <motion.h2
               variants={item}
-              className="text-xl font-light sm:text-2xl md:text-3xl"
+              className="text-xl font-light sm:text-2xl md:text-[1.75rem]"
             >
               A <span className="font-semibold">frontend developer</span> who
-              love to learn and build things.
+              enjoy building cool things. Love to learn new things every day.
             </motion.h2>
           </div>
 
