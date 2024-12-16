@@ -5,6 +5,7 @@ import thifalniagalogo from "../assets/thifalniagalogo.webp";
 import actslogo from "../assets/actslogo.webp";
 import generalassembly from "../assets/generalassembly.svg";
 import iium from "../assets/iium.webp";
+import { motion } from "framer-motion";
 
 const works = [
   {
@@ -114,7 +115,14 @@ export default function Experience() {
           className={`mx-auto mb-4 flex max-w-3xl flex-grow basis-1/2 flex-col gap-2 transition-all duration-700 ${option === 1 ? "" : "-translate-x-full opacity-0"} `}
         >
           {works.map((work, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, filter: "blur(10px)" }}
+              whileInView={{ opacity: 1, filter: "blur(0px)" }}
+              viewport={{ once: true, amount: 0.6 }}
+              transition={{
+                delay: index * 0.2,
+                duration: 0.5,
+              }}
               key={index}
               onClick={() => toggleAccordion(index)}
               className="group cursor-pointer rounded-2xl bg-neutral-300/60 p-6 transition-all hover:bg-teal-600/20 dark:bg-neutral-900 dark:hover:bg-teal-900/30"
@@ -164,7 +172,7 @@ export default function Experience() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
@@ -172,7 +180,14 @@ export default function Experience() {
           className={`mx-auto flex max-w-3xl flex-grow basis-1/2 flex-col gap-2 transition-all duration-700 ${option === 2 ? "absolute delay-100" : "absolute translate-x-full opacity-0"} `}
         >
           {educations.map((education, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, filter: "blur(10px)" }}
+              whileInView={{ opacity: 1, filter: "blur(0px)" }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{
+                delay: index * 0.2,
+                duration: 0.5,
+              }}
               key={index}
               className="group rounded-2xl bg-neutral-300/40 p-6 hover:bg-teal-600/20 dark:bg-neutral-900/80 dark:hover:bg-teal-900/30"
             >
@@ -194,7 +209,7 @@ export default function Experience() {
                   {education.year}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
           <hr className="w-[60vw] opacity-0"></hr>
         </div>
