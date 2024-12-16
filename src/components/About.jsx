@@ -171,11 +171,9 @@ export default function About() {
             >
               guitar
             </span>
-            ! I’m currently looking for a full-time role as a{" "}
-            <span className="font-medium dark:text-neutral-300/90">
-              Frontend Developer
-            </span>{" "}
-            where I can grow, contribute, and create meaningful work.
+            ! I’m always excited to collaborate with others and share my work.
+            It’s a way for me to express myself, where I can grow, learn and
+            create meaningful work.
           </p>
 
           <div className="fixed bottom-0 z-20 mx-auto h-[6vh] w-full overflow-hidden">
