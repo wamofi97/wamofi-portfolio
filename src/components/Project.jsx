@@ -61,12 +61,12 @@ export default function Project() {
       <div className="z-10 mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
         {projects.map((project, index) => (
           <motion.div
-            initial={{ opacity: 0, filter: "blur(10px)", y: -50 }}
+            initial={{ opacity: 0, filter: "blur(10px)", y: -10 }}
             whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{
-              delay: index * 0.2,
-              duration: 0.5,
+              delay: index * 0.15,
+              duration: 0.3,
             }}
             key={index}
             className="group flex flex-col justify-between rounded-2xl bg-neutral-300/60 p-1 transition-colors duration-300 hover:bg-teal-600/20 dark:bg-neutral-900 dark:hover:bg-teal-900/30"
@@ -92,11 +92,11 @@ export default function Project() {
               <div className="space-y-2 px-4 py-2">
                 <div className="flex items-center justify-between">
                   <h3 className="text font-body text-xl">{project.title}</h3>
-                  {/* <p
-                    className={`rounded-lg ${project.status === "Live" ? "bg-teal-600 text-neutral-300 dark:bg-teal-900" : "bg-neutral-400/30 dark:bg-neutral-300/20"} px-2 py-1 text-sm font-medium`}
+                  <p
+                    className={`rounded-lg ${project.status === "Live" ? "bg-teal-600 text-neutral-300 dark:bg-teal-900" : "bg-neutral-400/30 dark:bg-neutral-300/20"} hidden px-2 py-1 text-sm font-medium md:block`}
                   >
                     {project.status}
-                  </p> */}
+                  </p>
                 </div>
                 <div className="flex flex-wrap items-center gap-1 md:hidden">
                   {project.tech.map((tech, index) => (
@@ -114,9 +114,9 @@ export default function Project() {
               </div>
             </div>
 
-            <div className="flex items-center justify-between gap-2 px-4 pb-4 pt-2">
+            <div className="flex items-center justify-between gap-2 px-4 pb-4 pt-2 md:justify-end">
               <p
-                className={`rounded-lg ${project.status === "Live" ? "bg-teal-600 text-neutral-300 dark:bg-teal-900" : "bg-neutral-400/30 dark:bg-neutral-300/20"} px-2 py-1 text-sm font-medium`}
+                className={`rounded-lg ${project.status === "Live" ? "bg-teal-600 text-neutral-300 dark:bg-teal-900" : "bg-neutral-400/30 dark:bg-neutral-300/20"} block px-2 py-1 text-sm font-medium md:hidden`}
               >
                 {project.status}
               </p>
