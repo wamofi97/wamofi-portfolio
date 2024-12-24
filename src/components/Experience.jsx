@@ -44,12 +44,6 @@ const works = [
 ];
 
 const educations = [
-  // {
-  //   title: "Online Coding Bootcamp – PERN STACK 2024",
-  //   company: "KelasProgramming.com",
-  //   logo: kelasprogramming,
-  //   year: "Jan 2024 – June 2024",
-  // },
   {
     title: "User Experience Design Bootcamp",
     company: "General Assembly",
