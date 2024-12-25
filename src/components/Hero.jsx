@@ -65,9 +65,9 @@ export default function Hero() {
               alt="Profile"
               // onMouseEnter={() => setProfileImg(profileArray[1])}
               // onMouseLeave={() => setProfileImg(profileArray[0])}
-              className="h-52 min-w-52 rounded-full object-cover grayscale transition-all duration-300"
+              className="h-52 min-w-52 rounded-full object-cover grayscale transition-all duration-300 hover:grayscale-0"
               initial={{ scale: 1 }}
-              whileHover={{ scale: 1.1, filter: "grayscale(0)" }}
+              whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
             />
           </div>
