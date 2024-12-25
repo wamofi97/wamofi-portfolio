@@ -42,7 +42,7 @@ const callToActionItem = {
 const profileArray = [profile, profile2];
 
 export default function Hero() {
-  const [profileImg, setProfileImg] = useState(profileArray[0]);
+  // const [profileImg, setProfileImg] = useState(profileArray[1]);
 
   return (
     <section>
@@ -61,14 +61,14 @@ export default function Hero() {
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-200 to-teal-400 opacity-40 blur-2xl transition-opacity group-hover:opacity-70"></div>
           <div className="relative rotate-3 rounded-full shadow-xl transition-transform duration-300 hover:rotate-0">
             <motion.img
-              src={profileImg}
+              src={profile2}
               alt="Profile"
-              onMouseEnter={() => setProfileImg(profileArray[1])}
-              onMouseLeave={() => setProfileImg(profileArray[0])}
-              className="h-52 min-w-52 rounded-full object-cover transition-all duration-300"
+              // onMouseEnter={() => setProfileImg(profileArray[1])}
+              // onMouseLeave={() => setProfileImg(profileArray[0])}
+              className="h-52 min-w-52 rounded-full object-cover grayscale transition-all duration-300"
               initial={{ scale: 1 }}
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.1, ease: "easeInOut" }}
+              whileHover={{ scale: 1.1, filter: "grayscale(0)" }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
             />
           </div>
         </motion.div>
