@@ -59,16 +59,11 @@ export default function Hero() {
           className="group relative flex flex-col items-center justify-center"
         >
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-200 to-teal-400 opacity-40 blur-2xl transition-opacity group-hover:opacity-70"></div>
-          <div className="relative rotate-3 rounded-full shadow-xl transition-transform duration-300 hover:rotate-0">
+          <div className="relative rotate-3 rounded-full shadow-xl transition-transform duration-300 hover:rotate-0 hover:scale-105">
             <motion.img
               src={profile2}
               alt="Profile"
-              // onMouseEnter={() => setProfileImg(profileArray[1])}
-              // onMouseLeave={() => setProfileImg(profileArray[0])}
-              className="h-52 min-w-52 rounded-full object-cover grayscale transition-all duration-300 hover:grayscale-0"
-              initial={{ scale: 1 }}
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="h-52 min-w-52 rounded-full object-cover grayscale transition-all duration-500 hover:grayscale-0"
             />
           </div>
         </motion.div>
