@@ -1,11 +1,8 @@
-import profile from "../assets/frame.webp";
-import profile2 from "../assets/frame2.webp";
+import profile from "../assets/frame2.webp";
 import resume from "/resume.pdf";
 import { Github, Linkedin, Mail, BookUser, ChevronRight } from "lucide-react";
 import malaysia from "../assets/malaysia.svg";
-// import { TextEffect } from "./motion-ui/TextEffect";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 const container = {
   hidden: { opacity: 0 },
@@ -39,11 +36,7 @@ const callToActionItem = {
   show: { opacity: 1, filter: "blur(0px)", y: 0 },
 };
 
-const profileArray = [profile, profile2];
-
 export default function Hero() {
-  // const [profileImg, setProfileImg] = useState(profileArray[1]);
-
   return (
     <section>
       <motion.div
@@ -58,12 +51,12 @@ export default function Hero() {
           transition={{ delay: 0.2, duration: 0.6, ease: "easeInOut" }}
           className="group relative flex flex-col items-center justify-center"
         >
-          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-200 to-teal-400 opacity-40 blur-2xl transition-opacity group-hover:opacity-70"></div>
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-200 to-teal-400 opacity-40 blur-2xl transition-opacity duration-300 group-hover:opacity-70"></div>
           <div className="relative rotate-3 rounded-full shadow-xl transition-transform duration-300 hover:rotate-0 hover:scale-105">
             <motion.img
-              src={profile2}
+              src={profile}
               alt="Profile"
-              className="h-52 min-w-52 rounded-full object-cover grayscale transition-all duration-500 hover:grayscale-0"
+              className="profile-image h-52 min-w-52 rounded-full"
             />
           </div>
         </motion.div>
