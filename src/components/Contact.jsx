@@ -115,11 +115,11 @@ export default function Contact() {
               )}
               <button
                 type="submit"
-                className="group relative inline-flex cursor-pointer items-center gap-2 rounded-2xl bg-neutral-700 px-6 py-2 font-bold tracking-wide text-neutral-200 transition-all duration-300 hover:bg-teal-600 hover:text-neutral-50 hover:shadow-lg dark:bg-neutral-200 dark:text-neutral-700 dark:hover:bg-teal-600"
+                className="group relative inline-flex cursor-pointer items-center gap-2 rounded-2xl bg-neutral-700 px-6 py-2 font-bold tracking-wide text-neutral-200 transition-all duration-300 hover:bg-teal-600 hover:text-neutral-50 hover:shadow-lg dark:bg-neutral-200 dark:text-neutral-700 dark:hover:bg-teal-600 dark:hover:text-neutral-50"
               >
                 {isSending ? "Sending..." : "Send Message"}
                 <span className="w-0 overflow-hidden transition-[width] duration-300 ease-in-out group-hover:w-5">
-                  <ChevronRight className="h-6 w-6 animate-pulse text-neutral-200 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:text-neutral-700" />
+                  <ChevronRight className="h-6 w-6 animate-pulse text-neutral-200 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:text-neutral-50" />
                 </span>
               </button>
             </div>

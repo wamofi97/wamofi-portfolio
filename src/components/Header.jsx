@@ -54,31 +54,31 @@ export function Header({ activeSection }) {
             <div className="text-md flex items-center gap-8 font-medium *:uppercase">
               <button
                 onClick={() => scrollToSection("skills")}
-                className={`${activeSection === "skills" ? "gradient-text" : ""} hover:gradient-text cursor-pointer transition-colors duration-500`}
+                className={`${activeSection === "skills" ? "gradient-text hover:gradient text after:h-0" : "hover:text-teal-600 dark:hover:text-teal-400"} relative cursor-pointer transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-teal-600 after:transition-all after:duration-300 hover:after:w-full dark:after:bg-teal-400`}
               >
                 Skills
               </button>
               <button
                 onClick={() => scrollToSection("projects")}
-                className={`${activeSection === "projects" ? "gradient-text" : ""} hover:gradient-text cursor-pointer transition-colors duration-500`}
+                className={`${activeSection === "projects" ? "gradient-text hover:gradient text after:h-0" : "hover:text-teal-600 dark:hover:text-teal-400"} relative cursor-pointer transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-teal-600 after:transition-all after:duration-300 hover:after:w-full dark:after:bg-teal-400`}
               >
                 Projects
               </button>
               <button
                 onClick={() => scrollToSection("experiences")}
-                className={`${activeSection === "experiences" ? "gradient-text" : ""} hover:gradient-text cursor-pointer transition-colors duration-500`}
+                className={`${activeSection === "experiences" ? "gradient-text hover:gradient text after:h-0" : "hover:text-teal-600 dark:hover:text-teal-400"} relative cursor-pointer transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-teal-600 after:transition-all after:duration-300 hover:after:w-full dark:after:bg-teal-400`}
               >
                 Experiences
               </button>
               <button
                 onClick={() => scrollToSection("about")}
-                className={`${activeSection === "about" ? "gradient-text" : ""} hover:gradient-text cursor-pointer transition-colors duration-500`}
+                className={`${activeSection === "about" ? "gradient-text hover:gradient text after:h-0" : "hover:text-teal-600 dark:hover:text-teal-400"} relative cursor-pointer transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-teal-600 after:transition-all after:duration-300 hover:after:w-full dark:after:bg-teal-400`}
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className={`${activeSection === "contact" ? "gradient-text" : ""} hover:gradient-text cursor-pointer transition-colors duration-500`}
+                className={`${activeSection === "contact" ? "gradient-text hover:gradient text after:h-0" : "hover:text-teal-600 dark:hover:text-teal-400"} relative cursor-pointer transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-teal-600 after:transition-all after:duration-300 hover:after:w-full dark:after:bg-teal-400`}
               >
                 Contact
               </button>

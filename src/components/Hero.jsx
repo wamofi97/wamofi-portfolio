@@ -1,8 +1,10 @@
 import profile from "../assets/frame2.webp";
+import profile2 from "../assets/frame1.png";
 import resume from "/resume.pdf";
 import { Github, Linkedin, Mail, BookUser, ChevronRight } from "lucide-react";
 import malaysia from "../assets/malaysia.svg";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const container = {
   hidden: { opacity: 0 },
@@ -52,11 +54,11 @@ export default function Hero() {
           className="group relative flex flex-col items-center justify-center"
         >
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-200 to-teal-400 opacity-40 blur-2xl transition-opacity duration-300 group-hover:opacity-70"></div>
-          <div className="relative rotate-3 rounded-full shadow-xl transition-transform duration-300 hover:rotate-0 hover:scale-105">
+          <div className="relative rotate-3 rounded-full shadow-xl transition-transform duration-300 group-hover:rotate-0 group-hover:scale-105">
             <motion.img
               src={profile}
               alt="Profile"
-              className="profile-image h-52 min-w-52 rounded-full"
+              className="profile-image h-52 min-w-52 rounded-full transition-opacity duration-500"
             />
           </div>
         </motion.div>
@@ -77,7 +79,7 @@ export default function Hero() {
 
             <motion.h1
               variants={item}
-              className="text-3xl font-semibold sm:text-4xl md:text-5xl lg:text-6xl"
+              className="font-logo text-2xl font-semibold tracking-tight sm:text-4xl md:text-5xl"
             >
               {" "}
               Hi, I&apos;m{" "}
