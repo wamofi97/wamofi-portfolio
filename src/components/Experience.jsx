@@ -6,8 +6,21 @@ import actslogo from "../assets/actslogo.webp";
 import generalassembly from "../assets/generalassembly.svg";
 import iium from "../assets/iium.webp";
 import { motion } from "framer-motion";
+import tektician from "../assets/tekticianlogo.jpg";
 
 const works = [
+  {
+    title: "Frontend Developer",
+    company: "Tektician Sdn. Bhd",
+    logo: tektician,
+    year: "April 2025 - Current",
+    desc: [
+      "Developed and maintained web applications using React, Next.js, and other modern front-end frameworks.",
+      "Collaborated with cross-functional teams to design and implement user interfaces.",
+      "Implemented responsive design and ensured cross-browser compatibility.",
+      "Optimized code for performance and accessibility.",
+    ],
+  },
   {
     title: "Service Desk Engineer",
     company: "Infosys Sdn. Bhd.",

@@ -1,10 +1,8 @@
 import profile from "../assets/frame2.webp";
-import profile2 from "../assets/frame1.png";
 import resume from "/resume.pdf";
 import { Github, Linkedin, Mail, BookUser, ChevronRight } from "lucide-react";
 import malaysia from "../assets/malaysia.svg";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 const container = {
   hidden: { opacity: 0 },
