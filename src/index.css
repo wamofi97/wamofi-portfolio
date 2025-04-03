@@ -84,7 +84,7 @@ html {
 }
 
 .profile-image {
-  @apply brightness-75 contrast-[1.1] -hue-rotate-15 saturate-50 transition-all duration-300 hover:brightness-100 hover:contrast-100 hover:hue-rotate-0 hover:saturate-100;
+  @apply brightness-90 contrast-[1.1] hue-rotate-[10deg] transition-all duration-300 group-hover:brightness-100 group-hover:contrast-100 group-hover:hue-rotate-0 group-hover:saturate-100 dark:brightness-75 dark:-hue-rotate-15 dark:saturate-50;
 }
 
 @layer base {
