@@ -25,7 +25,7 @@ const works = [
     title: "Service Desk Engineer",
     company: "Infosys Sdn. Bhd.",
     logo: infosyslogo,
-    year: "Jan 2023 - Current",
+    year: "Jan 2023 - Jan 2024",
     desc: [
       "Managed and resolved technical issues reported by end-users through various communication channels, including calls, emails and ticketing systems.",
       "Cross trained in 2 different projects : Software as a Service(SAAS), Corporate Mobile",
