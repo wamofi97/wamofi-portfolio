@@ -29,7 +29,7 @@ const projects = [
     desc: "A wedding invitation platform allowing guests to RSVP and manage their attendance effortlessly. The website features secure user registration, dynamic RSVP management, and a modern, responsive design.",
     tech: ["React", "Tailwind CSS", "Node.js", "Express", "PostgreSQL"],
     link: "https://walimatul-rsvp.onrender.com/",
-    status: "Ongoing",
+    status: "Work in Progress",
     source: "https://github.com/wamofi97/wedding-rsvp",
     img: walimatul,
   },
@@ -58,89 +58,76 @@ export default function Project() {
         </div>
       </div>
 
-      <div className="z-10 mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
+      <div className="z-10 mx-auto flex max-w-5xl flex-col gap-6">
         {projects.map((project, index) => (
           <motion.div
-            initial={{ opacity: 0, filter: "blur(10px)", y: -10 }}
+            initial={{ opacity: 0, filter: "blur(20px)", y: -80 }}
             whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.6 }}
             transition={{
               delay: index * 0.15,
-              duration: 0.3,
+              duration: 0.6,
             }}
             key={index}
-            className="group flex flex-col justify-between rounded-2xl bg-neutral-300/60 p-1 transition-colors duration-300 hover:bg-teal-600/20 dark:bg-neutral-900 dark:hover:bg-teal-900/30"
+            className="group rounded-2xl bg-neutral-300/60 transition-colors duration-300 hover:bg-teal-700/10 dark:bg-neutral-900 dark:hover:bg-teal-900/30 md:p-5"
           >
-            <div className="flex flex-col gap-2">
-              <div className="relative overflow-hidden rounded-2xl rounded-b-none bg-black transition-all duration-300">
-                <img
-                  src={project.img}
-                  alt={project.title}
-                  className="h-80 w-full rounded-2xl rounded-b-none object-cover opacity-80 transition-opacity duration-500 md:group-hover:opacity-30"
-                />
-                <div className="absolute bottom-4 left-4 hidden translate-y-full flex-wrap items-center gap-1 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 md:flex">
-                  {project.tech.map((tech, index) => (
+            <div
+              className={`flex flex-col ${
+                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+              } gap-x-6`}
+            >
+              <img
+                src={project.img}
+                alt={project.title}
+                className="h-72 w-full rounded-xl rounded-b-none border-neutral-600/50 object-cover transition-transform duration-500 dark:border-neutral-400/50 md:w-[45%] md:rounded-b-xl md:border"
+              />
+
+              <div className="flex w-full flex-col gap-4 p-4 md:w-[55%] md:p-0">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between gap-4 md:justify-start">
+                    <h3 className="text font-body text-xl">{project.title}</h3>
                     <p
-                      key={index}
-                      className="rounded-lg bg-neutral-400/30 px-2 py-1 text-sm font-medium text-neutral-300"
+                      className={`rounded-lg ${project.status === "Live" ? "bg-teal-600 text-neutral-300 dark:bg-teal-900" : "bg-red-400/30"} px-2 py-1 text-sm font-medium`}
                     >
-                      {tech}
+                      {project.status}
                     </p>
-                  ))}
-                </div>
-              </div>
-              <div className="space-y-2 px-4 py-2">
-                <div className="flex items-center justify-between">
-                  <h3 className="text font-body text-xl">{project.title}</h3>
-                  <p
-                    className={`rounded-lg ${project.status === "Live" ? "bg-teal-600 text-neutral-300 dark:bg-teal-900" : "bg-neutral-400/30 dark:bg-neutral-300/20"} hidden px-2 py-1 text-sm font-medium md:block`}
-                  >
-                    {project.status}
+                  </div>
+                  <div className="flex flex-wrap items-center gap-1">
+                    {project.tech.map((tech, index) => (
+                      <p
+                        key={index}
+                        className="rounded-md bg-neutral-400/30 px-2 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-300/20 dark:text-neutral-300"
+                      >
+                        {tech}
+                      </p>
+                    ))}
+                  </div>
+                  <p className="text-neutral-600/80 dark:text-neutral-400/70">
+                    {project.desc}
                   </p>
                 </div>
-                <div className="flex flex-wrap items-center gap-1 md:hidden">
-                  {project.tech.map((tech, index) => (
-                    <p
-                      key={index}
-                      className="rounded-md bg-neutral-400/30 px-2 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-300/20 dark:text-neutral-300"
-                    >
-                      {tech}
-                    </p>
-                  ))}
+                <div className="flex items-center gap-2">
+                  <a
+                    href={project.source}
+                    target="_blank"
+                    className="group flex items-center gap-2 rounded-xl bg-neutral-700/20 py-2 pl-3 pr-1 font-medium hover:text-teal-700 dark:bg-neutral-300/20 dark:hover:text-teal-300"
+                  >
+                    <Github className="h-5 w-5" />
+                    <span className="w-0 opacity-0 transition-all duration-300 group-hover:w-16 group-hover:opacity-100">
+                      Source
+                    </span>
+                  </a>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    className="group flex items-center gap-2 rounded-xl bg-neutral-700 py-2 pl-3 pr-1 font-medium text-neutral-200 hover:bg-teal-600 hover:text-neutral-50 dark:bg-neutral-200 dark:text-neutral-700 dark:hover:bg-teal-600"
+                  >
+                    <ExternalLink className="h-5 w-5" />
+                    <span className="w-0 opacity-0 transition-all duration-300 group-hover:w-10 group-hover:opacity-100">
+                      Visit
+                    </span>
+                  </a>
                 </div>
-                <p className="text-neutral-600/80 dark:text-neutral-400/70">
-                  {project.desc}
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-center justify-between gap-2 px-4 pb-4 pt-2 md:justify-end">
-              <p
-                className={`rounded-lg ${project.status === "Live" ? "bg-teal-600 text-neutral-300 dark:bg-teal-900" : "bg-neutral-400/30 dark:bg-neutral-300/20"} block px-2 py-1 text-sm font-medium md:hidden`}
-              >
-                {project.status}
-              </p>
-              <div className="flex items-center gap-2">
-                <a
-                  href={project.source}
-                  target="_blank"
-                  className="group flex items-center gap-2 rounded-xl bg-neutral-700/20 py-2 pl-3 pr-1 font-medium hover:text-teal-700 dark:bg-neutral-300/20 dark:hover:text-teal-300"
-                >
-                  <Github className="h-5 w-5" />
-                  <span className="w-0 opacity-0 transition-all duration-300 group-hover:w-16 group-hover:opacity-100">
-                    Source
-                  </span>
-                </a>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  className="group flex items-center gap-2 rounded-xl bg-neutral-700 py-2 pl-3 pr-1 font-medium text-neutral-200 hover:bg-teal-600 hover:text-neutral-50 dark:bg-neutral-200 dark:text-neutral-700 dark:hover:bg-teal-600"
-                >
-                  <ExternalLink className="h-5 w-5" />
-                  <span className="w-0 opacity-0 transition-all duration-300 group-hover:w-10 group-hover:opacity-100">
-                    Visit
-                  </span>
-                </a>
               </div>
             </div>
           </motion.div>
