@@ -120,7 +120,7 @@ export function Skills() {
           <motion.div
             variants={item}
             key={index}
-            className="group flex-grow basis-[110px] rounded-2xl bg-neutral-300/60 p-3 hover:bg-teal-600/20 dark:bg-neutral-900 dark:hover:bg-teal-900/30 xs:flex-grow-0 sm:basis-[160px] sm:p-5 md:basis-auto"
+            className="group flex-grow basis-[110px] rounded-2xl bg-neutral-300/60 p-3 hover:bg-teal-700/10 dark:bg-neutral-900 dark:hover:bg-teal-900/30 xs:flex-grow-0 sm:basis-[160px] sm:p-5 md:basis-auto"
           >
             <div className="flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-4">
               <img
