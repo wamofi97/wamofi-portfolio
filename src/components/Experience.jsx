@@ -79,10 +79,14 @@ const educations = [
 
 export default function Experience() {
   const [option, setOption] = useState(1);
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndexes, setOpenIndexes] = useState([]);
 
   const toggleAccordion = (index) => {
-    setOpenIndex(index === openIndex ? null : index);
+    setOpenIndexes((prevIndexes) =>
+      prevIndexes.includes(index)
+        ? prevIndexes.filter((i) => i !== index)
+        : [...prevIndexes, index],
+    );
   };
 
   return (
@@ -132,7 +136,7 @@ export default function Experience() {
               }}
               key={index}
               onClick={() => toggleAccordion(index)}
-              className="group cursor-pointer rounded-2xl bg-neutral-300/60 p-6 transition-all hover:bg-teal-600/20 dark:bg-neutral-900 dark:hover:bg-teal-900/30"
+              className="group cursor-pointer rounded-2xl bg-neutral-300/60 p-6 transition-all hover:bg-teal-700/10 dark:bg-neutral-900 dark:hover:bg-teal-900/30"
             >
               <div className="">
                 <div className="flex flex-col justify-between gap-x-2 sm:flex-row">
@@ -148,7 +152,7 @@ export default function Experience() {
                       <div className="flex items-center gap-2">
                         <p className="text-teal-700">{work.company}</p>
                         <span
-                          className={`w-5 overflow-hidden text-xl ${openIndex === index ? "rotate-90" : "rotate-0"} transition-transform`}
+                          className={`w-5 overflow-hidden text-xl ${openIndexes.includes(index) ? "rotate-90" : "rotate-0"} transition-transform`}
                         >
                           <ChevronRight className="h-5 w-5 -translate-x-full opacity-60 transition-transform duration-500 group-hover:translate-x-0" />
                         </span>
@@ -164,7 +168,7 @@ export default function Experience() {
                 <hr className="w-[60vw] opacity-0"></hr>
 
                 <div
-                  className={`grid ${openIndex === index ? "grid-rows-[1fr]" : "grid-rows-[0fr]"} transition-[grid-template-rows] duration-500`}
+                  className={`grid ${openIndexes.includes(index) ? "grid-rows-[1fr]" : "grid-rows-[0fr]"} transition-[grid-template-rows] duration-500`}
                 >
                   <div className="overflow-hidden">
                     {work.desc.map((item, lowerIndex) => (
@@ -196,7 +200,7 @@ export default function Experience() {
                 duration: 0.5,
               }}
               key={index}
-              className="group rounded-2xl bg-neutral-300/40 p-6 hover:bg-teal-600/20 dark:bg-neutral-900/80 dark:hover:bg-teal-900/30"
+              className="group rounded-2xl bg-neutral-300/40 p-6 hover:bg-teal-700/10 dark:bg-neutral-900/80 dark:hover:bg-teal-900/30"
             >
               <div className="flex flex-col justify-between gap-x-2 sm:flex-row">
                 <div className="flex sm:gap-4">
